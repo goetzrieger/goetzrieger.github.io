@@ -3,29 +3,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="generator" content="Hugo 0.69.0" />
     <meta name="description" content="Ansible and Ansible Tower Labs">
 <meta name="author" content="Christian, Eric, Götz, Ismail, Joachim">
 
-    <link rel="icon" href="https://goetzrieger.github.io/images/favicon.png" type="image/png">
+    <link rel="icon" href="https://people.redhat.com/grieger/summit2020_labs/images/favicon.png" type="image/png">
 
     <title>Conditionals, Handlers and Loops :: Ansible Labs for Red Hat Summit</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1588672689" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1588672689" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1588672689" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1588672689" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1588672689" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1588672689" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1588672689" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1588672689" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1588672689" rel="stylesheet">
+    <link href="https://people.redhat.com/grieger/summit2020_labs/css/nucleus.css?1600091014" rel="stylesheet">
+    <link href="https://people.redhat.com/grieger/summit2020_labs/css/fontawesome-all.min.css?1600091014" rel="stylesheet">
+    <link href="https://people.redhat.com/grieger/summit2020_labs/css/hybrid.css?1600091014" rel="stylesheet">
+    <link href="https://people.redhat.com/grieger/summit2020_labs/css/featherlight.min.css?1600091014" rel="stylesheet">
+    <link href="https://people.redhat.com/grieger/summit2020_labs/css/perfect-scrollbar.min.css?1600091014" rel="stylesheet">
+    <link href="https://people.redhat.com/grieger/summit2020_labs/css/auto-complete.css?1600091014" rel="stylesheet">
+    <link href="https://people.redhat.com/grieger/summit2020_labs/css/atom-one-dark-reasonable.css?1600091014" rel="stylesheet">
+    <link href="https://people.redhat.com/grieger/summit2020_labs/css/theme.css?1600091014" rel="stylesheet">
+    <link href="https://people.redhat.com/grieger/summit2020_labs/css/hugo-theme.css?1600091014" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1588672689" rel="stylesheet">
+      <link href="https://people.redhat.com/grieger/summit2020_labs/css/theme-red.css?1600091014" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1588672689"></script>
+    <script src="https://people.redhat.com/grieger/summit2020_labs/js/jquery-3.3.1.min.js?1600091014"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -46,8 +46,8 @@
 
   <div id="header-wrapper">
     <div id="header">
-      <a id="logo" href="https://goetzrieger.github.io/">
-  <img src="https://goetzrieger.github.io/images/summit-badge.png">
+      <a id="logo" href="https://people.redhat.com/grieger/summit2020_labs/">
+  <img src="https://people.redhat.com/grieger/summit2020_labs/images/summit-badge.png">
 </a>
 
     </div>
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1588672689"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1588672689"></script>
+<script type="text/javascript" src="https://people.redhat.com/grieger/summit2020_labs/js/lunr.min.js?1600091014"></script>
+<script type="text/javascript" src="https://people.redhat.com/grieger/summit2020_labs/js/auto-complete.js?1600091014"></script>
 <script type="text/javascript">
     
-        var baseurl = "https:\/\/goetzrieger.github.io\/";
+        var baseurl = "https:\/\/people.redhat.com\/grieger\/summit2020_labs\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1588672689"></script>
+<script type="text/javascript" src="https://people.redhat.com/grieger/summit2020_labs/js/search.js?1600091014"></script>
 
     
   </div>
@@ -86,7 +86,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-getting-started/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-getting-started/">
           Ansible Getting Started
           
       </a>
@@ -113,7 +113,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-getting-started/1-setup/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-getting-started/1-setup/">
           Check the Prerequisites
           
       </a>
@@ -137,7 +137,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-getting-started/2-adhoc/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-getting-started/2-adhoc/">
           Running ad hoc commands
           
       </a>
@@ -161,7 +161,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-getting-started/3-playbook/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-getting-started/3-playbook/">
           Writing Your First Playbook
           
       </a>
@@ -185,7 +185,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-getting-started/4-variables/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-getting-started/4-variables/">
           Using Variables
           
       </a>
@@ -205,11 +205,11 @@
   
     
     <li data-nav-id="/ansible-getting-started/5-handlers/" title="Conditionals, Handlers and Loops" class="dd-item 
-        parent
+        
         active
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-getting-started/5-handlers/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-getting-started/5-handlers/">
           Conditionals, Handlers and Loops
           
       </a>
@@ -233,7 +233,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-getting-started/6-templates/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-getting-started/6-templates/">
           Templates
           
       </a>
@@ -257,7 +257,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-getting-started/7-bonus/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-getting-started/7-bonus/">
           Bonus Labs
           
       </a>
@@ -288,7 +288,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-getting-started/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-getting-started/">
           Ansible Tower Getting Started
           
       </a>
@@ -315,7 +315,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-getting-started/1-intro/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-getting-started/1-intro/">
           Introduction to Tower
           
       </a>
@@ -339,7 +339,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-getting-started/2-cred/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-getting-started/2-cred/">
           Inventories, credentials and ad hoc commands
           
       </a>
@@ -363,7 +363,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-getting-started/3-projects/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-getting-started/3-projects/">
           Projects &amp; job templates
           
       </a>
@@ -387,7 +387,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-getting-started/4-surveys/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-getting-started/4-surveys/">
           Surveys
           
       </a>
@@ -411,7 +411,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-getting-started/5-rbac/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-getting-started/5-rbac/">
           Role-based access control
           
       </a>
@@ -435,7 +435,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-getting-started/6-workflows/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-getting-started/6-workflows/">
           Workflows
           
       </a>
@@ -459,7 +459,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-getting-started/7-wrap/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-getting-started/7-wrap/">
           Wrap up
           
       </a>
@@ -490,7 +490,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-advanced/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-advanced/">
           Ansible Tower Advanced
           
       </a>
@@ -517,7 +517,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-advanced/1-intro/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-advanced/1-intro/">
           Ansible Tower Advanced
           
       </a>
@@ -541,7 +541,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-advanced/2-clustering/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-advanced/2-clustering/">
           Introduction to Ansible Tower Clustering
           
       </a>
@@ -565,7 +565,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-advanced/3-awx-cli-intro/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-advanced/3-awx-cli-intro/">
           There is more to Tower than the Web UI
           
       </a>
@@ -589,7 +589,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-advanced/4-awx-cli-exercises/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-advanced/4-awx-cli-exercises/">
           Creating Tower Objects Using `awx`
           
       </a>
@@ -613,7 +613,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-advanced/5-tower-cluster-jobs/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-advanced/5-tower-cluster-jobs/">
           Run a Job in a Cluster
           
       </a>
@@ -637,7 +637,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-advanced/6-instance-groups/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-advanced/6-instance-groups/">
           Tower Instance Groups
           
       </a>
@@ -661,7 +661,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-advanced/7-parallel-jobs/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-advanced/7-parallel-jobs/">
           Parallel Jobs
           
       </a>
@@ -685,7 +685,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-advanced/8-isolated-nodes/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-advanced/8-isolated-nodes/">
           Isolated Nodes
           
       </a>
@@ -709,7 +709,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-advanced/9-advanced-inventories/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-advanced/9-advanced-inventories/">
           Advanced Inventories
           
       </a>
@@ -733,7 +733,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-advanced/10-structured-content/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-advanced/10-structured-content/">
           Well Structured Content Repositories
           
       </a>
@@ -757,7 +757,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-advanced/11-rest-api/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-advanced/11-rest-api/">
           Discovering the Tower API
           
       </a>
@@ -781,7 +781,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/ansible-tower-advanced/12-appendix/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/ansible-tower-advanced/12-appendix/">
           Appendix
           
       </a>
@@ -812,7 +812,7 @@
         
         
         ">
-      <a href="https://goetzrieger.github.io/vscode-intro/">
+      <a href="https://people.redhat.com/grieger/summit2020_labs/vscode-intro/">
           Visual Studio Code Introduction
           
       </a>
@@ -833,7 +833,7 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="https://goetzrieger.github.io/"><i class='fas fa-home'></i> Homepage</a>
+                  <a class="padding" href="https://people.redhat.com/grieger/summit2020_labs/"><i class='fas fa-home'></i> Homepage</a>
               </li>
           
         </ul>
@@ -882,7 +882,7 @@
             
           
           
-            <a href='https://goetzrieger.github.io/'></a> > <a href='https://goetzrieger.github.io/ansible-getting-started/'>Ansible Getting Started</a> > Conditionals, Handlers and Loops
+            <a href='https://people.redhat.com/grieger/summit2020_labs/'></a> > <a href='https://people.redhat.com/grieger/summit2020_labs/ansible-getting-started/'>Ansible Getting Started</a> > Conditionals, Handlers and Loops
           
         
           
@@ -983,52 +983,43 @@
 <p>As an example you would like to install an FTP server, but only on hosts that are in the <strong>ftpserver</strong> inventory group.</p>
 
 <p>To do that, first edit the inventory to add another group, and place <code>node2</code> in it. Make sure that the IP address of <code>node2</code> is always the same when <code>node2</code> is listed. Edit the inventory <code>~/lab_inventory/hosts</code> to look like the following listing:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[all:vars]</span>
+<span style="color:#a6e22e">ansible_user</span><span style="color:#f92672">=</span><span style="color:#e6db74">student1</span>
+<span style="color:#a6e22e">ansible_ssh_pass</span><span style="color:#f92672">=</span><span style="color:#e6db74">xxx</span>
+<span style="color:#a6e22e">ansible_port</span><span style="color:#f92672">=</span><span style="color:#e6db74">22</span>
 
-<pre><code class="language-ini">[all:vars]
-ansible_user=student1
-ansible_ssh_pass=xxx
-ansible_port=22
+<span style="color:#66d9ef">[web]</span>
+<span style="color:#a6e22e">node1 ansible_host</span><span style="color:#f92672">=</span><span style="color:#e6db74">11.22.33.44</span>
+<span style="color:#a6e22e">node2 ansible_host</span><span style="color:#f92672">=</span><span style="color:#e6db74">22.33.44.55</span>
+<span style="color:#a6e22e">node3 ansible_host</span><span style="color:#f92672">=</span><span style="color:#e6db74">33.44.55.66</span>
 
-[web]
-node1 ansible_host=11.22.33.44
-node2 ansible_host=22.33.44.55
-node3 ansible_host=33.44.55.66
+<span style="color:#66d9ef">[ftpserver]</span>
+<span style="color:#a6e22e">node2 ansible_host</span><span style="color:#f92672">=</span><span style="color:#e6db74">22.33.44.55</span>
 
-[ftpserver]
-node2 ansible_host=22.33.44.55
-
-[control]
-ansible ansible_host=44.55.66.77
-</code></pre>
-
+<span style="color:#66d9ef">[control]</span>
+<span style="color:#a6e22e">ansible ansible_host</span><span style="color:#f92672">=</span><span style="color:#e6db74">44.55.66.77</span></code></pre></div>
 <p>Next create the file <code>ftpserver.yml</code> on your control host in the <code>~/ansible-files/</code> directory:</p>
-
-<pre><code class="language-yaml">---
-- name: Install vsftpd on ftpservers
-  hosts: all
-  become: yes
-  tasks:
-    - name: Install FTP server when host in ftpserver group
-      yum:
-        name: vsftpd
-        state: latest
-      when: inventory_hostname in groups[&quot;ftpserver&quot;]
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+- <span style="color:#66d9ef">name</span>: Install vsftpd on ftpservers
+  <span style="color:#66d9ef">hosts</span>: all
+  <span style="color:#66d9ef">become</span>: yes
+  <span style="color:#66d9ef">tasks</span>:
+    - <span style="color:#66d9ef">name</span>: Install FTP server when host in ftpserver group
+      <span style="color:#66d9ef">yum</span>:
+        <span style="color:#66d9ef">name</span>: vsftpd
+        <span style="color:#66d9ef">state</span>: latest
+      <span style="color:#66d9ef">when</span>: inventory_hostname in groups[<span style="color:#e6db74">&#34;ftpserver&#34;</span>]</code></pre></div>
 
 <div class="notices tip" ><p>By now you should know how to run Ansible Playbooks, we’ll start to be less verbose in this guide. Go create and run it. :-)</p>
 </div>
 
 
 <p>Run it and examine the output. The expected outcome: The task is skipped on node1, node3 and the ansible host (your control host) because they are not in the ftpserver group in your inventory file.</p>
-
-<pre><code class="language-bash">TASK [Install FTP server when host in ftpserver group] *******************************************
-skipping: [ansible]
-skipping: [node1]
-skipping: [node3]
-changed: [node2]
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">TASK <span style="color:#f92672">[</span>Install FTP server when host in ftpserver group<span style="color:#f92672">]</span> *******************************************
+skipping: <span style="color:#f92672">[</span>ansible<span style="color:#f92672">]</span>
+skipping: <span style="color:#f92672">[</span>node1<span style="color:#f92672">]</span>
+skipping: <span style="color:#f92672">[</span>node3<span style="color:#f92672">]</span>
+changed: <span style="color:#f92672">[</span>node2<span style="color:#f92672">]</span></code></pre></div>
 <h2 id="handlers">Handlers</h2>
 
 <p>Sometimes when a task does make a change to the system, an additional task or tasks may need to be run. For example, a change to a service’s configuration file may then require that the service be restarted so that the changed configuration takes effect.</p>
@@ -1044,31 +1035,25 @@ changed: [node2]
 </ul>
 
 <p>First we need the file Ansible will deploy, let’s just take the one from <code>node1</code>. Remember to replace the IP address shown in the listing below with the IP address from your individual <code>node1</code>.</p>
-
-<pre><code class="language-bash">[student&lt;N&gt;@ansible ansible-files]$ scp 11.22.33.44:/etc/httpd/conf/httpd.conf ~/ansible-files/
-httpd.conf
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible ansible-files<span style="color:#f92672">]</span>$ scp 11.22.33.44:/etc/httpd/conf/httpd.conf ~/ansible-files/
+httpd.conf</code></pre></div>
 <p>Next, create the Playbook <code>httpd_conf.yml</code>. Make sure that you are in the directory <code>~/ansible-files</code>.</p>
-
-<pre><code class="language-yaml">---
-- name: manage httpd.conf
-  hosts: web
-  become: yes
-  tasks:
-  - name: Copy Apache configuration file
-    copy:
-      src: httpd.conf
-      dest: /etc/httpd/conf/
-    notify:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+- <span style="color:#66d9ef">name</span>: manage httpd.conf
+  <span style="color:#66d9ef">hosts</span>: web
+  <span style="color:#66d9ef">become</span>: yes
+  <span style="color:#66d9ef">tasks</span>:
+  - <span style="color:#66d9ef">name</span>: Copy Apache configuration file
+    <span style="color:#66d9ef">copy</span>:
+      <span style="color:#66d9ef">src</span>: httpd.conf
+      <span style="color:#66d9ef">dest</span>: /etc/httpd/conf/
+    <span style="color:#66d9ef">notify</span>:
         - restart_apache
-  handlers:
-    - name: restart_apache
-      service:
-        name: httpd
-        state: restarted
-</code></pre>
-
+  <span style="color:#66d9ef">handlers</span>:
+    - <span style="color:#66d9ef">name</span>: restart_apache
+      <span style="color:#66d9ef">service</span>:
+        <span style="color:#66d9ef">name</span>: httpd
+        <span style="color:#66d9ef">state</span>: restarted</code></pre></div>
 <p>So what’s new here?</p>
 
 <ul>
@@ -1080,13 +1065,9 @@ httpd.conf
 <p>Run the Playbook. We didn’t change anything in the file yet so there should not be any <code>changed</code> lines in the output and of course the handler shouldn’t have fired.</p>
 
 <ul>
-<li>Now change the <code>Listen 80</code> line in httpd.conf to:</li>
-</ul>
+<li><p>Now change the <code>Listen 80</code> line in httpd.conf to:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#a6e22e">Listen 8080</span></code></pre></div></li>
 
-<pre><code class="language-ini">Listen 8080
-</code></pre>
-
-<ul>
 <li><p>Run the Playbook again. Now Ansible’s output should be a lot more interesting:</p>
 
 <ul>
@@ -1097,15 +1078,12 @@ httpd.conf
 </ul>
 
 <p>Apache should now listen on port 8080. Easy enough to verify:</p>
-
-<pre><code class="language-bash">[student1@ansible ansible-files]$ curl http://22.33.44.55
-curl: (7) Failed connect to 22.33.44.55:80; Connection refused
-[student1@ansible ansible-files]$ curl http://22.33.44.55:8080
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student1@ansible ansible-files<span style="color:#f92672">]</span>$ curl http://22.33.44.55
+curl: <span style="color:#f92672">(</span>7<span style="color:#f92672">)</span> Failed connect to 22.33.44.55:80; Connection refused
+<span style="color:#f92672">[</span>student1@ansible ansible-files<span style="color:#f92672">]</span>$ curl http://22.33.44.55:8080
 &lt;body&gt;
 &lt;h1&gt;This is a production webserver, take care!&lt;/h1&gt;
-&lt;/body&gt;
-</code></pre>
-
+&lt;/body&gt;</code></pre></div>
 <p>Feel free to change the <code>httpd.conf</code> file again and run the Playbook.</p>
 
 <h2 id="simple-loops">Simple Loops</h2>
@@ -1113,23 +1091,20 @@ curl: (7) Failed connect to 22.33.44.55:80; Connection refused
 <p>Loops enable us to repeat the same task over and over again. For example, lets say you want to create multiple users. By using an Ansible loop, you can do that in a single task. Loops can also iterate over more than just basic lists. For example, if you have a list of users with their corresponding group, loop can iterate over them as well. Find out more about loops in the <a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_loops.html">Ansible Loops</a> documentation.</p>
 
 <p>To show the loops feature we will generate three new users on <code>node1</code>. For that, create the Playbook <code>loop_users.yml</code> in <code>~/ansible-files</code> on your control node as your student user and run it. We will use the <code>user</code> module to generate the user accounts.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+- <span style="color:#66d9ef">name</span>: Ensure users
+  <span style="color:#66d9ef">hosts</span>: node1
+  <span style="color:#66d9ef">become</span>: yes
 
-<pre><code class="language-yaml">---
-- name: Ensure users
-  hosts: node1
-  become: yes
-
-  tasks:
-    - name: Ensure three users are present
-      user:
-        name: &quot;{{ item }}&quot;
-        state: present
-      loop:
+  <span style="color:#66d9ef">tasks</span>:
+    - <span style="color:#66d9ef">name</span>: Ensure three users are present
+      <span style="color:#66d9ef">user</span>:
+        <span style="color:#66d9ef">name</span>: <span style="color:#e6db74">&#34;{{ item }}&#34;</span>
+        <span style="color:#66d9ef">state</span>: present
+      <span style="color:#66d9ef">loop</span>:
          - dev_user
          - qa_user
-         - prod_user
-</code></pre>
-
+         - prod_user</code></pre></div>
 
 <div class="notices tip" ><p>Lines starting with a variable need to be quoted.</p>
 </div>
@@ -1148,39 +1123,32 @@ curl: (7) Failed connect to 22.33.44.55:80; Connection refused
 <h2 id="loops-over-hashes">Loops over hashes</h2>
 
 <p>As mentioned loops can also be over lists of hashes. Imagine that the users should be assigned to different additional groups:</p>
-
-<pre><code class="language-yaml">- username: dev_user
-  groups: ftp
-- username: qa_user
-  groups: ftp
-- username: prod_user
-  groups: apache
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#66d9ef">username</span>: dev_user
+  <span style="color:#66d9ef">groups</span>: ftp
+- <span style="color:#66d9ef">username</span>: qa_user
+  <span style="color:#66d9ef">groups</span>: ftp
+- <span style="color:#66d9ef">username</span>: prod_user
+  <span style="color:#66d9ef">groups</span>: apache</code></pre></div>
 <p>The <code>user</code> module has the optional parameter <code>groups</code> to list additional users. To reference items in a hash, the <code>{{ item }}</code> keyword needs to reference the subkey: <code>{{ item.groups }}</code> for example.</p>
 
 <p>Let&rsquo;s rewrite the playbook to create the users with additional user rights:</p>
 
 <!-- {% raw %} -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+- <span style="color:#66d9ef">name</span>: Ensure users
+  <span style="color:#66d9ef">hosts</span>: node1
+  <span style="color:#66d9ef">become</span>: yes
 
-<pre><code class="language-yaml">---
-- name: Ensure users
-  hosts: node1
-  become: yes
-
-  tasks:
-    - name: Ensure three users are present
-      user:
-        name: &quot;{{ item.username }}&quot;
-        state: present
-        groups: &quot;{{ item.groups }}&quot;
-      loop:
-        - { username: 'dev_user', groups: 'ftp' }
-        - { username: 'qa_user', groups: 'ftp' }
-        - { username: 'prod_user', groups: 'apache' }
-
-</code></pre>
-
+  <span style="color:#66d9ef">tasks</span>:
+    - <span style="color:#66d9ef">name</span>: Ensure three users are present
+      <span style="color:#66d9ef">user</span>:
+        <span style="color:#66d9ef">name</span>: <span style="color:#e6db74">&#34;{{ item.username }}&#34;</span>
+        <span style="color:#66d9ef">state</span>: present
+        <span style="color:#66d9ef">groups</span>: <span style="color:#e6db74">&#34;{{ item.groups }}&#34;</span>
+      <span style="color:#66d9ef">loop</span>:
+        - { <span style="color:#66d9ef">username: &#39;dev_user&#39;, groups</span>: <span style="color:#e6db74">&#39;ftp&#39;</span> }
+        - { <span style="color:#66d9ef">username: &#39;qa_user&#39;, groups</span>: <span style="color:#e6db74">&#39;ftp&#39;</span> }
+        - { <span style="color:#66d9ef">username: &#39;prod_user&#39;, groups</span>: <span style="color:#e6db74">&#39;apache&#39;</span> }</code></pre></div>
 <!-- {% endraw %} -->
 
 <p>Check the output:</p>
@@ -1190,12 +1158,9 @@ curl: (7) Failed connect to 22.33.44.55:80; Connection refused
 </ul>
 
 <p>Verify that the user <code>prod_user</code> was indeed created on <code>node1</code>:</p>
-
-<pre><code class="language-bash">[student&lt;N&gt;@ansible ansible-files]$ ansible node1 -m command -a &quot;id dev_user&quot;
-node1 | CHANGED | rc=0 &gt;&gt;
-uid=1002(dev_user) gid=1002(dev_user) groups=1002(dev_user),50(ftp)
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible ansible-files<span style="color:#f92672">]</span>$ ansible node1 -m command -a <span style="color:#e6db74">&#34;id dev_user&#34;</span>
+node1 | CHANGED | rc<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span> &gt;&gt;
+uid<span style="color:#f92672">=</span>1002<span style="color:#f92672">(</span>dev_user<span style="color:#f92672">)</span> gid<span style="color:#f92672">=</span>1002<span style="color:#f92672">(</span>dev_user<span style="color:#f92672">)</span> groups<span style="color:#f92672">=</span>1002<span style="color:#f92672">(</span>dev_user<span style="color:#f92672">)</span>,50<span style="color:#f92672">(</span>ftp<span style="color:#f92672">)</span></code></pre></div>
 
 
 
@@ -1733,10 +1698,10 @@ uid=1002(dev_user) gid=1002(dev_user) groups=1002(dev_user),50(ftp)
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://goetzrieger.github.io/ansible-getting-started/4-variables/" title="Using Variables"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://people.redhat.com/grieger/summit2020_labs/ansible-getting-started/4-variables/" title="Using Variables"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://goetzrieger.github.io/ansible-getting-started/6-templates/" title="Templates" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://people.redhat.com/grieger/summit2020_labs/ansible-getting-started/6-templates/" title="Templates" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1746,19 +1711,19 @@ uid=1002(dev_user) gid=1002(dev_user) groups=1002(dev_user),50(ftp)
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1588672689"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1588672689"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1588672689"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1588672689"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1588672689"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1588672689"></script>
+    <script src="https://people.redhat.com/grieger/summit2020_labs/js/clipboard.min.js?1600091014"></script>
+    <script src="https://people.redhat.com/grieger/summit2020_labs/js/perfect-scrollbar.min.js?1600091014"></script>
+    <script src="https://people.redhat.com/grieger/summit2020_labs/js/perfect-scrollbar.jquery.min.js?1600091014"></script>
+    <script src="https://people.redhat.com/grieger/summit2020_labs/js/jquery.sticky.js?1600091014"></script>
+    <script src="https://people.redhat.com/grieger/summit2020_labs/js/featherlight.min.js?1600091014"></script>
+    <script src="https://people.redhat.com/grieger/summit2020_labs/js/highlight.pack.js?1600091014"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1588672689"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1588672689"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1588672689"></script>
+    <script src="https://people.redhat.com/grieger/summit2020_labs/js/modernizr.custom-3.6.0.js?1600091014"></script>
+    <script src="https://people.redhat.com/grieger/summit2020_labs/js/learn.js?1600091014"></script>
+    <script src="https://people.redhat.com/grieger/summit2020_labs/js/hugo-learn.js?1600091014"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1588672689" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1588672689"></script>
+    <link href="https://people.redhat.com/grieger/summit2020_labs/mermaid/mermaid.css?1600091014" rel="stylesheet" />
+    <script src="https://people.redhat.com/grieger/summit2020_labs/mermaid/mermaid.js?1600091014"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
