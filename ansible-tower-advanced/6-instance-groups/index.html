@@ -12,20 +12,20 @@
     <title>Tower Instance Groups :: Ansible Labs for Red Hat Summit</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1600091559" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1600264389" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1600091559" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1600264389" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1600264389"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1600091559"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1600091559"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1600264389"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1600264389"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1600091559"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1600264389"></script>
 
     
   </div>
@@ -769,30 +769,6 @@
 
             
           
-            
-            
-
-
- 
-  
-    
-    <li data-nav-id="/ansible-tower-advanced/12-appendix/" title="Appendix" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://goetzrieger.github.io/ansible-tower-advanced/12-appendix/">
-          Appendix
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
         
         </ul>
               
@@ -992,17 +968,17 @@ at least one node in the <code>tower</code> group.</p></li>
 
 <li><p><strong>SAVE</strong></p></li>
 
-<li><p>Click the <strong>INSTANCES</strong> button and add node <strong>towernode2.internal</strong> again using the <img src="../../images/green_plus.png?classes=inline" alt="plus" /> icon</p></li>
+<li><p>Click the <strong>INSTANCES</strong> button and add node <strong>ansible-2</strong> again using the <img src="../../images/green_plus.png?classes=inline" alt="plus" /> icon</p></li>
 </ul>
 
-<p>Do the same to create a the new group <strong>prod</strong> with instance <strong>towernode3.internal</strong></p>
+<p>Do the same to create a the new group <strong>prod</strong> with instance <strong>ansible-3</strong></p>
 
 <p>Go back to the <strong>Instance Groups</strong> view, you should now have the following setup:</p>
 
 <ul>
 <li><p>All instances are in the <strong>tower</strong> base group</p></li>
 
-<li><p>Two more groups (<strong>prod</strong> and <strong>dev</strong>) with one instances each where setup</p></li>
+<li><p>Two more groups (<strong>prod</strong> and <strong>dev</strong>) with one instances each</p></li>
 </ul>
 
 
@@ -1022,15 +998,15 @@ at least one node in the <code>tower</code> group.</p></li>
 <h3 id="via-the-web-ui">Via the Web UI</h3>
 
 <p>You have configured the groups here, open the URL</p>
-<pre><code>https://student&lt;N&gt;-ansible.&lt;LABID&gt;.events.opentlc.com/#/instance_groups</code></pre>
+<pre><code>https://student&lt;N&gt;.&lt;LABID&gt;.rhdemo.io/#/instance_groups</code></pre>
 <p>in your browser.</p>
 
-<p>In the <strong>INSTANCE GROUPS</strong> overview all instance groups are listed with details of the group itself like number of instances in the group, running jobs and finished jobs. Like you’ve seen before for the <strong>tower</strong> global group the current capacity of the instance groups is shown in a live view, thus providing a quick insight if there are capacity problems.</p>
+<p>In the <strong>INSTANCE GROUPS</strong> overview all instance groups are listed with details of the group itself like number of instances in the group, running jobs and finished jobs. Like you’ve seen before the current capacity of the instance groups is shown in a live view, thus providing a quick insight if there are capacity problems.</p>
 
 <h3 id="via-the-awx-cli">Via the <code>awx</code> CLI</h3>
 
 <p>In your VSCode terminal, run:</p>
-<pre><code>[student@ansible ~]$ awx -k instance_group list -f human
+<pre><code>[student@ansible-1 ~]$ awx -k instance_group list -f human
 id name
 == =====
 1  tower
@@ -1040,11 +1016,11 @@ id name
 
 <p>You can again query the API to get this information. Either use the browser to access the URL (you might have to login to the API again):</p>
 
-<p><code>https://student&lt;N&gt;-ansible.&lt;LABID&gt;.events.opentlc.com/api/v2/instance_groups/</code></p>
+<p><code>https://student&lt;N&gt;.&lt;LABID&gt;.rhdemo.io/api/v2/instance_groups/</code></p>
 
 <p>or use curl to access the API from the command line in your VSCode terminal:</p>
 
-<p><code>[student@ansible ~]$ curl -s -k -u admin:VERY_SECRET_PASSWORD https://ansible.internal/api/v2/instance_groups/| python -m json.tool</code></p>
+<p><code>[student@ansible-1 ~]$ curl -s -k -u admin:VERY_SECRET_PASSWORD https://ansible-1/api/v2/instance_groups/| python3 -m json.tool</code></p>
 
 
 <div class="notices tip" ><p>The curl command has to be on one line. Do <em>not</em> forget or oversee the final slash at the end of the URL, it is relevant!</p>
@@ -1559,22 +1535,6 @@ id name
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1616,19 +1576,19 @@ id name
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1600264389"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1600264389"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1600091559" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1600091559"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1600264389" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1600264389"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

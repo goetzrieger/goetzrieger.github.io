@@ -12,20 +12,20 @@
     <title>Bonus Labs :: Ansible Labs for Red Hat Summit</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1600091559" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1600264389" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1600091559" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1600264389" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1600264389"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1600091559"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1600091559"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1600264389"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1600264389"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1600091559"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1600264389"></script>
 
     
   </div>
@@ -769,30 +769,6 @@
 
             
           
-            
-            
-
-
- 
-  
-    
-    <li data-nav-id="/ansible-tower-advanced/12-appendix/" title="Appendix" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://goetzrieger.github.io/ansible-tower-advanced/12-appendix/">
-          Appendix
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
         
         </ul>
               
@@ -961,13 +937,13 @@
 <p>
 Your commands could look like these:
 ```bash
-[student<N>@ansible ansible-files]$ ansible-doc -l | grep -i user
-[student<N>@ansible ansible-files]$ ansible-doc user
-[student<N>@ansible ansible-files]$ ansible node1,node3 -m user -a "name=testuser comment='Test D User'" -b
-[student<N>@ansible ansible-files]$ ansible node1,node3 -m command -a " id testuser" -b
-[student<N>@ansible ansible-files]$ ansible node2 -m command -a " id testuser" -b
-[student<N>@ansible ansible-files]$ ansible node1,node3 -m user -a "name=testuser state=absent remove=yes" -b
-[student<N>@ansible ansible-files]$ ansible web -m command -a " id testuser" -b
+[student<N>@ansible-1 ansible-files]$ ansible-doc -l | grep -i user
+[student<N>@ansible-1 ansible-files]$ ansible-doc user
+[student<N>@ansible-1 ansible-files]$ ansible node1,node3 -m user -a "name=testuser comment='Test D User'" -b
+[student<N>@ansible-1 ansible-files]$ ansible node1,node3 -m command -a " id testuser" -b
+[student<N>@ansible-1 ansible-files]$ ansible node2 -m command -a " id testuser" -b
+[student<N>@ansible-1 ansible-files]$ ansible node1,node3 -m user -a "name=testuser state=absent remove=yes" -b
+[student<N>@ansible-1 ansible-files]$ ansible web -m command -a " id testuser" -b
 ```
 </p>
 </details>
@@ -1035,13 +1011,13 @@ Your commands could look like these:
 <h3 id="run-and-test">Run and test</h3>
 
 <p>First run the playbook itself, then run curl against <code>node1</code> with port <code>8080</code> and <code>node2</code> with port <code>80</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student1@ansible ansible-files<span style="color:#f92672">]</span>$ ansible-playbook apache_config_tpl.yml
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student1@ansible-1 ansible-files<span style="color:#f92672">]</span>$ ansible-playbook apache_config_tpl.yml
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
-<span style="color:#f92672">[</span>student1@ansible ansible-files<span style="color:#f92672">]</span>$ curl http://18.195.235.231:8080
+<span style="color:#f92672">[</span>student1@ansible-1 ansible-files<span style="color:#f92672">]</span>$ curl http://18.195.235.231:8080
 &lt;body&gt;
 &lt;h1&gt;This is a development webserver, have fun!&lt;/h1&gt;
 &lt;/body&gt;
-<span style="color:#f92672">[</span>student1@ansible ansible-files<span style="color:#f92672">]</span>$ curl http://35.156.28.209:80
+<span style="color:#f92672">[</span>student1@ansible-1 ansible-files<span style="color:#f92672">]</span>$ curl http://35.156.28.209:80
 &lt;body&gt;
 &lt;h1&gt;This is a production webserver, take care!&lt;/h1&gt;
 &lt;/body&gt;</code></pre></div>
@@ -1542,22 +1518,6 @@ Your commands could look like these:
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1599,19 +1559,19 @@ Your commands could look like these:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1600264389"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1600264389"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1600091559" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1600091559"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1600264389" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1600264389"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

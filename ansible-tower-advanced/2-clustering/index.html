@@ -12,20 +12,20 @@
     <title>Introduction to Ansible Tower Clustering :: Ansible Labs for Red Hat Summit</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1600091559" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1600264389" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1600091559" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1600264389" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1600264389"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1600091559"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1600091559"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1600264389"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1600264389"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1600091559"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1600264389"></script>
 
     
   </div>
@@ -769,30 +769,6 @@
 
             
           
-            
-            
-
-
- 
-  
-    
-    <li data-nav-id="/ansible-tower-advanced/12-appendix/" title="Appendix" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://goetzrieger.github.io/ansible-tower-advanced/12-appendix/">
-          Appendix
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
         
         </ul>
               
@@ -950,8 +926,8 @@ where to run.</p>
 
 <h2 id="access-the-tower-web-ui">Access the Tower Web UI</h2>
 
-<p>For the first contact to your cluster open your browser and login to all
-three nodes web UIs as:</p>
+<p>For the first contact to your cluster open your browser and login to the
+Tower node 1 web UIs as:</p>
 
 <ul>
 <li><p>user <strong>admin</strong></p></li>
@@ -964,11 +940,7 @@ three nodes web UIs as:</p>
 </div>
 
 
-<p><strong><code>https://student&lt;N&gt;-ansible.&lt;LABID&gt;.events.opentlc.com</code></strong></p>
-
-<p><strong><code>https://student&lt;N&gt;-towernode2.&lt;LABID&gt;.events.opentlc.com</code></strong></p>
-
-<p><strong><code>https://student&lt;N&gt;-towernode3.&lt;LABID&gt;.events.opentlc.com</code></strong></p>
+<p><strong><code>https://student&lt;N&gt;.&lt;LABID&gt;.rhdemo.io</code></strong></p>
 
 <p>Just from the web UI you wouldn’t know you’ve got a Tower cluster at your hands here. To learn more about your cluster and its state, in one of the instances web UI under <strong>ADMINISTRATION</strong> choose <strong>Instance Groups</strong>. Here you will get an overview of the cluster by instance groups. Explore the information provided, of course there is no capacity used yet and no Jobs have run.</p>
 
@@ -984,27 +956,27 @@ three nodes web UIs as:</p>
 
 <p>You can also get information about your cluster on the command line. Log in to your <strong>code-server</strong> again if you closed it by opening this URL in your browser:</p>
 
-<p><strong><code>https://student&lt;N&gt;-code.&lt;LABID&gt;.events.opentlc.com</code></strong></p>
+<p><strong><code>https://student&lt;N&gt;-code.&lt;LABID&gt;.rhdemo.io/</code></strong></p>
 
 <p>Your VSCode session is running on your Tower node 1. Again if not still open, open a terminal by clicking <strong>Terminal-&gt;New Terminal</strong> in the menu bar.</p>
 
 <p>A terminal window opens at the bottom, become root:</p>
-<pre><code>[student@ansible ~]$ sudo -i
-[student@ansible ~]#</code></pre>
+<pre><code>[student@ansible-1 ~]$ sudo -i
+[root@ansible-1 ~]#</code></pre>
 <p>In the terminal run the following command:</p>
 
 <blockquote>
 <p>Your exact hostnames will differ, of course!</p>
 </blockquote>
-<pre><code>[student@ansible ~]# awx-manage list_instances
+<pre><code>[root@ansible-1 ~]# awx-manage list_instances
 [tower capacity=51]
-    ansible.internal capacity=17 version=3.6.3 heartbeat=&#34;2020-04-08 14:10:27&#34;
-    towernode2.internal capacity=17 version=3.6.3 heartbeat=&#34;2020-04-08 14:10:36&#34;
-    towernode3.internal capacity=17 version=3.6.3 heartbeat=&#34;2020-04-08 14:10:38&#34;</code></pre>
+    ansible-1 capacity=17 version=3.7.1 heartbeat=&#34;2020-08-27 09:06:21&#34;
+    ansible-2 capacity=17 version=3.7.1 heartbeat=&#34;2020-08-27 09:05:58&#34;
+    ansible-3 capacity=17 version=3.7.1 heartbeat=&#34;2020-08-27 09:06:00&#34;</code></pre>
 <p>So what we’ve got is a three-node Tower cluster, no surprises here. In addition the command tells us the capacity (maximum number of forks/concurrent jobs) per node and for the instance groups. Here the capacity value of 17 is allocated to any of our three nodes.</p>
 
 
-<div class="notices tip" ><p>The <strong>awx-manage</strong> (formerly tower-manage) utility can be used to administer a lot of the more internal aspects of Tower. You can e.g. use it to clean up old data, for token and session management and for cluster management.</p>
+<div class="notices tip" ><p>The <strong>awx-manage</strong> (formerly tower-manage) utility can be used to manage a lot of the more internal aspects of Tower. You can e.g. use it to clean up old data, for token and session management and for cluster management.</p>
 </div>
 
 
@@ -1504,22 +1476,6 @@ three nodes web UIs as:</p>
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1561,19 +1517,19 @@ three nodes web UIs as:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1600264389"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1600264389"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1600091559" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1600091559"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1600264389" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1600264389"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

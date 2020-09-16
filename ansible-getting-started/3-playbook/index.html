@@ -12,20 +12,20 @@
     <title>Writing Your First Playbook :: Ansible Labs for Red Hat Summit</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1600091559" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1600264389" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1600091559" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1600264389" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1600264389"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1600091559"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1600091559"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1600264389"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1600264389"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1600091559"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1600264389"></script>
 
     
   </div>
@@ -769,30 +769,6 @@
 
             
           
-            
-            
-
-
- 
-  
-    
-    <li data-nav-id="/ansible-tower-advanced/12-appendix/" title="Appendix" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://goetzrieger.github.io/ansible-tower-advanced/12-appendix/">
-          Appendix
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
         
         </ul>
               
@@ -1002,8 +978,8 @@
 <p>Instead, we are going to create a very simple directory structure for our playbook, and add just a couple of files to it.</p>
 
 <p>In your browser, bring up your <strong>code-server</strong> terminal (you opened one in the first section) and create a directory called <code>ansible-files</code> in your home directory and change into it:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible ~<span style="color:#f92672">]</span>$ mkdir ansible-files
-<span style="color:#f92672">[</span>student&lt;N&gt;@ansible ~<span style="color:#f92672">]</span>$ cd ansible-files/</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible-1 ~<span style="color:#f92672">]</span>$ mkdir ansible-files
+<span style="color:#f92672">[</span>student&lt;N&gt;@ansible-1 ~<span style="color:#f92672">]</span>$ cd ansible-files/</code></pre></div>
 <p>Now use <strong>code-server</strong> to add a file called <code>apache.yml</code> with the following content.</p>
 
 
@@ -1069,15 +1045,15 @@
 <h2 id="running-the-playbook">Running the Playbook</h2>
 
 <p>Playbooks are executed using the <code>ansible-playbook</code> command on the control node. Before you run a new Playbook it’s a good idea to check for syntax errors. Head over to the <strong>code-server</strong> terminal and run:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible ansible-files<span style="color:#f92672">]</span>$ ansible-playbook --syntax-check apache.yml</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible-1 ansible-files<span style="color:#f92672">]</span>$ ansible-playbook --syntax-check apache.yml</code></pre></div>
 <p>Now you should be ready to run your Playbook:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible ansible-files<span style="color:#f92672">]</span>$ ansible-playbook apache.yml</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible-1 ansible-files<span style="color:#f92672">]</span>$ ansible-playbook apache.yml</code></pre></div>
 <p>The output should not report any errors but provide an overview of the tasks executed and a <strong>Play Recap</strong> summarizing what has been done. There is also a task called <strong>Gathering Facts</strong> listed: this is a built-in task that runs automatically at the beginning of each <strong>Play</strong>. It collects information about the managed nodes. Exercises later on will cover this in more detail.</p>
 
 <p>Use SSH to make sure Apache has been installed on <code>node1</code>. The necessary IP address is provided in the inventory. Grep for the IP address there and use it to SSH to the node.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible ansible-files<span style="color:#f92672">]</span>$ grep node1 ~/lab_inventory/hosts
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible-1 ansible-files<span style="color:#f92672">]</span>$ grep node1 ~/lab_inventory/hosts
 node1 ansible_host<span style="color:#f92672">=</span>11.22.33.44
-<span style="color:#f92672">[</span>student&lt;N&gt;@ansible ansible-files<span style="color:#f92672">]</span>$ ssh 11.22.33.44
+<span style="color:#f92672">[</span>student&lt;N&gt;@ansible-1 ansible-files<span style="color:#f92672">]</span>$ ssh 11.22.33.44
 Last login: Wed May <span style="color:#ae81ff">15</span> 14:03:45 <span style="color:#ae81ff">2019</span> from 44.55.66.77
 Managed by Ansible
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
@@ -1086,7 +1062,7 @@ Name        : httpd
 Version     : 2.4.6
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span></code></pre></div>
 <p>Log out of <code>node1</code> with the command <code>exit</code> so that you are back on the control host, and verify the installed package with an Ansible ad hoc command!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible ansible-files<span style="color:#f92672">]</span>$ ansible node1 -m command -a <span style="color:#e6db74">&#39;rpm -qi httpd&#39;</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible-1 ansible-files<span style="color:#f92672">]</span>$ ansible node1 -m command -a <span style="color:#e6db74">&#39;rpm -qi httpd&#39;</span></code></pre></div>
 <p>Run the Playbook a second time, and compare the output: The output changed from <strong>changed</strong> to <strong>ok</strong>, and the color changed from yellow to green. Also the <strong>PLAY RECAP</strong> output is different now. This make it easy to spot what Ansible actually did.</p>
 
 <h2 id="extend-your-playbook-start-enable-apache">Extend your Playbook: Start &amp; Enable Apache</h2>
@@ -1119,7 +1095,7 @@ Version     : 2.4.6
 </ul>
 
 <p>With the second task we make sure the Apache server is indeed running on the target machine. Run your extended Playbook:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible ansible-files<span style="color:#f92672">]</span>$ ansible-playbook apache.yml</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible-1 ansible-files<span style="color:#f92672">]</span>$ ansible-playbook apache.yml</code></pre></div>
 <p>Note the output now: Some tasks are shown as <strong>ok</strong> in green and one is shown as <strong>changed</strong> in yellow.</p>
 
 <ul>
@@ -1136,7 +1112,7 @@ Version     : 2.4.6
 <div class="notices warning" ><p>Expect a lot of red lines and a 403 status</p>
 </div>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible ansible-files<span style="color:#f92672">]</span>$ ansible localhost -m uri -a <span style="color:#e6db74">&#34;url=http://&lt;IP&gt;&#34;</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible-1 ansible-files<span style="color:#f92672">]</span>$ ansible localhost -m uri -a <span style="color:#e6db74">&#34;url=http://&lt;IP&gt;&#34;</span></code></pre></div>
 <p>There are a lot of red lines and an error: As long as there is not at least an <code>index.html</code> file to be served by Apache, it will throw an ugly <strong>HTTP Error 403: Forbidden</strong> status and Ansible will report an error.</p>
 
 <p>So why not use Ansible to deploy a simple <code>index.html</code> file? Create the file <code>~/ansible-files/index.html</code> on the control node:</p>
@@ -1167,7 +1143,7 @@ Version     : 2.4.6
 <p>You are getting used to the Playbook syntax, so what happens? The new task uses the <code>copy</code> module and defines the source and destination options for the copy operation as parameters.</p>
 
 <p>Run your extended Playbook:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible ansible-files<span style="color:#f92672">]</span>$ ansible-playbook apache.yml</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible-1 ansible-files<span style="color:#f92672">]</span>$ ansible-playbook apache.yml</code></pre></div>
 <ul>
 <li><p>Have a good look at the output</p></li>
 
@@ -1212,7 +1188,7 @@ Version     : 2.4.6
       <span style="color:#66d9ef">src</span>: ~/ansible-files/index.html
       <span style="color:#66d9ef">dest</span>: /var/www/html/</code></pre></div>
 <p>Now run the Playbook:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible ansible-files<span style="color:#f92672">]</span>$ ansible-playbook apache.yml</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible-1 ansible-files<span style="color:#f92672">]</span>$ ansible-playbook apache.yml</code></pre></div>
 <p>Finally check if Apache is now running on all servers. Identify the IP addresses of the nodes in your inventory first, and afterwards use them each in the ad hoc command with the uri module as we already did with the <code>node1</code> above. All output should be green.</p>
 
 
@@ -1708,22 +1684,6 @@ Version     : 2.4.6
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1765,19 +1725,19 @@ Version     : 2.4.6
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1600264389"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1600264389"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1600091559" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1600091559"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1600264389" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1600264389"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

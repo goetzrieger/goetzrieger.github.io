@@ -12,20 +12,20 @@
     <title>Ansible Tower Advanced :: Ansible Labs for Red Hat Summit</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1600091559" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1600264389" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1600091559" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1600264389" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1600264389"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1600091559"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1600091559"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1600264389"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1600264389"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1600091559"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1600264389"></script>
 
     
   </div>
@@ -769,30 +769,6 @@
 
             
           
-            
-            
-
-
- 
-  
-    
-    <li data-nav-id="/ansible-tower-advanced/12-appendix/" title="Appendix" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://goetzrieger.github.io/ansible-tower-advanced/12-appendix/">
-          Appendix
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
         
         </ul>
               
@@ -982,7 +958,7 @@ access to the following hosts:</p>
 <thead>
 <tr>
 <th>Role</th>
-<th>Hostname External (if applicable)</th>
+<th>URL for External Access (if applicable)</th>
 <th>Hostname Internal</th>
 </tr>
 </thead>
@@ -990,62 +966,62 @@ access to the following hosts:</p>
 <tbody>
 <tr>
 <td>Ansible Tower Node 1</td>
-<td>student&lt;N&gt;-ansible.&lt;LABID&gt;.events.opentlc.com</td>
-<td>ansible.internal</td>
+<td>student&lt;N&gt;.&lt;LABID&gt;.rhdemo.io</td>
+<td>ansible-1</td>
 </tr>
 
 <tr>
 <td>Ansible Tower Node 2</td>
-<td>student&lt;N&gt;-towernode2.&lt;LABID&gt;.events.opentlc.com</td>
-<td>towernode2.internal</td>
+<td></td>
+<td>ansible-2</td>
 </tr>
 
 <tr>
 <td>Ansible Tower Node 3</td>
-<td>student&lt;N&gt;-towernode3.&lt;LABID&gt;.events.opentlc.com</td>
-<td>towernode3.internal</td>
+<td></td>
+<td>ansible-3</td>
 </tr>
 
 <tr>
 <td>Visual Code Web UI</td>
-<td>student&lt;N&gt;-code.&lt;LABID&gt;.events.opentlc.com</td>
+<td>student&lt;N&gt;-code.&lt;LABID&gt;.rhdemo.io/</td>
 <td></td>
 </tr>
 
 <tr>
 <td>Ansible Tower Database Host</td>
 <td></td>
-<td>towerdb.internal</td>
+<td>ansible-4</td>
 </tr>
 
 <tr>
-<td>Managed RHEL7 Host 1</td>
+<td>Managed RHEL8 Host 1</td>
 <td></td>
-<td>node1.internal</td>
+<td>node1</td>
 </tr>
 
 <tr>
-<td>Managed RHEL7 Host 2</td>
+<td>Managed RHEL8 Host 2</td>
 <td></td>
-<td>node2.internal</td>
+<td>node2</td>
 </tr>
 
 <tr>
 <td>Ansible Tower Isolated Node</td>
 <td></td>
-<td>isonode.internal</td>
+<td>isonode</td>
 </tr>
 
 <tr>
 <td>Managed Remote Host 1</td>
 <td></td>
-<td>remote.internal</td>
+<td>remotenode</td>
 </tr>
 </tbody>
 </table>
 
 
-<div class="notices tip" ><p>The lab environments in this session have a <strong>&lt;LABID&gt;</strong> and are separated by numbered <strong>student&lt;N&gt;</strong> accounts. You will be able to access the hosts using the external hostnames. Internally the hosts have another DNS name. Follow the instructions given by the lab facilitators to receive the values for <strong>student&lt;N&gt;</strong> and <strong>&lt;LABID&gt;</strong>!</p>
+<div class="notices tip" ><p>The lab environments in this session have a <strong>&lt;LABID&gt;</strong> and are separated by numbered <strong>student&lt;N&gt;</strong> accounts. You will be able to access the hosts using the external hostnames. Internally the hosts have different names as shown above. Follow the instructions given by the lab facilitators to receive the values for <strong>student&lt;N&gt;</strong> and <strong>&lt;LABID&gt;</strong>!</p>
 </div>
 
 
@@ -1066,15 +1042,15 @@ have:</p>
 <li><p>A three-node Tower cluster with a separate DB host, accessed via SSH
 or web UI</p></li>
 
-<li><p>Two managed RHEL 7 hosts</p></li>
+<li><p>Two managed RHEL 8 hosts</p></li>
 </ul>
 
 <p>And to mimic a remote site with isolated nodes:</p>
 
 <ul>
-<li><p>One host that acts as an isolated Tower node that can be reached via SSH from the Tower cluster nodes.</p></li>
+<li><p>One RHEL 8 host that acts as an isolated Tower node that can be reached via SSH from the Tower cluster nodes.</p></li>
 
-<li><p>One host which acts as a remote managed node that can only be reached from/through the isolated node.</p></li>
+<li><p>One RHEL 8 host which acts as a remote managed node that can only be reached from/through the isolated node.</p></li>
 </ul>
 
 <p>A diagram says more then a thousand words:</p>
@@ -1093,7 +1069,7 @@ or web UI</p></li>
 <ul>
 <li><p>Don’t type everything manually, use copy &amp; paste from the browser when appropriate. But don’t stop to think and understand… ;-)</p></li>
 
-<li><p>To <strong>edit files</strong> or <strong>open a terminal window</strong>, we provide <strong>code-server</strong>, basically the great VSCode Editor running in your browser. It&rsquo;s running on the first Tower node and can be accessed through the URL <strong><a href="https://student&lt;N&gt;-code.&lt;LABID&gt;.events.opentlc.com">https://student&lt;N&gt;-code.&lt;LABID&gt;.events.opentlc.com</a></strong></p></li>
+<li><p>To <strong>edit files</strong> or <strong>open a terminal window</strong>, we provide <strong>code-server</strong>, basically the great VSCode Editor running in your browser. It&rsquo;s running on the first Tower node and can be accessed through the URL <strong><a href="https://student&lt;N&gt;-code.&lt;LABID&gt;.rhdemo.io/">https://student&lt;N&gt;-code.&lt;LABID&gt;.rhdemo.io/</a></strong></p></li>
 </ul>
 
 
@@ -1116,7 +1092,7 @@ or web UI</p></li>
 </ul>
 
 <p>Now open code-server using the link from the lab landing page or this link in your browser by replacing <strong>&lt;N&gt;</strong> by your student number and the <strong>&lt;LABID&gt;</strong>:</p>
-<pre><code> https://student&lt;N&gt;-code.&lt;LABID&gt;.events.opentlc.com</code></pre>
+<pre><code> https://student&lt;N&gt;-code.&lt;LABID&gt;.rhdemo.io/</code></pre>
 <p><img src="../../images/vscode-pwd.png" alt="code-server login" /></p>
 
 <p>Use the password provided on the landing page to login into the code-server web UI, you can close the <strong>Welcome</strong> tab. Now open a new terminal by heading to the menu item <strong>Terminal</strong> at the top of the page and select <strong>New Terminal</strong>. A new section will appear in the lower half of the screen and you will be greeted with a prompt:</p>
@@ -1620,22 +1596,6 @@ or web UI</p></li>
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1677,19 +1637,19 @@ or web UI</p></li>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1600264389"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1600264389"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1600091559" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1600091559"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1600264389" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1600264389"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

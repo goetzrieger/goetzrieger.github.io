@@ -12,20 +12,20 @@
     <title>Advanced Inventories :: Ansible Labs for Red Hat Summit</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1600091559" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1600264389" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1600091559" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1600264389" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1600264389"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1600091559"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1600091559"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1600264389"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1600264389"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1600091559"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1600264389"></script>
 
     
   </div>
@@ -769,30 +769,6 @@
 
             
           
-            
-            
-
-
- 
-  
-    
-    <li data-nav-id="/ansible-tower-advanced/12-appendix/" title="Appendix" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://goetzrieger.github.io/ansible-tower-advanced/12-appendix/">
-          Appendix
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
         
         </ul>
               
@@ -915,7 +891,7 @@
 <li><a href="#use-facts-in-smart-inventory-searches">Use Facts in Smart Inventory Searches</a></li>
 <li><a href="#nested-facts">Nested Facts</a></li>
 </ul></li>
-<li><a href="#challenge-lab-facts">Challenge Lab: Facts</a></li>
+<li><a href="#challenge-lab-smart-inventory-with-facts">Challenge Lab: Smart Inventory with Facts</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -964,10 +940,10 @@
 
 <h3 id="the-inventory-source">The Inventory Source</h3>
 
-<p>First you need a source. In <strong>real life</strong> this would be your <strong>cloud provider, your CMDB or what not</strong>. For the sake of this lab we put a file into the Github repository you’ve already used to be our source</p>
+<p>First you need a source. In <strong>real life</strong> this would be your <strong>cloud provider, your CMDB or what not</strong>. For the sake of this lab we put a simple file into a Github repository.</p>
 
 <p>Use curl to query your external inventory source:</p>
-<pre><code>[student@ansible ~]$ curl https://raw.githubusercontent.com/goetzrieger/ansible-labs-playbooks/master/inventory_list
+<pre><code>[student@ansible-1 ~]$ curl https://raw.githubusercontent.com/goetzrieger/ansible-labs-playbooks/master/inventory_list
 {
     &#34;dyngroup&#34;:{
         &#34;hosts&#34;:[
@@ -1019,10 +995,10 @@ fi</code></pre>
 <li>Create the file <code>dyninv.sh</code> with the content shown above (use VI or the VSCode editor)</li>
 
 <li><p>Make the script executable:</p>
-<pre><code>[student@ansible ~]$ chmod +x dyninv.sh</code></pre></li>
+<pre><code>[student@ansible-1 ~]$ chmod +x dyninv.sh</code></pre></li>
 
 <li><p>Execute it:</p>
-<pre><code>[student@ansible ~]$ ./dyninv.sh --list
+<pre><code>[student@ansible-1 ~]$ ./dyninv.sh --list
 {
     &#34;dyngroup&#34;:{
         &#34;hosts&#34;:[
@@ -1156,7 +1132,7 @@ your custom source.</p></li>
 <li><p>A window <strong>DYNAMIC HOSTS</strong> opens, here you define the search query</p></li>
 </ul>
 
-<p>To start with you can just use simple search terms. Try <strong>cloud</strong> or <strong>internal</strong> as search terms and see what you get after hitting <strong>ENTER</strong>.</p>
+<p>To start with you can just use simple search terms. Try <strong>cloud</strong> or <strong>example.com</strong> as search terms and see what you get after hitting <strong>ENTER</strong>.</p>
 
 
 <div class="notices tip" ><p>Search terms are automatically saved so make sure to hit <strong>CLEAR ALL</strong> to clear the saved search when testing expressions.</p>
@@ -1183,7 +1159,7 @@ your custom source.</p></li>
 </div>
 
 
-<p>Fact caching can be enabled for <strong>Templates</strong> and is not enabled by default. So first we have to enable it. Check <strong>node1.internal</strong> and <strong>node2.internal</strong> have no facts stored:</p>
+<p>Fact caching can be enabled for <strong>Templates</strong> and is not enabled by default. So first we have to enable it. Check <strong>node1</strong> and <strong>node2</strong> have no facts stored:</p>
 
 <ul>
 <li>In <strong>RESOURCES→Inventories</strong> open the <strong>Example Inventory</strong> and click the <strong>HOSTS</strong> button.</li>
@@ -1212,12 +1188,12 @@ your custom source.</p></li>
 <p>After you run the templates go back to the host details like you did above and check the <strong>FACTS</strong> fields for</p>
 
 <ul>
-<li><p><strong>node1.internal</strong> and <strong>node2.internal</strong> (from the <strong>Example Inventory</strong>)</p></li>
+<li><p><strong>node1</strong> and <strong>node2</strong> (from the <strong>Example Inventory</strong>)</p></li>
 
-<li><p><strong>remote.internal</strong> (from the <strong>Remote Inventory</strong>).</p></li>
+<li><p><strong>remotenode</strong> (from the <strong>Remote Inventory</strong>).</p></li>
 </ul>
 
-<p>The hosts facts should now be populated with a lot of facts.</p>
+<p>The hosts facts should now be populated with a lot of information.</p>
 
 <h4 id="use-facts-in-smart-inventory-searches">Use Facts in Smart Inventory Searches</h4>
 
@@ -1254,7 +1230,7 @@ your custom source.</p></li>
 <p>The search string would look like this:
 <strong>ansible_facts.ansible_eth0.active:true</strong></p>
 
-<h3 id="challenge-lab-facts">Challenge Lab: Facts</h3>
+<h3 id="challenge-lab-smart-inventory-with-facts">Challenge Lab: Smart Inventory with Facts</h3>
 
 <p>So a small challenge: Find out if all hosts have the SElinux mode set to &ldquo;enforcing&rdquo;.</p>
 
@@ -1264,6 +1240,8 @@ your custom source.</p></li>
 <li><p>Create a Smart Inventory</p></li>
 
 <li><p>Create the proper search string</p></li>
+
+<li><p>Save the new Smart Inventory</p></li>
 </ul>
 
 <details><summary>**>> Click here for Solution <<**</summary>
@@ -1277,8 +1255,8 @@ It should return all hosts.
 <p>And to make this a bit more fun:</p>
 
 <ul>
-<li><p>SSH into one of your hosts (say <strong>node2.internal</strong>) as     <code>ec2-user</code> from your VSCode terminal and set SELinux to permissive:</p>
-<pre><code>[student@ansible ~]$ ssh ec2-user@node2.internal
+<li><p>SSH into one of your hosts (say <strong>node2</strong>) as     <code>ec2-user</code> from your VSCode terminal and set SELinux to permissive:</p>
+<pre><code>[student@ansible-1 ~]$ ssh ec2-user@node2
 [ec2-user@node2 ~]$ sudo -i
 [root@node2 ~]# sudo setenforce 0</code></pre></li>
 
@@ -1783,22 +1761,6 @@ It should return all hosts.
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1840,19 +1802,19 @@ It should return all hosts.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1600264389"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1600264389"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1600091559" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1600091559"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1600264389" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1600264389"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,20 +12,20 @@
     <title>Creating Tower Objects Using `awx` :: Ansible Labs for Red Hat Summit</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1600091559" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1600091559" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1600264389" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1600091559" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1600264389" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1600264389"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1600091559"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1600091559"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1600264389"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1600264389"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1600091559"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1600264389"></script>
 
     
   </div>
@@ -769,30 +769,6 @@
 
             
           
-            
-            
-
-
- 
-  
-    
-    <li data-nav-id="/ansible-tower-advanced/12-appendix/" title="Appendix" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://goetzrieger.github.io/ansible-tower-advanced/12-appendix/">
-          Appendix
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
         
         </ul>
               
@@ -955,7 +931,7 @@
 <details><summary>**>> Click here for Solution <<**</summary>
 <p>
 ```
-[student@ansible ~]$ awx -f human inventory create --name "Example Inventory" --organization "Default"
+[student@ansible-1 ~]$ awx -f human inventory create --name "Example Inventory" --organization "Default"
 ```
 
 <div class="notices note" ><p>You can work with multiple organizations in Tower. In this lab we’ll work in the <strong>Default</strong> organization.</p>
@@ -966,14 +942,14 @@
 
 <h3 id="add-hosts-to-the-inventory-using-awx">Add Hosts to the Inventory using <strong>awx</strong></h3>
 
-<p>Now that we have the empty inventory created, add your two managed hosts using their internal hostnames <strong><code>node1.internal</code></strong> and <strong><code>node2.internal</code></strong>, again using
+<p>Now that we have the empty inventory created, add your two managed hosts using their internal hostnames <strong><code>node1</code></strong> and <strong><code>node2</code></strong>, again using
 <strong>awx</strong>.</p>
 
 <details><summary>**>> Click here for Solution <<**</summary>
 <p>
 ```
-[student@ansible ~]$ awx -f human host create --name "node1.internal" --inventory "Example Inventory"
-[student@ansible ~]$ awx -f human host create --name "node2.internal" --inventory "Example Inventory"
+[student@ansible-1 ~]$ awx -f human host create --name "node1" --inventory "Example Inventory"
+[student@ansible-1 ~]$ awx -f human host create --name "node2" --inventory "Example Inventory"
 ```
 </p>
 </details>
@@ -986,26 +962,25 @@
 <pre><code>#!/bin/bash
 set +e  # avoid exiting if an object already exists.
 awx -f human inventory create --name &#34;Example Inventory&#34; --organization &#34;Default&#34;
-awx -f human host create --name &#34;node1.internal&#34; \
+awx -f human host create --name &#34;node1&#34; \
   --inventory &#34;Example Inventory&#34;
-awx -f human host create --name &#34;node2.internal&#34; \
+awx -f human host create --name &#34;node2&#34; \
   --inventory &#34;Example Inventory&#34;</code></pre>
 
 <div class="notices tip" ><p>You have run these commands above already, true. But we want to show how to create
-the full script here. This is why we just ignore errors with <code>set +e</code> (notice the
-&ldquo;Duplicate&rdquo; output).</p>
+the full script here. You&rsquo;ll get &ldquo;Duplicate&rdquo; messages because the objects already exist.</p>
 </div>
 
 
 <p>Next, save the script and make the script executable in the terminal window. Then launch it:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#f92672">[</span>student@ansible ~<span style="color:#f92672">]</span>$ chmod u+x /home/student&lt;N&gt;/setup-tower.sh
-    <span style="color:#f92672">[</span>student@ansible ~<span style="color:#f92672">]</span>$ /home/student&lt;N&gt;/setup-tower.sh</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ chmod u+x /home/student&lt;N&gt;/setup-tower.sh
+    <span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ /home/student&lt;N&gt;/setup-tower.sh</code></pre></div>
 <p>From now on we’ll explain the needed commands for each of the next steps and add them to the script one-by-one.</p>
 
 <h2 id="create-machine-credentials">Create Machine Credentials</h2>
 
 
-<div class="notices tip" ><p>SSH keys have already been created and distributed in your lab environment and <code>sudo</code> has been setup on the managed hosts to allow password-less login as user <strong>student&lt;N&gt;</strong> from <strong>ansible.internal</strong> using the user <strong>ec2-user</strong>.</p>
+<div class="notices tip" ><p>SSH keys have already been created and distributed in your lab environment and <code>sudo</code> has been setup on the managed hosts to allow password-less login. When you SSH into a host as user <strong>student&lt;N&gt;</strong> from <strong>ansible-1</strong> you will become user <strong>ec2-user</strong> on the host you SSH-ed to.</p>
 </div>
 
 
@@ -1066,9 +1041,9 @@ the full script here. This is why we just ignore errors with <code>set +e</code>
 <p>The final script is also shown here:</p>
 <pre><code>#!/bin/bash
 awx -f human inventory create --name &#34;Example Inventory&#34; --organization &#34;Default&#34;
-awx -f human host create --name &#34;node1.internal&#34; \
+awx -f human host create --name &#34;node1&#34; \
     --inventory &#34;Example Inventory&#34;
-awx -f human host create --name &#34;node2.internal&#34; \
+awx -f human host create --name &#34;node2&#34; \
   --inventory &#34;Example Inventory&#34;
 awx -f human credential create --name &#34;Example Credentials&#34; \
     --organization &#34;Default&#34; \
@@ -1597,22 +1572,6 @@ awx -f human job_template associate --name &#34;Install Apache&#34; \
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1654,19 +1613,19 @@ awx -f human job_template associate --name &#34;Install Apache&#34; \
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1600264389"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1600091559"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1600091559"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1600264389"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1600091559" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1600091559"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1600264389" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1600264389"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
