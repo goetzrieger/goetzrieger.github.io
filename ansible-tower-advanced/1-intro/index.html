@@ -9,23 +9,23 @@
 
     <link rel="icon" href="https://goetzrieger.github.io/images/favicon.png" type="image/png">
 
-    <title>Ansible Tower Advanced :: Ansible Labs for Red Hat Summit</title>
+    <title>Ansible Tower Advanced :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1600264389" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1600264389" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1600264389" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1600264389" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1600264389" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1600264389" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1600264389" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1600264389" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1600336195" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1600336195" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1600336195" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1600336195" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1600336195" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1600336195" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1600336195" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1600336195" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1600336195" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1600264389" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1600336195" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1600336195"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -47,7 +47,7 @@
   <div id="header-wrapper">
     <div id="header">
       <a id="logo" href="https://goetzrieger.github.io/">
-  <img src="https://goetzrieger.github.io/images/summit-badge.png">
+  <img src="https://goetzrieger.github.io/images/email_ansiblefest-2020.png">
 </a>
 
     </div>
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1600264389"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1600264389"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1600336195"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1600336195"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1600264389"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1600336195"></script>
 
     
   </div>
@@ -966,7 +966,7 @@ access to the following hosts:</p>
 <tbody>
 <tr>
 <td>Ansible Tower Node 1</td>
-<td>student&lt;N&gt;.&lt;LABID&gt;.rhdemo.io</td>
+<td>student&lt;N&gt;.&lt;LABID&gt;.open.redhat.com</td>
 <td>ansible-1</td>
 </tr>
 
@@ -984,7 +984,7 @@ access to the following hosts:</p>
 
 <tr>
 <td>Visual Code Web UI</td>
-<td>student&lt;N&gt;-code.&lt;LABID&gt;.rhdemo.io/</td>
+<td>student&lt;N&gt;-code.&lt;LABID&gt;.open.redhat.com</td>
 <td></td>
 </tr>
 
@@ -1053,9 +1053,9 @@ or web UI</p></li>
 <li><p>One RHEL 8 host which acts as a remote managed node that can only be reached from/through the isolated node.</p></li>
 </ul>
 
-<p>A diagram says more then a thousand words:</p>
+<!-- A diagram says more then a thousand words:
 
-<p><img src="../../images/tower_diagram.png" alt="tower diagram.png" /></p>
+![tower diagram.png](../../images/tower_diagram.png) -->
 
 
 <div class="notices tip" ><p>Access to the isolated node and the managed hosts is actually not restricted in the lab environment. Just imagine filtered, DMZ-like access rules for educational purposes… ;-)</p>
@@ -1069,7 +1069,7 @@ or web UI</p></li>
 <ul>
 <li><p>Don’t type everything manually, use copy &amp; paste from the browser when appropriate. But don’t stop to think and understand… ;-)</p></li>
 
-<li><p>To <strong>edit files</strong> or <strong>open a terminal window</strong>, we provide <strong>code-server</strong>, basically the great VSCode Editor running in your browser. It&rsquo;s running on the first Tower node and can be accessed through the URL <strong><a href="https://student&lt;N&gt;-code.&lt;LABID&gt;.rhdemo.io/">https://student&lt;N&gt;-code.&lt;LABID&gt;.rhdemo.io/</a></strong></p></li>
+<li><p>To <strong>edit files</strong> or <strong>open a terminal window</strong>, we provide <strong>code-server</strong>, basically the great VSCode Editor running in your browser. It&rsquo;s running on the first Tower node and can be accessed through the URL <strong><a href="https://student&lt;N&gt;-code.&lt;LABID&gt;.open.redhat.com">https://student&lt;N&gt;-code.&lt;LABID&gt;.open.redhat.com</a></strong></p></li>
 </ul>
 
 
@@ -1084,6 +1084,15 @@ or web UI</p></li>
 
 <h2 id="accessing-your-lab-environment">Accessing your Lab Environment</h2>
 
+<p>You&rsquo;ll get the access information for your lab (URL&rsquo;s, password) from a landing page. Getting access to this page depends on how you are consuming the lab:</p>
+
+<ul>
+<li>If you deployed from RHPDS, you&rsquo;ll receive an email with the landing page URL</li>
+<li>If you attend this lab at an event, your lab facilitator will lead you to the landing page</li>
+</ul>
+
+<p>Either way you&rsquo;ll get an URL similar to this: <code>http://&lt;LABID&gt;.open.redhat.com</code></p>
+
 <p>Your main points of contact with the lab are the Ansible Tower web UI&rsquo;s and <strong>code-server</strong>, providing a VSCode-experience in your browser. You&rsquo;ll use <strong>code-server</strong> to:</p>
 
 <ul>
@@ -1092,7 +1101,7 @@ or web UI</p></li>
 </ul>
 
 <p>Now open code-server using the link from the lab landing page or this link in your browser by replacing <strong>&lt;N&gt;</strong> by your student number and the <strong>&lt;LABID&gt;</strong>:</p>
-<pre><code> https://student&lt;N&gt;-code.&lt;LABID&gt;.rhdemo.io/</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">     https://student&lt;N&gt;-code.&lt;LABID&gt;.open.redhat.com</code></pre></div>
 <p><img src="../../images/vscode-pwd.png" alt="code-server login" /></p>
 
 <p>Use the password provided on the landing page to login into the code-server web UI, you can close the <strong>Welcome</strong> tab. Now open a new terminal by heading to the menu item <strong>Terminal</strong> at the top of the page and select <strong>New Terminal</strong>. A new section will appear in the lower half of the screen and you will be greeted with a prompt:</p>
@@ -1637,19 +1646,19 @@ or web UI</p></li>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1600264389"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1600264389"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1600264389"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1600264389"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1600264389"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1600336195"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1600336195"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1600336195"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1600336195"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1600336195"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1600336195"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1600264389"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1600264389"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1600336195"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1600336195"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1600336195"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1600264389" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1600264389"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1600336195" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1600336195"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

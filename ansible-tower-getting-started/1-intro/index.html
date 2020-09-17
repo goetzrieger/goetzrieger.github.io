@@ -9,23 +9,23 @@
 
     <link rel="icon" href="https://goetzrieger.github.io/images/favicon.png" type="image/png">
 
-    <title>Introduction to Tower :: Ansible Labs for Red Hat Summit</title>
+    <title>Introduction to Tower :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1600264389" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1600264389" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1600264389" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1600264389" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1600264389" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1600264389" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1600264389" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1600264389" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1600264389" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1600336195" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1600336195" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1600336195" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1600336195" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1600336195" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1600336195" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1600336195" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1600336195" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1600336195" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1600264389" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1600336195" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1600336195"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -47,7 +47,7 @@
   <div id="header-wrapper">
     <div id="header">
       <a id="logo" href="https://goetzrieger.github.io/">
-  <img src="https://goetzrieger.github.io/images/summit-badge.png">
+  <img src="https://goetzrieger.github.io/images/email_ansiblefest-2020.png">
 </a>
 
     </div>
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1600264389"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1600264389"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1600336195"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1600336195"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1600264389"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1600336195"></script>
 
     
   </div>
@@ -876,7 +876,9 @@
 <li>
 <ul>
 <li><a href="#why-ansible-tower">Why Ansible Tower?</a></li>
-<li><a href="#your-ansible-tower-lab-environment">Your Ansible Tower Lab Environment</a></li>
+</ul></li>
+<li><a href="#your-ansible-tower-lab-environment">Your Ansible Tower Lab Environment</a>
+<ul>
 <li><a href="#working-the-lab">Working the Lab</a></li>
 <li><a href="#accessing-your-lab-environment">Accessing your Lab Environment</a></li>
 <li><a href="#dashboard">Dashboard</a></li>
@@ -927,53 +929,65 @@
 <li><p>And much more&hellip;</p></li>
 </ul>
 
-<h2 id="your-ansible-tower-lab-environment">Your Ansible Tower Lab Environment</h2>
+<h1 id="your-ansible-tower-lab-environment">Your Ansible Tower Lab Environment</h1>
 
-<p>In this lab you work in a pre-configured lab environment. You will have access to the following hosts:</p>
+<p>In this lab you work in a pre-configured lab environment. You will have
+access to the following hosts:</p>
 
 <table>
 <thead>
 <tr>
 <th>Role</th>
-<th>Inventory name</th>
+<th>URL for External Access (if applicable)</th>
+<th>Hostname Internal</th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-<td>Ansible Control Host &amp; Tower</td>
-<td>ansible</td>
+<td>Ansible Tower</td>
+<td>student&lt;N&gt;.&lt;LABID&gt;.open.redhat.com</td>
+<td>ansible-1</td>
 </tr>
 
 <tr>
-<td>Managed Host 1</td>
+<td>Visual Code Web UI</td>
+<td>student&lt;N&gt;-code.&lt;LABID&gt;.open.redhat.com</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Managed RHEL8 Host 1</td>
+<td></td>
 <td>node1</td>
 </tr>
 
 <tr>
-<td>Managed Host 2</td>
+<td>Managed RHEL8 Host 2</td>
+<td></td>
 <td>node2</td>
 </tr>
 
 <tr>
-<td>Managed Host 2</td>
-<td>node3</td>
+<td>Managed RHEL8 Host 2</td>
+<td></td>
+<td>node2</td>
 </tr>
 </tbody>
 </table>
 
 
-<div class="notices warning" ><p>The lab environments in this session have a <strong>&lt;LABID&gt;</strong> and are separated by numbered <strong>student&lt;N&gt;</strong> accounts. Follow the instructions given by the lab facilitators to receive the values for <strong>student&lt;N&gt;</strong> and <strong>&lt;LABID&gt;</strong>!</p>
-</div>
-
-
-
-<div class="notices tip" ><p>On the lab landing page you&rsquo;ll find the URLs you need to access complete with student number and lab ID already filled in.</p>
+<div class="notices tip" ><p>The lab environments in this session have a <strong>&lt;LABID&gt;</strong> and are separated by numbered <strong>student&lt;N&gt;</strong> accounts. You will be able to access the hosts using the external hostnames. Internally the hosts have different names as shown above. Follow the instructions given by the lab facilitators to receive the values for <strong>student&lt;N&gt;</strong> and <strong>&lt;LABID&gt;</strong>!</p>
 </div>
 
 
 
 <div class="notices tip" ><p>Ansible Tower has already been installed and licensed for you, the web UI will be reachable over HTTP/HTTPS.</p>
+</div>
+
+
+
+<div class="notices info" ><p>Wherever you see the placeholder <strong>VERY_SECRET_PASSWORD</strong> in the following pages, use instead the specific password provided to you on the lab page. In general, whenever you need a password, even without the placeholder explicitly written, it&rsquo;s the same one.</p>
 </div>
 
 
@@ -984,8 +998,7 @@
 <ul>
 <li><p>Don’t type everything manually, use copy &amp; paste from the browser when appropriate. But don’t stop to think and understand… ;-)</p></li>
 
-<li><p>To <strong>edit files</strong> or <strong>open a terminal window</strong>, we provide <strong>code-server</strong>, basically the great VSCode Editor running in your browser. It&rsquo;s running on the Tower node and can be accessed through the URL</p>
-<pre><code>https://student&lt;N&gt;-code.&lt;LABID&gt;.events.opentlc.com</code></pre></li>
+<li><p>To <strong>edit files</strong> or <strong>open a terminal window</strong>, we provide <strong>code-server</strong>, basically the great VSCode Editor running in your browser. It&rsquo;s running on the first Tower node and can be accessed through the URL <code>https://student&lt;N&gt;-code.&lt;LABID&gt;.open.redhat.com</code></p></li>
 </ul>
 
 
@@ -1000,23 +1013,37 @@
 
 <h2 id="accessing-your-lab-environment">Accessing your Lab Environment</h2>
 
-<p>Your main points of contact with the lab is the Ansible Tower web UI and <strong>code-server</strong>, providing a VSCode-experience in your browser.</p>
+<p>You&rsquo;ll get the access information for your lab (URL&rsquo;s, password) from a landing page. Getting access to this page depends on how you are consuming the lab:</p>
+
+<ul>
+<li>If you deployed from RHPDS, you&rsquo;ll receive an email with the landing page URL</li>
+<li>If you attend this lab at an event, your lab facilitator will lead you to the landing page</li>
+</ul>
+
+<p>Either way you&rsquo;ll get an URL similar to this: <code>http://&lt;LABID&gt;.open.redhat.com</code></p>
+
+<p>Your main points of contact with the lab are the Ansible Tower web UI&rsquo;s and <strong>code-server</strong>, providing a VSCode-experience in your browser. You&rsquo;ll use <strong>code-server</strong> to:</p>
+
+<ul>
+<li>open virtual terminals</li>
+<li>edit files</li>
+</ul>
 
 <p>Now open code-server using the link from the lab landing page or this link in your browser by replacing <strong>&lt;N&gt;</strong> by your student number and the <strong>&lt;LABID&gt;</strong>:</p>
-<pre><code>    https://student&lt;N&gt;-code.&lt;LABID&gt;.events.opentlc.com</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">     https://student&lt;N&gt;-code.&lt;LABID&gt;.open.redhat.com</code></pre></div>
 <p><img src="../../images/vscode-pwd.png" alt="code-server login" /></p>
 
-<p>Use the password <strong>provided on the lab landing page</strong> to login into the code-server web UI, you can close the <strong>Welcome</strong> tab. Now open a new terminal by heading to the menu item <strong>Terminal</strong> at the top of the page and select <strong>New Terminal</strong>. A new section will appear in the lower half of the screen and you will be greeted with a prompt:</p>
+<p>Use the password provided on the landing page to login into the code-server web UI, you can close the <strong>Welcome</strong> tab. Now open a new terminal by heading to the menu item <strong>Terminal</strong> at the top of the page and select <strong>New Terminal</strong>. A new section will appear in the lower half of the screen and you will be greeted with a prompt:</p>
 
 <p><img src="../../images/vscode-terminal.png" alt="code-server terminal" /></p>
 
-<p>Read the <a href="../../vscode-intro/">Visual Studio Code Server introduction</a>, to learn more about how to create and edit files, and to work with the Terminal.</p>
+<p>If unsure about the usage, read the <a href="../../vscode-intro/">Visual Studio Code Server introduction</a>, to learn more about how to create and edit files, and to work with the Terminal.</p>
 
-<p>Congrats, you now have a shell terminal on your Ansible Tower. From here you run commands or access the other hosts in your lab environment if the lab task requires it.</p>
+<p>Congrats, you now have a shell terminal on your Ansible Tower node 1. From here you run commands or access the other hosts in your lab environment if the lab task requires it.</p>
 
 <h2 id="dashboard">Dashboard</h2>
 
-<p>Let&rsquo;s have a first look at Tower: Point your browser to the URL you were given on the lab landing page, similar to <code>https://student&lt;N&gt;.&lt;LABID&gt;.events.opentlc.com</code> (replace <code>&lt;N&gt;</code> with your student number and <code>&lt;LABID&gt;</code> with the ID of this lab) and log in as <code>admin</code>. You can find the password again on the lab landing page.</p>
+<p>Let&rsquo;s have a first look at Tower: Point your browser to the URL you were given on the lab landing page, similar to <code>https://student&lt;N&gt;.&lt;LABID&gt;.open.redhat.com</code> (replace <code>&lt;N&gt;</code> with your student number and <code>&lt;LABID&gt;</code> with the ID of this lab) and log in as <code>admin</code>. You can find the password again on the lab landing page.</p>
 
 <p>The web UI of Ansible Tower greets you with a dashboard with a graph showing:</p>
 
@@ -1592,19 +1619,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1600264389"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1600264389"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1600264389"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1600264389"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1600264389"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1600336195"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1600336195"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1600336195"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1600336195"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1600336195"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1600336195"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1600264389"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1600264389"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1600264389"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1600336195"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1600336195"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1600336195"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1600264389" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1600264389"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1600336195" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1600336195"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
