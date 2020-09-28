@@ -15,11 +15,19 @@
   </url>
   
   <url>
+    <loc>https://goetzrieger.github.io/ansible_collections/1-introduction/</loc>
+  </url>
+  
+  <url>
     <loc>https://goetzrieger.github.io/ansible-tower-getting-started/1-intro/</loc>
   </url>
   
   <url>
     <loc>https://goetzrieger.github.io/ansible-tower-getting-started/</loc>
+  </url>
+  
+  <url>
+    <loc>https://goetzrieger.github.io/ansible_collections/2-using-collections-from-playbooks/</loc>
   </url>
   
   <url>
@@ -39,6 +47,10 @@
   </url>
   
   <url>
+    <loc>https://goetzrieger.github.io/ansible_collections/3-using-collections-from-roles/</loc>
+  </url>
+  
+  <url>
     <loc>https://goetzrieger.github.io/ansible-tower-getting-started/3-projects/</loc>
   </url>
   
@@ -48,6 +60,14 @@
   
   <url>
     <loc>https://goetzrieger.github.io/ansible-getting-started/3-playbook/</loc>
+  </url>
+  
+  <url>
+    <loc>https://goetzrieger.github.io/ansible_collections/</loc>
+  </url>
+  
+  <url>
+    <loc>https://goetzrieger.github.io/ansible_collections/4-using-collections-from-tower/</loc>
   </url>
   
   <url>
@@ -71,11 +91,19 @@
   </url>
   
   <url>
+    <loc>https://goetzrieger.github.io/ansible_collections/5-creating-collections/</loc>
+  </url>
+  
+  <url>
     <loc>https://goetzrieger.github.io/ansible-tower-getting-started/5-rbac/</loc>
   </url>
   
   <url>
     <loc>https://goetzrieger.github.io/ansible-tower-advanced/5-tower-cluster-jobs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://goetzrieger.github.io/ansible_collections/6-automation-hub-and-galaxy/</loc>
   </url>
   
   <url>
@@ -88,6 +116,10 @@
   
   <url>
     <loc>https://goetzrieger.github.io/ansible-tower-getting-started/6-workflows/</loc>
+  </url>
+  
+  <url>
+    <loc>https://goetzrieger.github.io/ansible_collections/7-advanced-inventory-collections/</loc>
   </url>
   
   <url>
@@ -121,6 +153,22 @@
   <url>
     <loc>https://goetzrieger.github.io/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://goetzrieger.github.io/ansible_collections/3-using-collections-from-roles/solutions/selinux_manage_fqcn/</loc>
+  </url>
+  
+  <url>
+    <loc>https://goetzrieger.github.io/ansible_collections/3-using-collections-from-roles/solutions/selinux_manage_meta/</loc>
+  </url>
+  
+  <url>
+    <loc>https://goetzrieger.github.io/ansible_collections/5-creating-collections/solutions/roles/demo_image_builder/</loc>
+  </url>
+  
+  <url>
+    <loc>https://goetzrieger.github.io/ansible_collections/6-automation-hub-and-galaxy/screenshots/</loc>
   </url>
   
   <url>
