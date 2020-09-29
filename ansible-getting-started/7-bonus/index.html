@@ -12,20 +12,20 @@
     <title>Bonus Labs :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601371843" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601372365" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1601371843" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1601372365" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601372365"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601371843"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601371843"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601372365"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601372365"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601371843"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601372365"></script>
 
     
   </div>
@@ -1110,20 +1110,17 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#bonus-lab-ad-hoc-commands">Bonus Lab: Ad Hoc Commands</a></li>
-<li><a href="#bonus-lab-templates-and-variables">Bonus Lab: Templates and Variables</a>
-<ul>
-<li><a href="#define-the-variables">Define the variables:</a></li>
-<li><a href="#prepare-the-template">Prepare the template:</a></li>
-<li><a href="#create-the-playbook">Create the Playbook</a></li>
-<li><a href="#run-and-test">Run and test</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#the-end">The End</a></li>
-</ul>
+  <ul>
+    <li><a href="#bonus-lab-ad-hoc-commands">Bonus Lab: Ad Hoc Commands</a></li>
+    <li><a href="#bonus-lab-templates-and-variables">Bonus Lab: Templates and Variables</a>
+      <ul>
+        <li><a href="#define-the-variables">Define the variables:</a></li>
+        <li><a href="#prepare-the-template">Prepare the template:</a></li>
+        <li><a href="#create-the-playbook">Create the Playbook</a></li>
+        <li><a href="#run-and-test">Run and test</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1148,28 +1145,26 @@
 
 
 
-	
-
-<p>You have finished the lab already. But it doesn’t have to end here. We prepared some slightly more advanced bonus labs for you to follow through if you like. So if you are done with the labs and still have some time, here are some more labs for you:</p>
-
+	<p>You have finished the lab already. But it doesn’t have to end here. We prepared some slightly more advanced bonus labs for you to follow through if you like. So if you are done with the labs and still have some time, here are some more labs for you:</p>
 <h2 id="bonus-lab-ad-hoc-commands">Bonus Lab: Ad Hoc Commands</h2>
-
 <p>Create a new user <code>testuser</code> on <code>node1</code> and <code>node3</code> with a comment using an ad hoc command, make sure that it is not created on <code>node2</code>!</p>
-
 <ul>
-<li><p>Find the parameters for the appropriate module using <code>ansible-doc user</code> (leave with <code>q</code>)</p></li>
-
-<li><p>Use an Ansible ad hoc command to create the user with the comment <code>Test D User</code></p></li>
-
-<li><p>Use the <code>command</code> module with the proper invocation to find the userid</p></li>
-
-<li><p>Delete the user and check it has been deleted</p></li>
+<li>
+<p>Find the parameters for the appropriate module using <code>ansible-doc user</code> (leave with <code>q</code>)</p>
+</li>
+<li>
+<p>Use an Ansible ad hoc command to create the user with the comment <code>Test D User</code></p>
+</li>
+<li>
+<p>Use the <code>command</code> module with the proper invocation to find the userid</p>
+</li>
+<li>
+<p>Delete the user and check it has been deleted</p>
+</li>
 </ul>
-
 
 <div class="notices tip" ><p>Remember privilege escalation…​</p>
 </div>
-
 
 <details><summary>**>>Click here for Solution<<**</summary>
 <p>
@@ -1185,50 +1180,47 @@ Your commands could look like these:
 ```
 </p>
 </details>
-
 <h2 id="bonus-lab-templates-and-variables">Bonus Lab: Templates and Variables</h2>
-
 <p>You have learned the basics about Ansible templates, variables and handlers. Let’s combine all of these.</p>
-
 <p>Instead of editing and copying <code>httpd.conf</code> why don’t you just define a variable for the listen port and use it in a template? Here is your job:</p>
-
 <ul>
-<li><p>Define a variable <code>listen_port</code> for the <code>web</code> group with the value <code>8080</code> and another for <code>node2</code> with the value <code>80</code> using the proper files.</p></li>
-
-<li><p>Copy the <code>httpd.conf</code> file into the template <code>httpd.conf.j2</code> that uses the <code>listen_port</code> variable instead of the hard-coded port number.</p></li>
-
-<li><p>Write a Playbook that deploys the template and restarts Apache on changes using a handler.</p></li>
-
-<li><p>Run the Playbook and test the result using <code>curl</code>.</p></li>
+<li>
+<p>Define a variable <code>listen_port</code> for the <code>web</code> group with the value <code>8080</code> and another for <code>node2</code> with the value <code>80</code> using the proper files.</p>
+</li>
+<li>
+<p>Copy the <code>httpd.conf</code> file into the template <code>httpd.conf.j2</code> that uses the <code>listen_port</code> variable instead of the hard-coded port number.</p>
+</li>
+<li>
+<p>Write a Playbook that deploys the template and restarts Apache on changes using a handler.</p>
+</li>
+<li>
+<p>Run the Playbook and test the result using <code>curl</code>.</p>
+</li>
 </ul>
-
 
 <div class="notices tip" ><p>Remember the <code>group_vars</code> and <code>host_vars</code> directories? If not, refer to the chapter <a href="../4-variables/">Using Variables</a>.</p>
 </div>
 
-
 <h3 id="define-the-variables">Define the variables:</h3>
-
 <p>Add this line to <code>group_vars/web</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#a6e22e">listen_port: 8080</span></code></pre></div>
-<p>Add this line to <code>host_vars/node2</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#a6e22e">listen_port: 80</span></code></pre></div>
-<h3 id="prepare-the-template">Prepare the template:</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#a6e22e">listen_port: 8080</span>
+</code></pre></div><p>Add this line to <code>host_vars/node2</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#a6e22e">listen_port: 80</span>
+</code></pre></div><h3 id="prepare-the-template">Prepare the template:</h3>
 <ul>
-<li><p>Copy <code>httpd.conf</code> to <code>httpd.conf.j2</code></p></li>
-
-<li><p>Edit the <code>Listen</code> directive in <code>httpd.conf.j2</code> to make it look like this:</p></li>
+<li>
+<p>Copy <code>httpd.conf</code> to <code>httpd.conf.j2</code></p>
+</li>
+<li>
+<p>Edit the <code>Listen</code> directive in <code>httpd.conf.j2</code> to make it look like this:</p>
+</li>
 </ul>
-
 <!-- {% raw %} -->
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[...]</span>
 <span style="color:#a6e22e">Listen {{ listen_port }}</span>
-<span style="color:#66d9ef">[...]</span></code></pre></div>
-<!-- {% endraw %} -->
-
+<span style="color:#66d9ef">[...]</span>
+</code></pre></div><!-- {% endraw %} -->
 <h3 id="create-the-playbook">Create the Playbook</h3>
-
 <p>Create a playbook called <code>apache_config_tpl.yml</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
 - <span style="color:#66d9ef">name</span>: Apache httpd.conf
@@ -1245,9 +1237,8 @@ Your commands could look like these:
     - <span style="color:#66d9ef">name</span>: restart apache
       <span style="color:#66d9ef">service</span>:
         <span style="color:#66d9ef">name</span>: httpd
-        <span style="color:#66d9ef">state</span>: restarted</code></pre></div>
-<h3 id="run-and-test">Run and test</h3>
-
+        <span style="color:#66d9ef">state</span>: restarted
+</code></pre></div><h3 id="run-and-test">Run and test</h3>
 <p>First run the playbook itself, then run curl against <code>node1</code> with port <code>8080</code> and <code>node2</code> with port <code>80</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student1@ansible-1 ansible-files<span style="color:#f92672">]</span>$ ansible-playbook apache_config_tpl.yml
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
@@ -1258,9 +1249,8 @@ Your commands could look like these:
 <span style="color:#f92672">[</span>student1@ansible-1 ansible-files<span style="color:#f92672">]</span>$ curl http://35.156.28.209:80
 &lt;body&gt;
 &lt;h1&gt;This is a production webserver, take care!&lt;/h1&gt;
-&lt;/body&gt;</code></pre></div>
-<h1 id="the-end">The End</h1>
-
+&lt;/body&gt;
+</code></pre></div><h1 id="the-end">The End</h1>
 <p>Congratulations, you finished your labs! We hope you enjoyed your first encounter with Ansible as much as we enjoyed creating the labs.</p>
 
 
@@ -1945,19 +1935,19 @@ Your commands could look like these:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601372365"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601372365"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601371843" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601371843"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601372365" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601372365"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

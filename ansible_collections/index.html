@@ -12,20 +12,20 @@
     <title>Ansible Collections :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601371843" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601372365" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1601371843" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1601372365" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601372365"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601371843"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601371843"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601372365"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601372365"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601371843"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601372365"></script>
 
     
   </div>
@@ -1104,16 +1104,13 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li><a href="#ansible-collections-workshop">Ansible Collections Workshop</a>
-<ul>
-<li><a href="#time-planning">Time Planning</a></li>
-<li><a href="#prerequisites">Prerequisites</a></li>
-<li><a href="#ansible-collections-exercises">Ansible Collections Exercises</a></li>
-<li><a href="#additional-information">Additional Information</a></li>
-<li><a href="#authors">Authors</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#time-planning">Time Planning</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#ansible-collections-exercises">Ansible Collections Exercises</a></li>
+    <li><a href="#additional-information">Additional Information</a></li>
+    <li><a href="#authors">Authors</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1138,73 +1135,76 @@
 
 
 
-	
-
-<h1 id="ansible-collections-workshop">Ansible Collections Workshop</h1>
-
+	<h1 id="ansible-collections-workshop">Ansible Collections Workshop</h1>
 <p>This workshop is a step by step series of exercises to demonstrate
 features and benefits of Ansible Collections, a unique distribution
 format of Ansible content that can be used to package and distribute
 playbooks, roles, modules, and plugins.</p>
-
 <h2 id="time-planning">Time Planning</h2>
-
 <p>The average duration of this workshop depends on the Ansible skills of
 practitioner. The average duration should be around 3 hours or less with
 advanced Ansible users.</p>
-
 <p>All exercises are self explanatory and guide the participants through the entire lab.
 Concepts are explained when they are introduced along with the practice exercise.</p>
-
 <h2 id="prerequisites">Prerequisites</h2>
-
 <ul>
-<li><p>Ansible v2.9</p></li>
-
-<li><p>An OS of choice between RHEL/CentOS 8.x, CentOS Stream, Fedora 31+</p></li>
+<li>
+<p>Ansible v2.9</p>
+</li>
+<li>
+<p>An OS of choice between RHEL/CentOS 8.x, CentOS Stream, Fedora 31+</p>
+</li>
 </ul>
-
 <h2 id="ansible-collections-exercises">Ansible Collections Exercises</h2>
-
 <p>The workshop is structured in a set of progressive exercises, covering collections creation,
 usage from playbooks, roles and Tower and an introduction to Ansible Automation Hub.</p>
-
 <ul>
-<li><p><a href="./1-create-collections">Exercise 1 - Create Collections</a></p></li>
-
-<li><p><a href="./2-collections-from-playbook">Exercise 2 - Collections from playbook</a></p></li>
-
-<li><p><a href="./3-collections-from-roles">Exercise 3 - Collections from roles</a></p></li>
-
-<li><p><a href="./4-collections-from-tower">Exercise 4 - Collections from tower</a></p></li>
-
-<li><p><a href="./5-use-automation-hub">Exercise 5 - Use Automation Hub</a></p></li>
+<li>
+<p><a href="./1-create-collections">Exercise 1 - Create Collections</a></p>
+</li>
+<li>
+<p><a href="./2-collections-from-playbook">Exercise 2 - Collections from playbook</a></p>
+</li>
+<li>
+<p><a href="./3-collections-from-roles">Exercise 3 - Collections from roles</a></p>
+</li>
+<li>
+<p><a href="./4-collections-from-tower">Exercise 4 - Collections from tower</a></p>
+</li>
+<li>
+<p><a href="./5-use-automation-hub">Exercise 5 - Use Automation Hub</a></p>
+</li>
 </ul>
-
 <h2 id="additional-information">Additional Information</h2>
-
 <ul>
-<li><p><a href="https://docs.ansible.com/ansible/latest/user_guide/collections_using.html">Ansible Docs: Using Collections</a></p></li>
-
-<li><p><a href="https://github.com/ansible-collections/overview">Ansible Collections Overview</a></p></li>
-
-<li><p><a href="https://docs.ansible.com/ansible/devel/dev_guide/developing_collections.html">Ansible Docs: Developing Collections</a></p></li>
-
-<li><p><a href="https://www.ansible.com/blog/introducing-the-awx-collection">Blog Post: Introducing: The AWX and Ansible Tower Collections</a></p></li>
+<li>
+<p><a href="https://docs.ansible.com/ansible/latest/user_guide/collections_using.html">Ansible Docs: Using Collections</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ansible-collections/overview">Ansible Collections Overview</a></p>
+</li>
+<li>
+<p><a href="https://docs.ansible.com/ansible/devel/dev_guide/developing_collections.html">Ansible Docs: Developing Collections</a></p>
+</li>
+<li>
+<p><a href="https://www.ansible.com/blog/introducing-the-awx-collection">Blog Post: Introducing: The AWX and Ansible Tower Collections</a></p>
+</li>
 </ul>
-
 <h2 id="authors">Authors</h2>
-
 <p>Ansible Automation Platform 1.1 Hackfest - Team 1</p>
-
 <ul>
-<li><p>Christian Jung <a href="mailto:cjung@redhat.com">cjung@redhat.com</a></p></li>
-
-<li><p>Gianni Salinetti <a href="mailto:gsalinet@redhat.com">gsalinet@redhat.com</a></p></li>
-
-<li><p>David Sastre Medina <a href="mailto:asastrem@redhat.com">asastrem@redhat.com</a></p></li>
-
-<li><p>Ismail Dhaoui <a href="mailto:idhaoui@redhat.com">idhaoui@redhat.com</a></p></li>
+<li>
+<p>Christian Jung <a href="mailto:cjung@redhat.com">cjung@redhat.com</a></p>
+</li>
+<li>
+<p>Gianni Salinetti <a href="mailto:gsalinet@redhat.com">gsalinet@redhat.com</a></p>
+</li>
+<li>
+<p>David Sastre Medina <a href="mailto:asastrem@redhat.com">asastrem@redhat.com</a></p>
+</li>
+<li>
+<p>Ismail Dhaoui <a href="mailto:idhaoui@redhat.com">idhaoui@redhat.com</a></p>
+</li>
 </ul>
 
 
@@ -1888,19 +1888,19 @@ usage from playbooks, roles and Tower and an introduction to Ansible Automation 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601372365"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601372365"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601371843" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601371843"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601372365" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601372365"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

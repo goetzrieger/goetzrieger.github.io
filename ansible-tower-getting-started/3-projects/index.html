@@ -12,20 +12,20 @@
     <title>Projects &amp; job templates :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601371843" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601372365" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1601371843" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1601372365" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601372365"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601371843"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601371843"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601372365"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601372365"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601371843"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601372365"></script>
 
     
   </div>
@@ -1110,16 +1110,13 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#setup-git-repository">Setup Git Repository</a></li>
-<li><a href="#create-the-project">Create the Project</a></li>
-<li><a href="#create-a-job-template-and-run-a-job">Create a Job Template and Run a Job</a></li>
-<li><a href="#challenge-lab-check-the-result">Challenge Lab: Check the Result</a></li>
-<li><a href="#what-about-some-practice">What About Some Practice?</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#setup-git-repository">Setup Git Repository</a></li>
+    <li><a href="#create-the-project">Create the Project</a></li>
+    <li><a href="#create-a-job-template-and-run-a-job">Create a Job Template and Run a Job</a></li>
+    <li><a href="#challenge-lab-check-the-result">Challenge Lab: Check the Result</a></li>
+    <li><a href="#what-about-some-practice">What About Some Practice?</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1144,18 +1141,11 @@
 
 
 
-	
-
-<p>A Tower <strong>Project</strong> is a logical collection of Ansible Playbooks. You can manage your playbooks by placing them into a source code management (SCM) system supported by Tower, including Git, Subversion, and Mercurial.</p>
-
+	<p>A Tower <strong>Project</strong> is a logical collection of Ansible Playbooks. You can manage your playbooks by placing them into a source code management (SCM) system supported by Tower, including Git, Subversion, and Mercurial.</p>
 <p>You should definitely keep your Playbooks under version control. In this lab we’ll use Playbooks that are provided in a Github repository.</p>
-
 <h2 id="setup-git-repository">Setup Git Repository</h2>
-
 <p>For this lab we will use playbooks stored in this Git repository, using the <a href="https://github.com/ansible/workshop-examples/tree/summit_2020">proper tag/branch</a>:</p>
-
 <p><a href="https://github.com/ansible/workshop-examples">https://github.com/ansible/workshop-examples</a></p>
-
 <p>A Playbook to install the Apache webserver has already been committed to the directory <strong>rhel/apache</strong>, <code>apache_install.yml</code>, here for reference:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
 - <span style="color:#66d9ef">name</span>: Apache server installed
@@ -1189,161 +1179,176 @@
     <span style="color:#66d9ef">service</span>:
       <span style="color:#66d9ef">name</span>: httpd
       <span style="color:#66d9ef">enabled</span>: <span style="color:#66d9ef">true</span>
-      <span style="color:#66d9ef">state</span>: started</code></pre></div>
-
+      <span style="color:#66d9ef">state</span>: started
+</code></pre></div>
 <div class="notices tip" ><p>Note the difference to other Playbooks you might have written! Most importantly there is no <code>become</code> and <code>hosts</code> is set to <code>all</code>.</p>
 </div>
 
-
 <p>To configure and use this repository as a <strong>Source Control Management (SCM)</strong> system in Tower you have to create a <strong>Project</strong> that uses the repository</p>
-
 <h2 id="create-the-project">Create the Project</h2>
-
 <ul>
-<li><p>Go to <strong>RESOURCES → Projects</strong> in the side menu view click the <img src="../../images/green_plus.png?classes=inline" alt="plus" /> button. Fill in the form:</p></li>
-
-<li><p><strong>NAME:</strong> Ansible Workshop Examples</p></li>
-
-<li><p><strong>ORGANIZATION:</strong> Default</p></li>
-
-<li><p><strong>SCM TYPE:</strong> Git</p></li>
+<li>
+<p>Go to <strong>RESOURCES → Projects</strong> in the side menu view click the <img src="../../images/green_plus.png?classes=inline" alt="plus"> button. Fill in the form:</p>
+</li>
+<li>
+<p><strong>NAME:</strong> Ansible Workshop Examples</p>
+</li>
+<li>
+<p><strong>ORGANIZATION:</strong> Default</p>
+</li>
+<li>
+<p><strong>SCM TYPE:</strong> Git</p>
+</li>
 </ul>
-
 <p>Now you need the URL to access the repo. You could get the URL in Github as <strong>Clone URL</strong>. Enter the URL into the Project configuration:</p>
-
 <ul>
-<li><p><strong>SCM URL:</strong> <code>https://github.com/ansible/workshop-examples.git</code></p></li>
-
-<li><p><strong>SCM BRANCH/TAG/COMMIT:</strong> <code>summit_2020</code></p></li>
-
-<li><p><strong>SCM UPDATE OPTIONS:</strong> Tick all four boxes to always get a fresh copy of the repository and to update the repository when launching a job.</p></li>
-
-<li><p>Click <strong>SAVE</strong></p></li>
+<li>
+<p><strong>SCM URL:</strong> <code>https://github.com/ansible/workshop-examples.git</code></p>
+</li>
+<li>
+<p><strong>SCM BRANCH/TAG/COMMIT:</strong> <code>summit_2020</code></p>
+</li>
+<li>
+<p><strong>SCM UPDATE OPTIONS:</strong> Tick all four boxes to always get a fresh copy of the repository and to update the repository when launching a job.</p>
+</li>
+<li>
+<p>Click <strong>SAVE</strong></p>
+</li>
 </ul>
-
 <p>The new Project will be synced automatically after creation. But you can also do this manually: Sync the Project again with the Git repository by going to the <strong>Projects</strong> view and clicking the circular arrow <strong>Get latest SCM revision</strong> icon to the right of the Project.</p>
-
 <p>After starting the sync job, go to the <strong>Jobs</strong> view: there is a new job for the update of the Git repository.</p>
-
 <h2 id="create-a-job-template-and-run-a-job">Create a Job Template and Run a Job</h2>
-
 <p>A job template is a definition and set of parameters for running an Ansible job. Job templates are useful to execute the same job many times. So before running an Ansible <strong>Job</strong> from Tower you must create a <strong>Job Template</strong> that pulls together:</p>
-
 <ul>
-<li><p><strong>Inventory</strong>: On what hosts should the job run?</p></li>
-
-<li><p><strong>Credentials</strong> What credentials are needed to log into the hosts?</p></li>
-
-<li><p><strong>Project</strong>: Where is the Playbook?</p></li>
-
-<li><p><strong>What</strong> Playbook to use?</p></li>
+<li>
+<p><strong>Inventory</strong>: On what hosts should the job run?</p>
+</li>
+<li>
+<p><strong>Credentials</strong> What credentials are needed to log into the hosts?</p>
+</li>
+<li>
+<p><strong>Project</strong>: Where is the Playbook?</p>
+</li>
+<li>
+<p><strong>What</strong> Playbook to use?</p>
+</li>
 </ul>
-
-<p>Okay, let’s just do that: Go to the <strong>Templates</strong> view, click the <img src="../../images/green_plus.png?classes=inline" alt="plus" /> button and choose <strong>Job Template</strong>.</p>
-
+<p>Okay, let’s just do that: Go to the <strong>Templates</strong> view, click the <img src="../../images/green_plus.png?classes=inline" alt="plus"> button and choose <strong>Job Template</strong>.</p>
 
 <div class="notices tip" ><p>Remember that you can often click on magnifying glasses to get an overview of options to pick to fill in fields.</p>
 </div>
 
-
 <ul>
-<li><p><strong>NAME:</strong> Install Apache</p></li>
-
-<li><p><strong>JOB TYPE:</strong> Run</p></li>
-
-<li><p><strong>INVENTORY:</strong> Workshop Inventory</p></li>
-
-<li><p><strong>PROJECT:</strong> Ansible Workshop Examples</p></li>
-
-<li><p><strong>PLAYBOOK:</strong> <code>rhel/apache/apache_install.yml</code></p></li>
-
-<li><p><strong>CREDENTIAL:</strong> Workshop Credentials</p></li>
-
-<li><p>We need to run the tasks as root so check <strong>Enable privilege escalation</strong></p></li>
-
-<li><p>Click <strong>SAVE</strong></p></li>
+<li>
+<p><strong>NAME:</strong> Install Apache</p>
+</li>
+<li>
+<p><strong>JOB TYPE:</strong> Run</p>
+</li>
+<li>
+<p><strong>INVENTORY:</strong> Workshop Inventory</p>
+</li>
+<li>
+<p><strong>PROJECT:</strong> Ansible Workshop Examples</p>
+</li>
+<li>
+<p><strong>PLAYBOOK:</strong> <code>rhel/apache/apache_install.yml</code></p>
+</li>
+<li>
+<p><strong>CREDENTIAL:</strong> Workshop Credentials</p>
+</li>
+<li>
+<p>We need to run the tasks as root so check <strong>Enable privilege escalation</strong></p>
+</li>
+<li>
+<p>Click <strong>SAVE</strong></p>
+</li>
 </ul>
-
 <p>You can start the job by directly clicking the blue <strong>LAUNCH</strong> button, or by clicking on the rocket in the Job Templates overview. After launching the Job Template, you are automatically brought to the job overview where you can follow the playbook execution in real time:</p>
-
-<p><img src="../../images/job_overview.png" alt="job execution" /></p>
-
+<p><img src="../../images/job_overview.png" alt="job execution"></p>
 <p>Since this might take some time, have a closer look at all the details provided:</p>
-
 <ul>
-<li><p>All details of the job template like inventory, project, credentials and playbook are shown.</p></li>
-
-<li><p>Additionally, the actual revision of the playbook is recorded here - this makes it easier to analyse job runs later on.</p></li>
-
-<li><p>Also the time of execution with start and end time is recorded, giving you an idea of how long a job execution actually was.</p></li>
-
-<li><p>On the right side, the output of the playbook run is shown. Click on a node underneath a task to get detailed information for the task.</p></li>
+<li>
+<p>All details of the job template like inventory, project, credentials and playbook are shown.</p>
+</li>
+<li>
+<p>Additionally, the actual revision of the playbook is recorded here - this makes it easier to analyse job runs later on.</p>
+</li>
+<li>
+<p>Also the time of execution with start and end time is recorded, giving you an idea of how long a job execution actually was.</p>
+</li>
+<li>
+<p>On the right side, the output of the playbook run is shown. Click on a node underneath a task to get detailed information for the task.</p>
+</li>
 </ul>
-
 <p>After the Job has finished go to the main <strong>Jobs</strong> view: All jobs are listed here, you should see directly before the Playbook run an SCM update was started. This is the Git update we configured for the <strong>Project</strong> on Job Template launch!</p>
-
 <h2 id="challenge-lab-check-the-result">Challenge Lab: Check the Result</h2>
-
 <p>Time for a little challenge:</p>
-
 <ul>
 <li>Use an ad hoc command on all hosts to make sure Apache has been installed and is running.</li>
 </ul>
-
 <p>You have already been through all the steps needed, so try this for yourself.</p>
-
 
 <div class="notices tip" ><p>What about <code>systemctl status httpd</code>?</p>
 </div>
 
-
 <details><summary>**>>Click here for Solution<<**</summary>
 <p>
-
-- Go to **Inventories** → **Workshop Inventory**
-
-- In the **HOSTS** view select all hosts and click **RUN COMMANDS**
-
-- **MODULE:** command
-
-- **ARGUMENTS:** systemctl status httpd
-
-- **MACHINE CREDENTIALS:** Workshop Credentials
-
-- Click **LAUNCH**
-
+<ul>
+<li>
+<p>Go to <strong>Inventories</strong> → <strong>Workshop Inventory</strong></p>
+</li>
+<li>
+<p>In the <strong>HOSTS</strong> view select all hosts and click <strong>RUN COMMANDS</strong></p>
+</li>
+<li>
+<p><strong>MODULE:</strong> command</p>
+</li>
+<li>
+<p><strong>ARGUMENTS:</strong> systemctl status httpd</p>
+</li>
+<li>
+<p><strong>MACHINE CREDENTIALS:</strong> Workshop Credentials</p>
+</li>
+<li>
+<p>Click <strong>LAUNCH</strong></p>
+</li>
+</ul>
 </p>
 </details>
-
 <p>It should all look good!</p>
-
 <h2 id="what-about-some-practice">What About Some Practice?</h2>
-
 <p>Here is a list of tasks:</p>
-
 
 <div class="notices warning" ><p>Please make sure to finish these steps as the next chapter depends on it!</p>
 </div>
 
-
 <ul>
-<li><p>Create a new inventory called <code>Webserver</code> and make only <code>node1</code> member of it.</p></li>
-
-<li><p>Copy the <code>Install Apache</code> template using the copy icon in the <strong>Templates</strong> view</p></li>
-
-<li><p>Change the name to <code>Install Apache Ask</code></p></li>
-
-<li><p>Change the <strong>INVENTORY</strong> setting of the Project so it will prompt for the inventory on launch (tick the appropriate box).</p></li>
-
-<li><p><strong>SAVE</strong></p></li>
-
-<li><p>Launch the <code>Install Apache Ask</code> template.</p></li>
-
-<li><p>It will now ask for the inventory to use, choose the <code>Webserver</code> inventory and click <strong>NEXT</strong> and <strong>LAUNCH</strong></p></li>
-
-<li><p>Wait until the Job has finished and make sure it ran only on <code>node1</code></p></li>
+<li>
+<p>Create a new inventory called <code>Webserver</code> and make only <code>node1</code> member of it.</p>
+</li>
+<li>
+<p>Copy the <code>Install Apache</code> template using the copy icon in the <strong>Templates</strong> view</p>
+</li>
+<li>
+<p>Change the name to <code>Install Apache Ask</code></p>
+</li>
+<li>
+<p>Change the <strong>INVENTORY</strong> setting of the Project so it will prompt for the inventory on launch (tick the appropriate box).</p>
+</li>
+<li>
+<p><strong>SAVE</strong></p>
+</li>
+<li>
+<p>Launch the <code>Install Apache Ask</code> template.</p>
+</li>
+<li>
+<p>It will now ask for the inventory to use, choose the <code>Webserver</code> inventory and click <strong>NEXT</strong> and <strong>LAUNCH</strong></p>
+</li>
+<li>
+<p>Wait until the Job has finished and make sure it ran only on <code>node1</code></p>
+</li>
 </ul>
-
 
 <div class="notices tip" ><p>The Job didn’t change anything because Apache was already installed in the latest version.</p>
 </div>
@@ -2034,19 +2039,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601372365"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601372365"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601371843" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601371843"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601372365" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601372365"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

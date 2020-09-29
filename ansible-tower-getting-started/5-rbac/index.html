@@ -12,20 +12,20 @@
     <title>Role-based access control :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601371843" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601372365" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1601371843" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1601372365" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601372365"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601371843"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601371843"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601372365"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601372365"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601371843"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601372365"></script>
 
     
   </div>
@@ -1110,15 +1110,12 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#ansible-tower-users">Ansible Tower Users</a></li>
-<li><a href="#ansible-tower-teams">Ansible Tower Teams</a></li>
-<li><a href="#granting-permissions">Granting Permissions</a></li>
-<li><a href="#test-permissions">Test Permissions</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#ansible-tower-users">Ansible Tower Users</a></li>
+    <li><a href="#ansible-tower-teams">Ansible Tower Teams</a></li>
+    <li><a href="#granting-permissions">Granting Permissions</a></li>
+    <li><a href="#test-permissions">Test Permissions</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1143,133 +1140,143 @@
 
 
 
-	
-
-<p>You have already learned how Tower separates credentials from users. Another advantage of Ansible Tower is the user and group rights management.</p>
-
+	<p>You have already learned how Tower separates credentials from users. Another advantage of Ansible Tower is the user and group rights management.</p>
 <h2 id="ansible-tower-users">Ansible Tower Users</h2>
-
 <p>There are three types of Tower Users:</p>
-
 <ul>
-<li><p><strong>Normal User</strong>: Have read and write access limited to the inventory and projects for which that user has been granted the appropriate roles and privileges.</p></li>
-
-<li><p><strong>System Auditor</strong>: Auditors implicitly inherit the read-only capability for all objects within the Tower environment.</p></li>
-
-<li><p><strong>System Administrator</strong>: Has admin, read, and write privileges over the entire Tower installation.</p></li>
+<li>
+<p><strong>Normal User</strong>: Have read and write access limited to the inventory and projects for which that user has been granted the appropriate roles and privileges.</p>
+</li>
+<li>
+<p><strong>System Auditor</strong>: Auditors implicitly inherit the read-only capability for all objects within the Tower environment.</p>
+</li>
+<li>
+<p><strong>System Administrator</strong>: Has admin, read, and write privileges over the entire Tower installation.</p>
+</li>
 </ul>
-
 <p>Let’s create a user:</p>
-
 <ul>
-<li><p>In the Tower menu under <strong>ACCESS</strong> click <strong>Users</strong></p></li>
-
-<li><p>Click the green plus button</p></li>
-
-<li><p>Fill in the values for the new user:</p>
-
+<li>
+<p>In the Tower menu under <strong>ACCESS</strong> click <strong>Users</strong></p>
+</li>
+<li>
+<p>Click the green plus button</p>
+</li>
+<li>
+<p>Fill in the values for the new user:</p>
 <ul>
-<li><p><strong>FIRST NAME:</strong> Werner</p></li>
-
-<li><p><strong>LAST NAME:</strong> Web</p></li>
-
-<li><p><strong>EMAIL:</strong> wweb@example.com</p></li>
-
-<li><p><strong>USERNAME:</strong> wweb</p></li>
-
-<li><p><strong>USER TYPE:</strong> Normal User</p></li>
-
-<li><p><strong>PASSWORD:</strong> ansible</p></li>
-
-<li><p>Confirm password</p></li>
-</ul></li>
-
-<li><p>Click <strong>SAVE</strong></p></li>
+<li>
+<p><strong>FIRST NAME:</strong> Werner</p>
+</li>
+<li>
+<p><strong>LAST NAME:</strong> Web</p>
+</li>
+<li>
+<p><strong>EMAIL:</strong> <a href="mailto:wweb@example.com">wweb@example.com</a></p>
+</li>
+<li>
+<p><strong>USERNAME:</strong> wweb</p>
+</li>
+<li>
+<p><strong>USER TYPE:</strong> Normal User</p>
+</li>
+<li>
+<p><strong>PASSWORD:</strong> ansible</p>
+</li>
+<li>
+<p>Confirm password</p>
+</li>
 </ul>
-
+</li>
+<li>
+<p>Click <strong>SAVE</strong></p>
+</li>
+</ul>
 <h2 id="ansible-tower-teams">Ansible Tower Teams</h2>
-
 <p>A Team is a subdivision of an organization with associated users, projects, credentials, and permissions. Teams provide a means to implement role-based access control schemes and delegate responsibilities across organizations. For instance, permissions may be granted to a whole Team rather than each user on the Team.</p>
-
 <p>Create a Team:</p>
-
 <ul>
-<li><p>In the menu go to <strong>ACCESS → Teams</strong></p></li>
-
-<li><p>Click the green plus button and create a team named <code>Web Content</code>.</p></li>
-
-<li><p>Click <strong>SAVE</strong></p></li>
+<li>
+<p>In the menu go to <strong>ACCESS → Teams</strong></p>
+</li>
+<li>
+<p>Click the green plus button and create a team named <code>Web Content</code>.</p>
+</li>
+<li>
+<p>Click <strong>SAVE</strong></p>
+</li>
 </ul>
-
 <p>Now you can add a user to the Team:</p>
-
 <ul>
-<li><p>Switch to the Users view of the <code>Web Content</code> Team by clicking the <strong>USERS</strong> button.</p></li>
-
-<li><p>Click the green plus button, check the box next to the <code>wweb</code> user and click <strong>SAVE</strong>.</p></li>
+<li>
+<p>Switch to the Users view of the <code>Web Content</code> Team by clicking the <strong>USERS</strong> button.</p>
+</li>
+<li>
+<p>Click the green plus button, check the box next to the <code>wweb</code> user and click <strong>SAVE</strong>.</p>
+</li>
 </ul>
-
 <p>Now click the <strong>PERMISSIONS</strong> button in the <strong>TEAMS</strong> view, you will be greeted with &ldquo;No Permissions Have Been Granted&rdquo;.</p>
-
 <p>Permissions allow to read, modify, and administer projects, inventories, and other Tower elements. Permissions can be set for different resources.</p>
-
 <h2 id="granting-permissions">Granting Permissions</h2>
-
 <p>To allow users or teams to actually do something, you have to set permissions. The user <strong>wweb</strong> should only be allowed to modify content of the assigned webservers.</p>
-
 <p>Add the permission to use the template:</p>
-
 <ul>
-<li><p>In the Permissions view of the Team <code>Web Content</code> click the green plus button to add permissions.</p></li>
-
-<li><p>A new window opens. You can choose to set permissions for a number of resources.</p>
-
+<li>
+<p>In the Permissions view of the Team <code>Web Content</code> click the green plus button to add permissions.</p>
+</li>
+<li>
+<p>A new window opens. You can choose to set permissions for a number of resources.</p>
 <ul>
-<li><p>Select the resource type <strong>JOB TEMPLATES</strong></p></li>
-
-<li><p>Choose the <code>Create index.html</code> Template by checking the box next to it.</p></li>
-</ul></li>
-
-<li><p>The second part of the window opens, here you assign roles to the selected resource.</p>
-
+<li>
+<p>Select the resource type <strong>JOB TEMPLATES</strong></p>
+</li>
+<li>
+<p>Choose the <code>Create index.html</code> Template by checking the box next to it.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The second part of the window opens, here you assign roles to the selected resource.</p>
 <ul>
 <li>Choose <strong>EXECUTE</strong></li>
-</ul></li>
-
-<li><p>Click <strong>SAVE</strong></p></li>
 </ul>
-
+</li>
+<li>
+<p>Click <strong>SAVE</strong></p>
+</li>
+</ul>
 <h2 id="test-permissions">Test Permissions</h2>
-
 <p>Now log out of Tower’s web UI and in again as the <strong>wweb</strong> user.</p>
-
 <ul>
-<li><p>Go to the <strong>Templates</strong> view, you should notice for wweb only the <code>Create
-index.html</code> template is listed. He is allowed to view and launch, but not to edit the Template. Just open the template and try to change it.</p></li>
-
-<li><p>Run the Job Template by clicking the rocket icon. Enter the survey content to your liking and launch the job.</p></li>
-
-<li><p>In the following <strong>Jobs</strong> view have a good look around, note that there where changes to the host (of course…​).</p></li>
+<li>
+<p>Go to the <strong>Templates</strong> view, you should notice for wweb only the <code>Create index.html</code> template is listed. He is allowed to view and launch, but not to edit the Template. Just open the template and try to change it.</p>
+</li>
+<li>
+<p>Run the Job Template by clicking the rocket icon. Enter the survey content to your liking and launch the job.</p>
+</li>
+<li>
+<p>In the following <strong>Jobs</strong> view have a good look around, note that there where changes to the host (of course…​).</p>
+</li>
 </ul>
-
 <p>Check the result: In the code-server terminal execute <code>curl</code> to pull the content of the webserver on <code>node1</code> (you could of course check <code>node2</code>, too):</p>
-<pre><code>curl http://node1</code></pre>
+<pre><code>curl http://node1
+</code></pre>
 <ul>
 <li>In the web UI, log out user <strong>wweb</strong> and in again as <strong>admin</strong>.</li>
 </ul>
-
 <p>Just recall what you have just done: You enabled a restricted user to run an Ansible Playbook</p>
-
 <ul>
-<li><p>Without having access to the credentials</p></li>
-
-<li><p>Without being able to change the Playbook itself</p></li>
-
-<li><p>But with the ability to change variables you predefined!</p></li>
+<li>
+<p>Without having access to the credentials</p>
+</li>
+<li>
+<p>Without being able to change the Playbook itself</p>
+</li>
+<li>
+<p>But with the ability to change variables you predefined!</p>
+</li>
 </ul>
-
 <p>Effectively you provided the power to execute automation to another user without handing out your credentials or giving the user the ability to change the automation code. And yet, at the same time the user can still modify things based on the surveys you created.</p>
-
 <p><strong>This capability is one of the main strengths of Ansible Tower!</strong></p>
 
 
@@ -1957,19 +1964,19 @@ index.html</code> template is listed. He is allowed to view and launch, but not 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601372365"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601372365"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601371843" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601371843"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601372365" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601372365"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

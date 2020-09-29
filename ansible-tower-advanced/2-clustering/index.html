@@ -12,20 +12,20 @@
     <title>Introduction to Ansible Tower Clustering :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601371843" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601372365" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1601371843" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1601372365" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601372365"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601371843"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601371843"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601372365"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601372365"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601371843"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601372365"></script>
 
     
   </div>
@@ -1110,13 +1110,10 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#access-the-tower-web-ui">Access the Tower Web UI</a></li>
-<li><a href="#access-your-tower-cluster-via-command-line">Access your Tower Cluster via Command line</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#access-the-tower-web-ui">Access the Tower Web UI</a></li>
+    <li><a href="#access-your-tower-cluster-via-command-line">Access your Tower Cluster via Command line</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1141,68 +1138,51 @@
 
 
 
-	
-
-<p>With version 3.1 Ansible Tower introduced clustering, replacing the
+	<p>With version 3.1 Ansible Tower introduced clustering, replacing the
 redundancy solution configured with active-passive nodes. Clustering
 is sharing load between Tower nodes/instances. Each Tower instance is
 able to act as an entry point for UI and API access.</p>
 
-
 <div class="notices tip" ><p>Using a load balancer in front of the Tower nodes is possible, but optional because an Ansible Tower cluster can be accessed via all Tower instances.</p>
 </div>
-
 
 <p>Each instance in a Tower cluster expands the cluster’s capacity to
 execute jobs. Jobs can and will run anywhere rather than be directed on
 where to run.</p>
 
-
 <div class="notices tip" ><p>The Appendix contains some installation considerations and an installer inventory for reference.</p>
 </div>
 
-
 <h2 id="access-the-tower-web-ui">Access the Tower Web UI</h2>
-
 <p>For the first contact to your cluster open your browser and login to the
 Tower node 1 web UIs as:</p>
-
 <ul>
-<li><p>user <strong>admin</strong></p></li>
-
-<li><p>password <strong>VERY_SECRET_PASSWORD</strong></p></li>
+<li>
+<p>user <strong>admin</strong></p>
+</li>
+<li>
+<p>password <strong>VERY_SECRET_PASSWORD</strong></p>
+</li>
 </ul>
-
 
 <div class="notices warning" ><p>Use the pre-created URLs from the lab landing page or replace <strong>&lt;LABID&gt;</strong> with the session ID and <strong>&lt;N&gt;</strong> with your student number!</p>
 </div>
 
-
 <p><strong><code>https://student&lt;N&gt;.&lt;LABID&gt;.open.redhat.com</code></strong></p>
-
 <p>Just from the web UI you wouldn’t know you’ve got a Tower cluster at your hands here. To learn more about your cluster and its state, in one of the instances web UI under <strong>ADMINISTRATION</strong> choose <strong>Instance Groups</strong>. Here you will get an overview of the cluster by instance groups. Explore the information provided, of course there is no capacity used yet and no Jobs have run.</p>
-
 <p>Right now we have only one instance group named <strong>tower</strong>. When you get more groups, from this view you will see how the instance are distributed over the groups.</p>
-
 <p>To dig deeper click on <strong>INSTANCES</strong> to get more information about the instances allocated to a group. In the instances view you can toggle nodes off/online and adjust the number of forks (don&rsquo;t do this now).</p>
-
 <blockquote>
 <p>You’ll learn more about this later.</p>
 </blockquote>
-
 <h2 id="access-your-tower-cluster-via-command-line">Access your Tower Cluster via Command line</h2>
-
 <p>You can also get information about your cluster on the command line. Log in to your <strong>code-server</strong> again if you closed it by opening this URL in your browser:</p>
-
 <p><strong><code>https://student&lt;N&gt;-code.&lt;LABID&gt;.open.redhat.com</code></strong></p>
-
 <p>Your VSCode session is running on your Tower node 1. Again if not still open, open a terminal by clicking <strong>Terminal-&gt;New Terminal</strong> in the menu bar.</p>
-
 <p>A terminal window opens at the bottom, become root:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ sudo -i
-    <span style="color:#f92672">[</span>root@ansible-1 ~<span style="color:#f92672">]</span>#</code></pre></div>
-<p>In the terminal run the following command:</p>
-
+    <span style="color:#f92672">[</span>root@ansible-1 ~<span style="color:#f92672">]</span>#
+</code></pre></div><p>In the terminal run the following command:</p>
 <blockquote>
 <p>Your exact hostnames will differ, of course!</p>
 </blockquote>
@@ -1210,9 +1190,8 @@ Tower node 1 web UIs as:</p>
     <span style="color:#f92672">[</span>tower capacity<span style="color:#f92672">=</span>51<span style="color:#f92672">]</span>
         ansible-1 capacity<span style="color:#f92672">=</span><span style="color:#ae81ff">17</span> version<span style="color:#f92672">=</span>3.7.1 heartbeat<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2020-08-27 09:06:21&#34;</span>
         ansible-2 capacity<span style="color:#f92672">=</span><span style="color:#ae81ff">17</span> version<span style="color:#f92672">=</span>3.7.1 heartbeat<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2020-08-27 09:05:58&#34;</span>
-        ansible-3 capacity<span style="color:#f92672">=</span><span style="color:#ae81ff">17</span> version<span style="color:#f92672">=</span>3.7.1 heartbeat<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2020-08-27 09:06:00&#34;</span></code></pre></div>
-<p>So what we’ve got is a three-node Tower cluster, no surprises here. In addition the command tells us the capacity (maximum number of forks/concurrent jobs) per node and for the instance groups. Here the capacity value of 17 is allocated to any of our three nodes.</p>
-
+        ansible-3 capacity<span style="color:#f92672">=</span><span style="color:#ae81ff">17</span> version<span style="color:#f92672">=</span>3.7.1 heartbeat<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2020-08-27 09:06:00&#34;</span>
+</code></pre></div><p>So what we’ve got is a three-node Tower cluster, no surprises here. In addition the command tells us the capacity (maximum number of forks/concurrent jobs) per node and for the instance groups. Here the capacity value of 17 is allocated to any of our three nodes.</p>
 
 <div class="notices tip" ><p>The <strong>awx-manage</strong> (formerly tower-manage) utility can be used to manage a lot of the more internal aspects of Tower. You can e.g. use it to clean up old data, for token and session management and for cluster management.</p>
 </div>
@@ -1903,19 +1882,19 @@ Tower node 1 web UIs as:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601372365"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601372365"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601371843" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601371843"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601372365" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601372365"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

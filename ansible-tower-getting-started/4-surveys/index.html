@@ -12,20 +12,20 @@
     <title>Surveys :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601371843" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601372365" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1601371843" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1601372365" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601372365"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601371843"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601371843"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601372365"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601372365"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601371843"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601372365"></script>
 
     
   </div>
@@ -1110,19 +1110,17 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#the-apache-configuration-role">The Apache-configuration Role</a></li>
-<li><a href="#create-a-template-with-a-survey">Create a Template with a Survey</a>
-<ul>
-<li><a href="#create-template">Create Template</a></li>
-<li><a href="#add-the-survey">Add the Survey</a></li>
-</ul></li>
-<li><a href="#launch-the-template">Launch the Template</a></li>
-<li><a href="#what-about-some-practice">What About Some Practice?</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#the-apache-configuration-role">The Apache-configuration Role</a></li>
+    <li><a href="#create-a-template-with-a-survey">Create a Template with a Survey</a>
+      <ul>
+        <li><a href="#create-template">Create Template</a></li>
+        <li><a href="#add-the-survey">Add the Survey</a></li>
+      </ul>
+    </li>
+    <li><a href="#launch-the-template">Launch the Template</a></li>
+    <li><a href="#what-about-some-practice">What About Some Practice?</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1147,144 +1145,156 @@
 
 
 
-	
-
-<p>You might have noticed the <strong>ADD SURVEY</strong> button in the <strong>Template</strong> configuration view. A survey is a way to create a simple form to ask for parameters that get used as variables when a <strong>Template</strong> is launched as a <strong>Job</strong>.</p>
-
+	<p>You might have noticed the <strong>ADD SURVEY</strong> button in the <strong>Template</strong> configuration view. A survey is a way to create a simple form to ask for parameters that get used as variables when a <strong>Template</strong> is launched as a <strong>Job</strong>.</p>
 <p>You have installed Apache on all hosts in the job you just run. Now we’re going to extend on this:</p>
-
 <ul>
-<li><p>Use a proper role which has a Jinja2 template to deploy an <code>index.html</code> file.</p></li>
-
-<li><p>Create a job <strong>Template</strong> with a survey to collect the values for the <code>index.html</code> template.</p></li>
-
-<li><p>Launch the job <strong>Template</strong></p></li>
+<li>
+<p>Use a proper role which has a Jinja2 template to deploy an <code>index.html</code> file.</p>
+</li>
+<li>
+<p>Create a job <strong>Template</strong> with a survey to collect the values for the <code>index.html</code> template.</p>
+</li>
+<li>
+<p>Launch the job <strong>Template</strong></p>
+</li>
 </ul>
-
 <p>Additionally, the role will also make sure that the Apache configuration is properly set up - in case it got mixed up during the other exercises.</p>
-
 
 <div class="notices tip" ><p>The survey feature only provides a simple query for data - it does not support four-eye principles, queries based on dynamic data or nested menus.</p>
 </div>
 
-
 <h2 id="the-apache-configuration-role">The Apache-configuration Role</h2>
-
 <p>The Playbook and the role with the Jinja template already exist in the Github repository <a href="https://github.com/ansible/workshop-examples">https://github.com/ansible/workshop-examples</a> (always using the <a href="https://github.com/ansible/workshop-examples/tree/summit_2020">correct tag/branch</a>) in the directory <code>rhel/apache</code>.</p>
-
 <p>Head over to the Github UI and have a look at the content: the playbook <code>apache_role_install.yml</code> merely references the role. The role can be found in the <code>roles/role_apache</code> subdirectory.</p>
-
 <ul>
-<li><p>Inside the role, note the two variables in the <code>templates/index.html.j2</code> template file marked by <code>{{…​}}</code>.</p></li>
-
-<li><p>Also, check out the tasks in <code>tasks/main.yml</code> that deploy the file from the template.</p></li>
+<li>
+<p>Inside the role, note the two variables in the <code>templates/index.html.j2</code> template file marked by <code>{{…​}}</code>.</p>
+</li>
+<li>
+<p>Also, check out the tasks in <code>tasks/main.yml</code> that deploy the file from the template.</p>
+</li>
 </ul>
-
 <p>What is this Playbook doing? It creates a file (<strong>dest</strong>) on the managed hosts from the template (<strong>src</strong>).</p>
-
 <p>The role also deploys a static configuration for Apache. This is to make sure that all changes done in the previous chapters are overwritten and your examples work properly.</p>
-
 <p>Because the Playbook and role is located in the same Github repo as the <code>apache_install.yml</code> Playbook you don&rsquo;t have to configure a new project for this exercise.</p>
-
 <h2 id="create-a-template-with-a-survey">Create a Template with a Survey</h2>
-
 <p>Now you create a new Template that includes a survey.</p>
-
 <h3 id="create-template">Create Template</h3>
-
 <ul>
-<li><p>Go to <strong>Templates</strong>, click the <img src="../../images/green_plus.png?classes=inline" alt="plus" /> button and choose <strong>Job Template</strong></p></li>
-
-<li><p><strong>NAME:</strong> Create index.html</p></li>
-
-<li><p>Configure the template to:</p>
-
+<li>
+<p>Go to <strong>Templates</strong>, click the <img src="../../images/green_plus.png?classes=inline" alt="plus"> button and choose <strong>Job Template</strong></p>
+</li>
+<li>
+<p><strong>NAME:</strong> Create index.html</p>
+</li>
+<li>
+<p>Configure the template to:</p>
 <ul>
-<li><p>Use the <code>Webserver</code> Inventory</p></li>
-
-<li><p>Use the <code>Ansible Workshop Examples</code> <strong>Project</strong></p></li>
-
-<li><p>Use the <code>apache_role_install.yml</code> <strong>Playbook</strong></p></li>
-
-<li><p>Use the <code>Workshop Credentials</code></p></li>
-
-<li><p>To run with privilege escalation</p></li>
-</ul></li>
+<li>
+<p>Use the <code>Webserver</code> Inventory</p>
+</li>
+<li>
+<p>Use the <code>Ansible Workshop Examples</code> <strong>Project</strong></p>
+</li>
+<li>
+<p>Use the <code>apache_role_install.yml</code> <strong>Playbook</strong></p>
+</li>
+<li>
+<p>Use the <code>Workshop Credentials</code></p>
+</li>
+<li>
+<p>To run with privilege escalation</p>
+</li>
 </ul>
-
+</li>
+</ul>
 <p>Try for yourself, the solution is below.</p>
-
 <details><summary>**>>Click here for Solution<<**</summary>
 <p>
-
-- **NAME:** Create index.html
-
-- **JOB TYPE:** Run
-
-- **INVENTORY:** Webserver
-
-- **PROJECT:** Ansible Workshop Examples
-
-- **PLAYBOOK:** `rhel/apache/apache_role_install.yml`
-
-- **CREDENTIAL:** Workshop Credentials
-
-- **OPTIONS:** Enable Privilege Escalation
-
-- Click **SAVE**
-
+<ul>
+<li>
+<p><strong>NAME:</strong> Create index.html</p>
+</li>
+<li>
+<p><strong>JOB TYPE:</strong> Run</p>
+</li>
+<li>
+<p><strong>INVENTORY:</strong> Webserver</p>
+</li>
+<li>
+<p><strong>PROJECT:</strong> Ansible Workshop Examples</p>
+</li>
+<li>
+<p><strong>PLAYBOOK:</strong> <code>rhel/apache/apache_role_install.yml</code></p>
+</li>
+<li>
+<p><strong>CREDENTIAL:</strong> Workshop Credentials</p>
+</li>
+<li>
+<p><strong>OPTIONS:</strong> Enable Privilege Escalation</p>
+</li>
+<li>
+<p>Click <strong>SAVE</strong></p>
+</li>
+</ul>
 </p>
 </details>
-
 
 <div class="notices warning" ><p>Do not run the template yet!</p>
 </div>
 
-
 <h3 id="add-the-survey">Add the Survey</h3>
-
 <ul>
-<li><p>In the Template, click the <strong>ADD SURVEY</strong> button (you have to save the job template to make the button active!)</p></li>
-
-<li><p>Under <strong>ADD SURVEY PROMPT</strong> fill in:</p>
-
+<li>
+<p>In the Template, click the <strong>ADD SURVEY</strong> button (you have to save the job template to make the button active!)</p>
+</li>
+<li>
+<p>Under <strong>ADD SURVEY PROMPT</strong> fill in:</p>
 <ul>
-<li><p><strong>PROMPT:</strong> First Line</p></li>
-
-<li><p><strong>ANSWER VARIABLE NAME:</strong> first_line</p></li>
-
-<li><p><strong>ANSWER TYPE:</strong> Text</p></li>
-</ul></li>
-
-<li><p>Click <strong>+ADD</strong></p></li>
-
-<li><p>In the same way add a second <strong>Survey Prompt</strong></p>
-
-<ul>
-<li><p><strong>PROMPT:</strong> Second Line</p></li>
-
-<li><p><strong>ANSWER VARIABLE NAME:</strong> second_line</p></li>
-
-<li><p><strong>ANSWER TYPE:</strong> Text</p></li>
-</ul></li>
-
-<li><p>Click <strong>+ADD</strong></p></li>
-
-<li><p>Click <strong>SAVE</strong> for the Survey</p></li>
-
-<li><p>Click <strong>SAVE</strong> for the Template</p></li>
+<li>
+<p><strong>PROMPT:</strong> First Line</p>
+</li>
+<li>
+<p><strong>ANSWER VARIABLE NAME:</strong> first_line</p>
+</li>
+<li>
+<p><strong>ANSWER TYPE:</strong> Text</p>
+</li>
 </ul>
-
+</li>
+<li>
+<p>Click <strong>+ADD</strong></p>
+</li>
+<li>
+<p>In the same way add a second <strong>Survey Prompt</strong></p>
+<ul>
+<li>
+<p><strong>PROMPT:</strong> Second Line</p>
+</li>
+<li>
+<p><strong>ANSWER VARIABLE NAME:</strong> second_line</p>
+</li>
+<li>
+<p><strong>ANSWER TYPE:</strong> Text</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>+ADD</strong></p>
+</li>
+<li>
+<p>Click <strong>SAVE</strong> for the Survey</p>
+</li>
+<li>
+<p>Click <strong>SAVE</strong> for the Template</p>
+</li>
+</ul>
 <h2 id="launch-the-template">Launch the Template</h2>
-
 <p>Now launch the <strong>Create index.html</strong> job template.</p>
-
 <p>Before the actual launch the survey will ask for <strong>First Line</strong> and <strong>Second Line</strong>. Fill in some text and click <strong>Next</strong>. The next window shows the values, if all is good run the Job by clicking <strong>Launch</strong>.</p>
-
 
 <div class="notices tip" ><p>Note how the two survey lines are shown to the left of the Job view as <strong>Extra Variables</strong>.</p>
 </div>
-
 
 <p>After the job has completed, check the Apache homepage. In your code-server terminal, execute <code>curl</code> against <code>node1</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl http://node1
@@ -1292,24 +1302,24 @@
 &lt;h1&gt;Apache is running fine&lt;/h1&gt;
 &lt;h1&gt;This is survey field <span style="color:#e6db74">&#34;First Line&#34;</span>: line one&lt;/h1&gt;
 &lt;h1&gt;This is survey field <span style="color:#e6db74">&#34;Second Line&#34;</span>: line two&lt;/h1&gt;
-&lt;/body&gt;</code></pre></div>
-<p>Note how the two variables where used by the playbook to create the content of the <code>index.html</code> file.</p>
-
+&lt;/body&gt;
+</code></pre></div><p>Note how the two variables where used by the playbook to create the content of the <code>index.html</code> file.</p>
 <h2 id="what-about-some-practice">What About Some Practice?</h2>
-
 <p>Here is a list of tasks:</p>
-
 
 <div class="notices warning" ><p><strong>Please make sure to finish these steps as the next chapter depends on it!</strong></p>
 </div>
 
-
 <ul>
-<li><p>Take the inventory <code>Webserver</code> and add node <code>node2</code> to it.</p></li>
-
-<li><p>Run the <strong>Create index.html</strong> Template again.</p></li>
-
-<li><p>Verify the results on node2 by using <code>curl</code>.</p></li>
+<li>
+<p>Take the inventory <code>Webserver</code> and add node <code>node2</code> to it.</p>
+</li>
+<li>
+<p>Run the <strong>Create index.html</strong> Template again.</p>
+</li>
+<li>
+<p>Verify the results on node2 by using <code>curl</code>.</p>
+</li>
 </ul>
 
 
@@ -1997,19 +2007,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601372365"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601372365"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601371843" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601371843"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601372365" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601372365"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

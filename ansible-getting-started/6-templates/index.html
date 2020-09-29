@@ -12,20 +12,20 @@
     <title>Templates :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601371843" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601372365" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1601371843" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1601372365" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601372365"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601371843"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601371843"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601372365"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601372365"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601371843"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601372365"></script>
 
     
   </div>
@@ -1110,13 +1110,10 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#using-templates-in-playbooks">Using Templates in Playbooks</a></li>
-<li><a href="#challenge-lab">Challenge Lab</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#using-templates-in-playbooks">Using Templates in Playbooks</a></li>
+    <li><a href="#challenge-lab">Challenge Lab</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1141,26 +1138,17 @@
 
 
 
-	
-
-<p>Ansible uses Jinja2 templating to modify files before they are distributed to managed hosts. <a href="http://jinja.pocoo.org">Jinja2</a> is one of the most used templating engines for Python.</p>
-
+	<p>Ansible uses Jinja2 templating to modify files before they are distributed to managed hosts. <a href="http://jinja.pocoo.org">Jinja2</a> is one of the most used templating engines for Python.</p>
 <h2 id="using-templates-in-playbooks">Using Templates in Playbooks</h2>
-
 <p>When a template for a file has been created, it can be deployed to the managed hosts using the <code>template</code> module, which supports the transfer of a local file from the control node to the managed hosts.</p>
-
 <p>As an example of using templates you will change the <code>motd</code> file to contain host-specific data.</p>
-
 <p>First in the <code>~/ansible-files/</code> directory create the template file <code>motd-facts.j2</code>:</p>
-
 <!-- {% raw %} -->
 <pre><code class="language-html+jinja" data-lang="html+jinja">Welcome to {{ ansible_hostname }}.
 {{ ansible_distribution }} {{ ansible_distribution_version}}
-deployed on {{ ansible_architecture }} architecture.</code></pre>
-<!-- {% endraw %} -->
-
+deployed on {{ ansible_architecture }} architecture.
+</code></pre><!-- {% endraw %} -->
 <p>The template file contains the basic text that will later be copied over. It also contains variables which will be replaced on the target machines individually.</p>
-
 <p>Next we need a playbook to use this template. In the <code>~/ansible-files/</code> directory create the Playbook <code>motd-facts.yml</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
 - <span style="color:#66d9ef">name</span>: Fill motd file with host data
@@ -1172,64 +1160,61 @@ deployed on {{ ansible_architecture }} architecture.</code></pre>
         <span style="color:#66d9ef">dest</span>: /etc/motd
         <span style="color:#66d9ef">owner</span>: root
         <span style="color:#66d9ef">group</span>: root
-        <span style="color:#66d9ef">mode</span>: <span style="color:#ae81ff">0644</span></code></pre></div>
-<p>You have done this a couple of times by now:</p>
-
+        <span style="color:#66d9ef">mode</span>: <span style="color:#ae81ff">0644</span>
+</code></pre></div><p>You have done this a couple of times by now:</p>
 <ul>
-<li><p>Understand what the Playbook does.</p></li>
-
-<li><p>Execute the Playbook <code>motd-facts.yml</code>.</p></li>
-
-<li><p>Login to <code>node1</code> via SSH and check the message of the day content.</p></li>
-
-<li><p>Log out of <code>node1</code>.</p></li>
+<li>
+<p>Understand what the Playbook does.</p>
+</li>
+<li>
+<p>Execute the Playbook <code>motd-facts.yml</code>.</p>
+</li>
+<li>
+<p>Login to <code>node1</code> via SSH and check the message of the day content.</p>
+</li>
+<li>
+<p>Log out of <code>node1</code>.</p>
+</li>
 </ul>
-
 <p>You should see how Ansible replaces the variables with the facts it discovered from the system.</p>
-
 <h2 id="challenge-lab">Challenge Lab</h2>
-
 <p>Add a line to the template to list the current kernel of the managed node.</p>
-
 <ul>
 <li>Find a fact that contains the kernel version using the commands you learned in the &ldquo;Ansible Facts&rdquo; chapter.</li>
 </ul>
 
-
 <div class="notices tip" ><p>Do a <code>grep -i</code> for kernel</p>
 </div>
 
-
 <ul>
-<li><p>Change the template to use the fact you found.</p></li>
-
-<li><p>Run the Playbook again.</p></li>
-
-<li><p>Check motd by logging in to node1</p></li>
+<li>
+<p>Change the template to use the fact you found.</p>
+</li>
+<li>
+<p>Run the Playbook again.</p>
+</li>
+<li>
+<p>Check motd by logging in to node1</p>
+</li>
 </ul>
-
 <details><summary> **>>Click here for Solution<<** </summary>
 <p>
-
-- Find the fact:
-
-```bash
-[student<N>@ansible-1 ansible-files]$ ansible node1 -m setup|grep -i kernel
-       "ansible_kernel": "3.10.0-693.el7.x86_64",
-```
-
-- Modify the template `motd-facts.j2`:
-
-```html+jinja
-Welcome to {{ ansible_hostname }}.
+<ul>
+<li>Find the fact:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible-1 ansible-files<span style="color:#f92672">]</span>$ ansible node1 -m setup|grep -i kernel
+       <span style="color:#e6db74">&#34;ansible_kernel&#34;</span>: <span style="color:#e6db74">&#34;3.10.0-693.el7.x86_64&#34;</span>,
+</code></pre></div><ul>
+<li>Modify the template <code>motd-facts.j2</code>:</li>
+</ul>
+<pre><code class="language-html+jinja" data-lang="html+jinja">Welcome to {{ ansible_hostname }}.
 {{ ansible_distribution }} {{ ansible_distribution_version}}
 deployed on {{ ansible_architecture }} architecture
 running kernel {{ ansible_kernel }}.
-```
-
-- Run the playbook.
-- Verify the new message via SSH login to `node1`.
-
+</code></pre><ul>
+<li>Run the playbook.</li>
+<li>Verify the new message via SSH login to <code>node1</code>.</li>
+</ul>
 </p>
 </details>
 
@@ -1915,19 +1900,19 @@ running kernel {{ ansible_kernel }}.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601372365"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601372365"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601371843" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601371843"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601372365" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601372365"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

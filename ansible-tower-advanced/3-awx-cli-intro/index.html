@@ -12,20 +12,20 @@
     <title>There is more to Tower than the Web UI :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1601371843" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601371843" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1601372365" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601372365" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1601371843" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1601372365" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601372365"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601371843"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601371843"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601372365"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601372365"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601371843"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601372365"></script>
 
     
   </div>
@@ -1110,12 +1110,9 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#challenge-lab-awx">Challenge Lab: awx</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#challenge-lab-awx">Challenge Lab: awx</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1140,30 +1137,23 @@
 
 
 
-	
-
-<p>This is an advanced Tower lab so we don’t really want you to use the web UI for everything. Tower’s web UI is well done and helps with a lot of tasks, but same as in system administration it’s often handy to be able to use the command line or scripts for certain tasks.</p>
-
+	<p>This is an advanced Tower lab so we don’t really want you to use the web UI for everything. Tower’s web UI is well done and helps with a lot of tasks, but same as in system administration it’s often handy to be able to use the command line or scripts for certain tasks.</p>
 <p>We’ve incorporated different ways to work with Tower in this lab guide and hope you’ll find it helpful. The first step we do is install the <strong>AWX CLI</strong> utility.</p>
-
 
 <div class="notices tip" ><p><strong>AWX CLI</strong> is the official command-line client for AWX and Red Hat Ansible Tower. It uses naming and structure consistent with the AWX HTTP API, provides consistent output formats with optional machine-parsable formats.</p>
 </div>
-
 
 <p>We’ll install it on your Tower node1 using the official repository RPM packages. Use the VSCode terminal window you opened before to install <strong>AWX CLI</strong> as <code>root</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ sudo -i
     <span style="color:#f92672">[</span>root@ansible-1 ~<span style="color:#f92672">]</span><span style="color:#75715e"># yum-config-manager --add-repo https://releases.ansible.com/ansible-tower/cli/ansible-tower-cli-el8.repo</span>
     <span style="color:#f92672">[</span>root@ansible-1 ~<span style="color:#f92672">]</span><span style="color:#75715e"># yum install ansible-tower-cli -y</span>
     <span style="color:#f92672">[</span>root@ansible-1 ~<span style="color:#f92672">]</span><span style="color:#75715e"># exit</span>
-    <span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$</code></pre></div>
-
+    <span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$
+</code></pre></div>
 <div class="notices warning" ><p>Please make sure to leave the root shell after installation of the package!</p>
 </div>
 
-
 <p>After installing the tool, you have to configure authentication. The preferred way is to create a token and export it into an environment variable. After this you can seamlessly use <strong>awx</strong> commands in this shell. First set a number of environment variables to define your connection:</p>
-
 
 <div class="notices tip" ><p>Replace student number and labid!</p>
 </div>
@@ -1171,71 +1161,67 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ export TOWER_HOST<span style="color:#f92672">=</span>https://student&lt;N&gt;.&lt;LABID&gt;.open.redhat.com
     <span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ export TOWER_USERNAME<span style="color:#f92672">=</span>admin
     <span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ export TOWER_PASSWORD<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;VERY_SECRET_PASSWORD&#39;</span>
-    <span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ export TOWER_VERIFY_SSL<span style="color:#f92672">=</span>false</code></pre></div>
-
+    <span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ export TOWER_VERIFY_SSL<span style="color:#f92672">=</span>false
+</code></pre></div>
 <div class="notices tip" ><p>Feel free to write this into a new file using the code-server editor and then to use <strong>source &lt;filename&gt;</strong> to set the environment variables. This way if you loose connection to code-server you can easily re-set the vars.</p>
 </div>
 
-
 <p>Then use <strong>awx</strong> to login and print out the access token and to save it to a file at the same time:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ awx login -f human | tee token</code></pre></div>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ awx login -f human | tee token
+</code></pre></div>
 <div class="notices tip" ><p>We are saving the <strong>export TOWER_OAUTH_TOKEN=&lt;YOUR_TOKEN&gt;</strong> command line output to the file <strong>token</strong> using <strong>tee</strong> here to be able to set the environment variable more easily.</p>
 </div>
 
-
 <p>Finally set the environment variable with the token using the line the command printed out:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ source token</code></pre></div>
-<p>Now that the access token is available in your shell, test <strong>awx</strong> is working. First run it without arguments to get a
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ source token
+</code></pre></div><p>Now that the access token is available in your shell, test <strong>awx</strong> is working. First run it without arguments to get a
 list of resources you can manage with it:</p>
-<pre><code>[student@ansible-1 ~]$ awx --help</code></pre>
+<pre><code>[student@ansible-1 ~]$ awx --help
+</code></pre>
 <p>And then test something, e.g. (leave out <strong>-f human</strong> if you&rsquo;re a JSON fan&hellip;) ;)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ awx -f human user list</code></pre></div>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ awx -f human user list
+</code></pre></div>
 <div class="notices tip" ><p>When trying to find a <strong>awx</strong> command line for something you want to do, just move one by one.</p>
 </div>
 
-
 <p>Example: Need to create an inventory&hellip;</p>
-<pre><code>[student@ansible-1 ~]$ awx --help</code></pre>
+<pre><code>[student@ansible-1 ~]$ awx --help
+</code></pre>
 <p>Okay, there is an <strong>inventory</strong> resource. Let’s see…</p>
-<pre><code>[student@ansible-1 ~]$ awx inventory</code></pre>
+<pre><code>[student@ansible-1 ~]$ awx inventory
+</code></pre>
 <p>Well, the <strong>create</strong> action sounds like what I had in mind. But what arguments do I
 need? Just run:</p>
-<pre><code>[student@ansible-1 ~]$ awx inventory create</code></pre>
+<pre><code>[student@ansible-1 ~]$ awx inventory create
+</code></pre>
 <p>And you&rsquo;ll get the required and optional arguments for the <strong>create</strong> action!</p>
-
 <h2 id="challenge-lab-awx">Challenge Lab: awx</h2>
-
 <p>To practice your <strong>awx</strong> skills, here is a challenge:</p>
-
 <ul>
-<li><p>Try to change the <strong>idle time out</strong> of the Tower web UI, it’s 1800 seconds by default. Set it to, say, 7200. Using <strong>awx</strong>, of course.</p></li>
-
-<li><p>Start by looking for a resource type <strong>awx</strong> provides using <strong>&ndash;help</strong> that sounds like it has something to do with changing settings.</p></li>
-
-<li><p>Look at the available <strong>awx</strong> commands for this resource type.</p></li>
-
-<li><p>Use the commands to have a look at the parameters settings and change it.</p></li>
+<li>
+<p>Try to change the <strong>idle time out</strong> of the Tower web UI, it’s 1800 seconds by default. Set it to, say, 7200. Using <strong>awx</strong>, of course.</p>
+</li>
+<li>
+<p>Start by looking for a resource type <strong>awx</strong> provides using <strong>&ndash;help</strong> that sounds like it has something to do with changing settings.</p>
+</li>
+<li>
+<p>Look at the available <strong>awx</strong> commands for this resource type.</p>
+</li>
+<li>
+<p>Use the commands to have a look at the parameters settings and change it.</p>
+</li>
 </ul>
-
 
 <div class="notices tip" ><p>The configuration parameter is called <strong>SESSION_COOKIE_AGE</strong></p>
 </div>
 
-
 <details><summary>**Click here for Solution**</summary>
 <p>
-
-```bash
-    [student@ansible-1 ~]$ awx setting list | grep SESSION
-    [student@ansible-1 ~]$ awx setting modify SESSION_COOKIE_AGE 7200
-    [student@ansible-1 ~]$ awx setting list | grep SESSION
-```
-
-</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    <span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ awx setting list | grep SESSION
+    <span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ awx setting modify SESSION_COOKIE_AGE <span style="color:#ae81ff">7200</span>
+    <span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ awx setting list | grep SESSION
+</code></pre></div></p>
 </details>
-
 <p>If you want to, go to the web UI of any node (not just the one you connected <strong>awx</strong> to) and check the setting under <strong>ADMINISTRATION→Settings→System</strong>.</p>
 
 
@@ -1923,19 +1909,19 @@ need? Just run:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601372365"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1601371843"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601371843"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1601372365"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601372365"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601371843" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601371843"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601372365" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601372365"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
