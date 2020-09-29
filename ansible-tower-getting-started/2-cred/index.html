@@ -12,20 +12,20 @@
     <title>Inventories, credentials and ad hoc commands :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601308900" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601369545" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1601308900" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1601369545" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601308900"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601369545"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601308900"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601308900"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601369545"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601369545"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601308900"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601369545"></script>
 
     
   </div>
@@ -1202,8 +1202,9 @@
 <p>To test access to the nodes via SSH do the following:</p>
 
 <ul>
-<li>In your browser bring up the terminal window in code-server (remember this runs on the Tower node)</li>
-<li>From here as user <code>ec2-user</code> SSH into <code>node1</code> or one of the other nodes and execute <code>sudo -i</code>.</li>
+<li><p>In your browser bring up the terminal window in code-server (remember this runs on the Tower node)</p></li>
+
+<li><p>From here as user <code>ec2-user</code> SSH into <code>node1</code> or one of the other nodes and execute <code>sudo -i</code>.</p></li>
 
 <li><p>For the SSH connection use the node password from the inventory file, <code>sudo -i</code> works without password.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student1@ansible-1 ~<span style="color:#f92672">]</span>$ ssh ec2-user@node1
@@ -1253,8 +1254,9 @@ MIIEpAIBAAKCAQEA2nnL3m5sKvoSy37OZ8DQCTjTIPVmCJt/M02KgDt53+baYAFu1TIkC3Yk+HK1
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 -----END RSA PRIVATE KEY-----</code></pre></div>
 <ul>
-<li>Copy the <strong>complete private key</strong> (including &ldquo;BEGIN&rdquo; and &ldquo;END&rdquo; lines) and paste it into the <strong>SSH PRIVATE KEY</strong> field in the web UI.</li>
-<li>Click <strong>SAVE</strong></li>
+<li><p>Copy the <strong>complete private key</strong> (including &ldquo;BEGIN&rdquo; and &ldquo;END&rdquo; lines) and paste it into the <strong>SSH PRIVATE KEY</strong> field in the web UI.</p></li>
+
+<li><p>Click <strong>SAVE</strong></p></li>
 </ul>
 
 <p>Go back to the <strong>RESOURCES -&gt; Credentials -&gt; Workshop Credentials</strong> and note
@@ -2023,19 +2025,19 @@ that the SSH key is not visible.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601308900"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601369545"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601308900"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601369545"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601308900" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601308900"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601369545" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601369545"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,20 +12,20 @@
     <title>Writing Your First Playbook :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1601308899" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601308899" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1601308899" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601308899" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601308899" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601308899" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601308899" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1601308899" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601308899" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1601369544" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601369544" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1601369544" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601369544" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601369544" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601369544" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601369544" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1601369544" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601369544" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1601308899" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1601369544" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601308899"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601369544"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601308899"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601308899"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601369544"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601369544"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601308899"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601369544"></script>
 
     
   </div>
@@ -1172,7 +1172,7 @@
 <ul>
 <li><p>to start with three dashes (<code>---</code>)</p></li>
 
-<li><p>proper identation using spaces and <strong>not</strong> tabs!</p></li>
+<li><p>proper indentation using spaces and <strong>not</strong> tabs!</p></li>
 </ul>
 
 <p>There are some important concepts:</p>
@@ -1268,8 +1268,9 @@
 <li><p>Parameters for the module are added:</p>
 
 <ul>
-<li><code>name:</code> to identify the package name</li>
-<li><code>state:</code> to define the wanted state of the package</li>
+<li><p><code>name:</code> to identify the package name</p></li>
+
+<li><p><code>state:</code> to define the wanted state of the package</p></li>
 </ul></li>
 </ul>
 
@@ -1357,7 +1358,7 @@ Version     : 2.4.6
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">body</span>&gt;
 &lt;<span style="color:#f92672">h1</span>&gt;Apache is running fine&lt;/<span style="color:#f92672">h1</span>&gt;
 &lt;/<span style="color:#f92672">body</span>&gt;</code></pre></div>
-<p>You already used Ansible’s <code>copy</code> module to write text supplied on the commandline into a file. Now you’ll use the module in your Playbook to actually copy a file:</p>
+<p>You already used Ansible’s <code>copy</code> module to write text supplied on the command line into a file. Now you’ll use the module in your Playbook to actually copy a file:</p>
 
 <p>On the control node as your student user edit the file <code>~/ansible-files/apache.yml</code> and add a new task utilizing the <code>copy</code> module. It should now look like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
@@ -2111,19 +2112,19 @@ Version     : 2.4.6
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601308899"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601308899"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601308899"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601308899"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601308899"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601308899"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601369545"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601308899"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1601308899"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601308899"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601369545"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601308899" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601308899"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601369545" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601369545"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

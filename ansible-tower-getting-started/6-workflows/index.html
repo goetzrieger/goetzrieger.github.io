@@ -12,20 +12,20 @@
     <title>Workflows :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601308900" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601369545" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1601308900" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1601369545" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601308900"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601369545"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601308900"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601308900"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601369545"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601369545"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601308900"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601369545"></script>
 
     
   </div>
@@ -1162,7 +1162,7 @@
 
 <h2 id="lab-scenario">Lab Scenario</h2>
 
-<p>You have two departements in your organization:</p>
+<p>You have two departments in your organization:</p>
 
 <ul>
 <li><p>The web operations team that is developing Playbooks for deploying web infrastructures in their own Git repository.</p></li>
@@ -1175,15 +1175,19 @@
 <p>The web operations team has to:</p>
 
 <ul>
-<li>Install and configure NodeJS to run as a service.</li>
-<li>An Apache instance needs to be installed and configured as proxy to pass requests for the NodeJS content to the NodeJS backend. And a lot of other steps might be needed, too. Like SELinux, firewall&hellip; you know the drill.</li>
+<li><p>Install and configure NodeJS to run as a service.</p></li>
+
+<li><p>An Apache instance needs to be installed and configured as proxy to pass requests for the NodeJS content to the NodeJS backend. And a lot of other steps might be needed, too. Like SELinux, firewall&hellip; you know the drill.</p></li>
 </ul>
 
 <p>The web developer team has to:</p>
 
 <ul>
-<li>Deploy the most recent version of the JavaScript web application.</li>
+<li><p>Deploy the most recent version of the JavaScript web application.</p>
+
+<ul>
 <li>Make sure stuff like making sure the directory structure is fine and service restarts happen.</li>
+</ul></li>
 </ul>
 
 <p>To make things somewhat easier for you, everything needed already exists in a Github repository: Playbooks, JavaScript files etc. You just need to glue it together.</p>
@@ -1232,21 +1236,37 @@
 <p>
 
 - Create the project for web operations. In the **Projects** view click the green us button and fill in:
-    - **NAME:** Webops Git Repo
-    - **ORGANIZATION:** Default
-    - **SCM TYPE:** Git
-    - **SCM URL:** https\://github.com/ansible/workshop-examples.git
-    - **SCM BRANCH/TAG/COMMIT:** `webops_summit_2020`
-    - **SCM UPDATE OPTIONS:** Tick the first three boxes.
+
+  - **NAME:** Webops Git Repo
+
+  - **ORGANIZATION:** Default
+
+  - **SCM TYPE:** Git
+
+  - **SCM URL:** https\://github.com/ansible/workshop-examples.git
+
+  - **SCM BRANCH/TAG/COMMIT:** `webops_summit_2020`
+
+  - **SCM UPDATE OPTIONS:** Tick the first three boxes.
+
 - Click **SAVE**
+
 - Create the project for the application developers. In the **Projects** view click the green plus button and fill in:
-    - **NAME:** Webdev Git Repo
-    - **ORGANIZATION:** Default
-    - **SCM TYPE:** Git
-    - **SCM URL:** https\://github.com/ansible/workshop-examples.git
-    - **SCM BRANCH/TAG/COMMIT:** `webdev_summit_2020`
-    - **SCM UPDATE OPTIONS:** Tick the first three boxes.
+
+  - **NAME:** Webdev Git Repo
+
+  - **ORGANIZATION:** Default
+
+  - **SCM TYPE:** Git
+
+  - **SCM URL:** https\://github.com/ansible/workshop-examples.git
+
+  - **SCM BRANCH/TAG/COMMIT:** `webdev_summit_2020`
+
+  - **SCM UPDATE OPTIONS:** Tick the first three boxes.
+
 - Click **SAVE**
+
 </p>
 </details>
 
@@ -1378,7 +1398,7 @@
 <p>Note how the workflow run is shown in the job view. In contrast to a normal job template job execution this time there is no Playbook output on the right, but a visual representation of the different workflow steps. If you want to look at the actual Jobs behind that, click <strong>DETAILS</strong> in each step. If you want to get back from a details view to the corresponding workflow, just hit your browsers back button.</p>
 
 <p>After the job has finished, check if everything worked fine. In your code-server terminal, run:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl http://node3/nodejs</code></pre></div>
+<pre><code>curl http://node3/nodejs</code></pre>
 <p>You should be greeted with a friendly <code>Hello World</code></p>
 
 
@@ -2066,19 +2086,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601308900"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601369545"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601308900"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601369545"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601308900" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601308900"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601369545" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601369545"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

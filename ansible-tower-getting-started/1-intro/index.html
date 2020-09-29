@@ -12,20 +12,20 @@
     <title>Introduction to Tower :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601308900" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601369545" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1601308900" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1601369545" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601308900"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601369545"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601308900"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601308900"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601369545"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601369545"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601308900"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601369545"></script>
 
     
   </div>
@@ -1114,13 +1114,18 @@
 <li>
 <ul>
 <li><a href="#why-ansible-tower">Why Ansible Tower?</a></li>
-</ul></li>
-<li><a href="#your-ansible-tower-lab-environment">Your Ansible Tower Lab Environment</a>
-<ul>
+<li><a href="#your-ansible-tower-lab-environment">Your Ansible Tower Lab Environment</a></li>
 <li><a href="#working-the-lab">Working the Lab</a></li>
 <li><a href="#accessing-your-lab-environment">Accessing your Lab Environment</a></li>
 <li><a href="#dashboard">Dashboard</a></li>
-<li><a href="#concepts">Concepts</a></li>
+<li><a href="#concepts">Concepts</a>
+<ul>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#inventories">Inventories</a></li>
+<li><a href="#credentials">Credentials</a></li>
+<li><a href="#templates">Templates</a></li>
+<li><a href="#jobs">Jobs</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -1167,7 +1172,7 @@
 <li><p>And much more&hellip;</p></li>
 </ul>
 
-<h1 id="your-ansible-tower-lab-environment">Your Ansible Tower Lab Environment</h1>
+<h2 id="your-ansible-tower-lab-environment">Your Ansible Tower Lab Environment</h2>
 
 <p>In this lab you work in a pre-configured lab environment. You will have
 access to the following hosts:</p>
@@ -1254,8 +1259,9 @@ access to the following hosts:</p>
 <p>You&rsquo;ll get the access information for your lab (URL&rsquo;s, password) from a landing page. Getting access to this page depends on how you are consuming the lab:</p>
 
 <ul>
-<li>If you deployed from RHPDS, you&rsquo;ll receive an email with the landing page URL</li>
-<li>If you attend this lab at an event, your lab facilitator will lead you to the landing page</li>
+<li><p>If you deployed from RHPDS, you&rsquo;ll receive an email with the landing page URL</p></li>
+
+<li><p>If you attend this lab at an event, your lab facilitator will lead you to the landing page</p></li>
 </ul>
 
 <p>Either way you&rsquo;ll get an URL similar to this: <code>http://&lt;LABID&gt;.open.redhat.com</code></p>
@@ -1263,8 +1269,9 @@ access to the following hosts:</p>
 <p>Your main points of contact with the lab are the Ansible Tower web UI&rsquo;s and <strong>code-server</strong>, providing a VSCode-experience in your browser. You&rsquo;ll use <strong>code-server</strong> to:</p>
 
 <ul>
-<li>open virtual terminals</li>
-<li>edit files</li>
+<li><p>open virtual terminals</p></li>
+
+<li><p>edit files</p></li>
 </ul>
 
 <p>Now open code-server using the link from the lab landing page or this link in your browser by replacing <strong>&lt;N&gt;</strong> by your student number and the <strong>&lt;LABID&gt;</strong>:</p>
@@ -1301,25 +1308,25 @@ access to the following hosts:</p>
 
 <p>Before we dive further into using Ansible Tower for your automation, you should get familiar with some concepts and naming conventions.</p>
 
-<p><strong>Projects</strong></p>
+<h3 id="projects">Projects</h3>
 
 <p>Projects are logical collections of Ansible playbooks in Ansible Tower. These playbooks either reside on the Ansible Tower instance, or in a source code version control system supported by Tower.</p>
 
-<p><strong>Inventories</strong></p>
+<h3 id="inventories">Inventories</h3>
 
 <p>An Inventory is a collection of hosts against which jobs may be launched, the same as an Ansible inventory file. Inventories are divided into groups and these groups contain the actual hosts. Groups may be populated manually, by entering host names into Tower, from one of Ansible Tower’s supported cloud providers or through dynamic inventory scripts.</p>
 
-<p><strong>Credentials</strong></p>
+<h3 id="credentials">Credentials</h3>
 
 <p>Credentials are utilized by Tower for authentication when launching Jobs against machines, synchronizing with inventory sources, and importing project content from a version control system. Credential configuration can be found in the Settings.</p>
 
 <p>Tower credentials are imported and stored encrypted in Tower, and are not retrievable in plain text on the command line by any user. You can grant users and teams the ability to use these credentials, without actually exposing the credential to the user.</p>
 
-<p><strong>Templates</strong></p>
+<h3 id="templates">Templates</h3>
 
 <p>A job template is a definition and set of parameters for running an Ansible job. Job templates are useful to execute the same job many times. Job templates also encourage the reuse of Ansible playbook content and collaboration between teams. To execute a job, Tower requires that you first create a job template.</p>
 
-<p><strong>Jobs</strong></p>
+<h3 id="jobs">Jobs</h3>
 
 <p>A job is basically an instance of Tower launching an Ansible playbook against an inventory of hosts.</p>
 
@@ -2005,19 +2012,19 @@ access to the following hosts:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601308900"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601369545"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601308900"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601369545"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601308900" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601308900"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601369545" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601369545"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

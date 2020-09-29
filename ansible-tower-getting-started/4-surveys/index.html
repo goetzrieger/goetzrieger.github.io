@@ -12,20 +12,20 @@
     <title>Surveys :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1601308900" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601308900" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1601369545" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601369545" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1601308900" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1601369545" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601308900"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601369545"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601308900"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601308900"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601369545"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601369545"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601308900"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601369545"></script>
 
     
   </div>
@@ -1170,13 +1170,14 @@
 
 <h2 id="the-apache-configuration-role">The Apache-configuration Role</h2>
 
-<p>The Playbook and the role with the Jinja template already exist in the Github repository <strong><a href="https://github.com/ansible/workshop-examples">https://github.com/ansible/workshop-examples</a></strong> (always using the <a href="https://github.com/ansible/workshop-examples/tree/summit_2020">correct tag/branch</a>) in the directory <code>rhel/apache</code>.</p>
+<p>The Playbook and the role with the Jinja template already exist in the Github repository <a href="https://github.com/ansible/workshop-examples">https://github.com/ansible/workshop-examples</a> (always using the <a href="https://github.com/ansible/workshop-examples/tree/summit_2020">correct tag/branch</a>) in the directory <code>rhel/apache</code>.</p>
 
 <p>Head over to the Github UI and have a look at the content: the playbook <code>apache_role_install.yml</code> merely references the role. The role can be found in the <code>roles/role_apache</code> subdirectory.</p>
 
 <ul>
-<li>Inside the role, note the two variables in the <code>templates/index.html.j2</code> template file marked by <code>{{…​}}</code>.</li>
-<li>Also, check out the tasks in <code>tasks/main.yml</code> that deploy the file from the template.</li>
+<li><p>Inside the role, note the two variables in the <code>templates/index.html.j2</code> template file marked by <code>{{…​}}</code>.</p></li>
+
+<li><p>Also, check out the tasks in <code>tasks/main.yml</code> that deploy the file from the template.</p></li>
 </ul>
 
 <p>What is this Playbook doing? It creates a file (<strong>dest</strong>) on the managed hosts from the template (<strong>src</strong>).</p>
@@ -1217,13 +1218,21 @@
 <p>
 
 - **NAME:** Create index.html
+
 - **JOB TYPE:** Run
+
 - **INVENTORY:** Webserver
+
 - **PROJECT:** Ansible Workshop Examples
+
 - **PLAYBOOK:** `rhel/apache/apache_role_install.yml`
+
 - **CREDENTIAL:** Workshop Credentials
+
 - **OPTIONS:** Enable Privilege Escalation
+
 - Click **SAVE**
+
 </p>
 </details>
 
@@ -1988,19 +1997,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601308900"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601369545"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1601308900"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601308900"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1601369545"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601369545"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601308900" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601308900"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601369545" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601369545"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
