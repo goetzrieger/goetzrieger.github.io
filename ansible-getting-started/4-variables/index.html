@@ -12,20 +12,20 @@
     <title>Using Variables :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1601372690" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601372690" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1601372690" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601372690" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601372690" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601372690" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601372690" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1601372690" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601372690" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1601373065" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601373065" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1601373065" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601373065" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601373065" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601373065" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601373065" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1601373065" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601373065" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1601372690" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1601373065" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601372690"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601373065"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601372690"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601372690"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601373065"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601373065"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601372690"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601373065"></script>
 
     
   </div>
@@ -1256,11 +1256,9 @@ node3 ansible_host<span style="color:#f92672">=</span>33.44.55.66
 
 <details><summary><b>Click here for Solution</b></summary>
 <p>
-```bash
-[student<N>@ansible-1 ansible-files]$ ansible node1 -m setup|grep distribution
-[student<N>@ansible-1 ansible-files]$ ansible node1 -m setup -a 'filter=ansible_distribution' -o
-```
-</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student&lt;N&gt;@ansible-1 ansible-files<span style="color:#f92672">]</span>$ ansible node1 -m setup|grep distribution
+<span style="color:#f92672">[</span>student&lt;N&gt;@ansible-1 ansible-files<span style="color:#f92672">]</span>$ ansible node1 -m setup -a <span style="color:#e6db74">&#39;filter=ansible_distribution&#39;</span> -o
+</code></pre></div></p>
 </details>
 <h2 id="using-facts-in-playbooks">Using Facts in Playbooks</h2>
 <p>Facts can be used in a Playbook like variables, using the proper naming, of course. Create this Playbook as <code>facts.yml</code> in the <code>~/ansible-files/</code> directory:</p>
@@ -1984,19 +1982,19 @@ node3                      : ok<span style="color:#f92672">=</span><span style="
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601372690"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601372690"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601372690"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601372690"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601372690"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601372690"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601373065"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601373065"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601373065"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601373065"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601373065"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601373065"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601372690"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1601372690"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601372690"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601373065"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1601373065"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601373065"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601372690" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601372690"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601373065" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601373065"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
