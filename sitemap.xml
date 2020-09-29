@@ -3,6 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://goetzrieger.github.io/ansible_collections/</loc>
+  </url>
+  
+  <url>
     <loc>https://goetzrieger.github.io/ansible-getting-started/</loc>
   </url>
   
@@ -60,10 +64,6 @@
   
   <url>
     <loc>https://goetzrieger.github.io/ansible-getting-started/3-playbook/</loc>
-  </url>
-  
-  <url>
-    <loc>https://goetzrieger.github.io/ansible_collections/</loc>
   </url>
   
   <url>
