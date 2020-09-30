@@ -3,10 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://goetzrieger.github.io/ansible-collections/</loc>
-  </url>
-  
-  <url>
     <loc>https://goetzrieger.github.io/ansible-getting-started/</loc>
   </url>
   
@@ -24,10 +20,6 @@
   
   <url>
     <loc>https://goetzrieger.github.io/ansible-tower-getting-started/1-intro/</loc>
-  </url>
-  
-  <url>
-    <loc>https://goetzrieger.github.io/ansible-tower-getting-started/</loc>
   </url>
   
   <url>
@@ -51,6 +43,10 @@
   </url>
   
   <url>
+    <loc>https://goetzrieger.github.io/ansible-tower-getting-started/</loc>
+  </url>
+  
+  <url>
     <loc>https://goetzrieger.github.io/ansible-collections/3-using-collections-from-roles/</loc>
   </url>
   
@@ -64,6 +60,10 @@
   
   <url>
     <loc>https://goetzrieger.github.io/ansible-getting-started/3-playbook/</loc>
+  </url>
+  
+  <url>
+    <loc>https://goetzrieger.github.io/ansible-collections/</loc>
   </url>
   
   <url>
@@ -83,10 +83,6 @@
   </url>
   
   <url>
-    <loc>https://goetzrieger.github.io/vscode-intro/</loc>
-  </url>
-  
-  <url>
     <loc>https://goetzrieger.github.io/ansible-getting-started/5-handlers/</loc>
   </url>
   
@@ -100,6 +96,10 @@
   
   <url>
     <loc>https://goetzrieger.github.io/ansible-tower-advanced/5-tower-cluster-jobs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://goetzrieger.github.io/vscode-intro/</loc>
   </url>
   
   <url>
