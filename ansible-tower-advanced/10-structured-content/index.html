@@ -12,20 +12,20 @@
     <title>Well Structured Content Repositories :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1601906177" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601906177" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1601906177" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601906177" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601906177" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601906177" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601906177" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1601906177" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601906177" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1601907478" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601907478" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1601907478" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601907478" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601907478" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601907478" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601907478" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1601907478" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601907478" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1601906177" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1601907478" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601906177"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601907478"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601906177"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601906177"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601907478"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601907478"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601906177"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601907478"></script>
 
     
   </div>
@@ -1178,7 +1178,7 @@
 </div>
 
 
-<div class="notices warning" ><p>Be careful to <em>not</em> have separate code repositories for each environment. It would go against the purpose of testing the <em>same</em> code as you push it through your life-cycle, only varying the data / inventory. If you have difficulties to keep the same code throughout all your environments we recommend to re-think the structure of cour code and what you put into your inventory.</p>
+<div class="notices warning" ><p>Be careful to <em>not</em> have separate code repositories for each environment. It would go against the purpose of testing the <em>same</em> code as you push it through your life-cycle, only varying the data / inventory. If you have difficulties to keep the same code throughout all your environments we recommend to re-think the structure of our code and what you put into your inventory.</p>
 </div>
 
 <h2 id="example-repository">Example repository</h2>
@@ -1186,7 +1186,7 @@
 <p>Since we want to store all content in a repository, we have to create a simplistic Git server on our control host. In a more typical environment, you would work with GitLab, Gitea, or any other commercial Git server.</p>
 <pre><code>[student@ansible-1 ~]$ wget https://raw.githubusercontent.com/ansible-labs-summit-crew/structured-content/master/simple_git.yml
 [student@ansible-1 ~]$ ansible-playbook simple_git.yml
-</code></pre><p>Next we will clone the repository on the control host. To enable you to work with git on the commandline the SSH key for user <em>ec2-user</em> was already added to the Git user <em>git</em>. Next, clone the repository on the control machine:</p>
+</code></pre><p>Next we will clone the repository on the control host. To enable you to work with git on the command line the SSH key for user <em>ec2-user</em> was already added to the Git user <em>git</em>. Next, clone the repository on the control machine:</p>
 <pre><code>[student@ansible-1 ~]$ git clone git@ansible-1:projects/structured-content.git
 # Message &quot;warning: You appear to have cloned an empty repository.&quot; is OK and can be ignored
 [student@ansible-1 ~]$ git config --global push.default simple
@@ -1439,7 +1439,7 @@ web UI or use <strong>awx</strong> like shown below.</p>
 <p>To make sure that the project based inventory worked, click on the <strong>HOSTS</strong> button of the Inventory and make sure the two hosts are listed and tagged with the respective stages as <strong>RELATED GROUPS</strong>.</p>
 <p>Now create a template to execute the <code>site.yml</code> against both stages at the same time and associate the credentials.</p>
 
-<div class="notices tip" ><p>Please note that in a real world use case you might want to have different templates to address the different stages separatly.</p>
+<div class="notices tip" ><p>Please note that in a real world use case you might want to have different templates to address the different stages separably.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span><span style="color:#75715e"># awx job_template create --name &#34;Structured Content Execution&#34; \</span>
                     --job_type run --inventory <span style="color:#e6db74">&#34;Structured Content Inventory&#34;</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>                    --project <span style="color:#e6db74">&#34;Structured Content Repository&#34;</span> <span style="color:#ae81ff">\
@@ -2197,19 +2197,19 @@ changed: [node1]
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601906177"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601906177"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601906177"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601906177"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601906177"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601906177"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601907478"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601907478"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601907478"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601907478"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601907478"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601907478"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601906177"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1601906177"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601906177"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601907478"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1601907478"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601907478"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601906177" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601906177"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601907478" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601907478"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
