@@ -23,6 +23,10 @@
   </url>
   
   <url>
+    <loc>https://goetzrieger.github.io/ansible-tower-getting-started/</loc>
+  </url>
+  
+  <url>
     <loc>https://goetzrieger.github.io/ansible-collections/2-using-collections-from-playbooks/</loc>
   </url>
   
@@ -40,10 +44,6 @@
   
   <url>
     <loc>https://goetzrieger.github.io/ansible-tower-advanced/</loc>
-  </url>
-  
-  <url>
-    <loc>https://goetzrieger.github.io/ansible-tower-getting-started/</loc>
   </url>
   
   <url>
@@ -99,10 +99,6 @@
   </url>
   
   <url>
-    <loc>https://goetzrieger.github.io/vscode-intro/</loc>
-  </url>
-  
-  <url>
     <loc>https://goetzrieger.github.io/ansible-collections/6-automation-hub-and-galaxy/</loc>
   </url>
   
@@ -148,6 +144,10 @@
   
   <url>
     <loc>https://goetzrieger.github.io/ansible-tower-advanced/11-rest-api/</loc>
+  </url>
+  
+  <url>
+    <loc>https://goetzrieger.github.io/vscode-intro/</loc>
   </url>
   
   <url>
