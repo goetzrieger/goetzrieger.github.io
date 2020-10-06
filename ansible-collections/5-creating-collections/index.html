@@ -12,20 +12,20 @@
     <title>Creating Collections :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1601991291" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601991291" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1601991291" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601991291" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601991291" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601991291" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601991291" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1601991291" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601991291" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1601995215" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1601995215" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1601995215" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1601995215" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1601995215" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1601995215" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1601995215" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1601995215" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1601995215" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1601991291" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1601995215" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601991291"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1601995215"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601991291"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601991291"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1601995215"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1601995215"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601991291"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1601995215"></script>
 
     
   </div>
@@ -1240,7 +1240,7 @@ the <code>workshop_demo_collection</code> in the <code>redhat</code> namespace.<
 <span style="color:#f92672">[</span>student@ansible-1 workshop_demo_collection<span style="color:#f92672">}}</span> <span style="color:#f92672">]</span>$ mkdir plugins/modules
 </code></pre></div><p>Using the VSCode editor, create the file <code>demo_hello.py</code> with the content below in the <code>modules</code> folder. The <code>demo_hello</code> module says, well, &ldquo;Hello&rdquo; in different languages to a user defined through a parameter. This is not a lab about writing plugins, but take the time to look at the module code and understand its behavior.</p>
 
-<div class="notices tip" ><p>When doing copy/paste from your browser into the VSCode editor you might have to use <code>ctrl-v</code>.</p>
+<div class="notices tip" ><p>When doing copy/paste from your browser into the VSCode editor you might have to use <code>Shift-Ctrl-V</code>.</p>
 </div>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/usr/bin/python
@@ -1400,18 +1400,18 @@ def main<span style="color:#f92672">()</span>:
 <p>Run the test playbook.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 collections_test <span style="color:#f92672">]</span>$ ansible-playbook playbook.yml
 
-PLAY <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span> ************************************************************************************************************************************************************
+PLAY <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span> ******************************************************************************************************
 
-TASK <span style="color:#f92672">[</span>Gathering Facts<span style="color:#f92672">]</span> ******************************************************************************************************************************************************
+TASK <span style="color:#f92672">[</span>Gathering Facts<span style="color:#f92672">]</span> ************************************************************************************************
 ok: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span>
 
-TASK <span style="color:#f92672">[</span>redhat.workshop_demo_collection.hello_motd : Generate greeting and store result<span style="color:#f92672">]</span> **************************************************************************************
+TASK <span style="color:#f92672">[</span>redhat.workshop_demo_collection.hello_motd : Generate greeting and store result<span style="color:#f92672">]</span> ********************************
 ok: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span>
 
-TASK <span style="color:#f92672">[</span>redhat.workshop_demo_collection.hello_motd : store test in /etc/motd<span style="color:#f92672">]</span> *************************************************************************************************
+TASK <span style="color:#f92672">[</span>redhat.workshop_demo_collection.hello_motd : store test in /etc/motd<span style="color:#f92672">]</span> *******************************************
 changed: <span style="color:#f92672">[</span>localhost<span style="color:#f92672">]</span>
 
-PLAY RECAP ******************************************************************************************************************************************************************
+PLAY RECAP ************************************************************************************************************
 localhost                  : ok<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>    changed<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>    unreachable<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    failed<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    skipped<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    rescued<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    ignored<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
 </code></pre></div><h2 id="takeaways">Takeaways</h2>
 <ul>
@@ -2119,19 +2119,19 @@ localhost                  : ok<span style="color:#f92672">=</span><span style="
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601991291"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601991291"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601991291"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601991291"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601991291"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601991291"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1601995215"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1601995215"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1601995215"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1601995215"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1601995215"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1601995215"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601991291"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1601991291"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601991291"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1601995215"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1601995215"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1601995215"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601991291" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601991291"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1601995215" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1601995215"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
