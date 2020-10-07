@@ -12,20 +12,20 @@
     <title>Collections in Tower :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1602061551" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602061551" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1602061551" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602061551" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602061551" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602061551" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602061551" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1602061551" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602061551" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1602073008" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602073008" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1602073008" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602073008" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602073008" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602073008" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602073008" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1602073008" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602073008" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1602061551" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1602073008" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602061551"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602073008"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602061551"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602061551"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602073008"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602073008"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602061551"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602073008"></script>
 
     
   </div>
@@ -1111,8 +1111,13 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#step-1---write-a-requirementsyml">Step 1 - Write a requirements.yml</a></li>
-    <li><a href="#step-2---create-job-template">Step 2 - Create Job Template</a></li>
+    <li><a href="#set-up-a-local-git-server">Set up a Local Git Server</a></li>
+    <li><a href="#create-content-for-the-tower-project">Create Content for the Tower Project</a></li>
+    <li><a href="#create-the-project-and-job-template">Create the Project and Job Template</a></li>
+    <li><a href="#inventory-and-machine-credentials">Inventory and Machine Credentials</a></li>
+    <li><a href="#configure-scm-credentials">Configure SCM Credentials</a></li>
+    <li><a href="#set-up-the-project">Set up the Project</a></li>
+    <li><a href="#create-the-job-template-and-run-it">Create the Job Template and run it</a></li>
     <li><a href="#troubleshooting">Troubleshooting</a></li>
   </ul>
 </nav>
@@ -1141,24 +1146,174 @@
 
 	<p>Red Hat Ansible Tower supports Ansible Collections starting with version 3.5 - earlier version will not automatically install and configure them for you. To make sure Ansible Collections are recognized by Red Hat Ansible Tower a requirements file is needed and has to be stored in the proper directory.</p>
 <p>Ansible Galaxy is already configured by default, however if you want your Red Hat Ansible Tower to prefer and fetch content from the Red Hat Automation Hub, additional configuration changes are required. They are addressed in a the chapter <a href="../7-use-automation-hub/">Use Automation Hub</a> in this lab.</p>
-<p>In this exercise you will learn how to define an Ansible Collection as a requirement in a format recognized by Red Hat Ansible Tower.</p>
-<h2 id="step-1---write-a-requirementsyml">Step 1 - Write a requirements.yml</h2>
-<p>Red Hat Ansible Tower can download and install Ansible Collections automatically before executing a Job Template. If a <code>collections/requirements.yml</code> exists, it will be parsed and Ansible Collections specified in this file will be automatically installed.</p>
+<p>In this exercise you will learn how to define an Ansible Collection as a requirement in a format recognized by Red Hat Ansible Tower. We&rsquo;ll be using the <strong>posix</strong> collection again from Ansible Galaxy, but as you probably know for Tower to access the needed bits &amp; pieces a version control system is needed. For the sake of keeping this lab setup easy, we&rsquo;ll set up a local Git server for this.</p>
+<h2 id="set-up-a-local-git-server">Set up a Local Git Server</h2>
+<p>So, let’s get started. We have to create a simplistic Git server on our control host. In a more typical environment, you would work with GitLab, Gitea, or any other commercial Git server.</p>
+
+<div class="notices tip" ><p>Make sure to run these steps from your users home directory!</p>
+</div>
+
+<pre><code>[student@ansible-1 ~]$ wget https://raw.githubusercontent.com/ansible-labs-summit-crew/structured-content/master/simple_git.yml
+[student@ansible-1 ~]$ ansible-playbook simple_git.yml -e &quot;git_project=tower_collections&quot;
+</code></pre><p>Next we will clone the repository on the control host. To enable you to work with git on the command line the SSH key for user <em>ec2-user</em> was already added to the Git user <em>git</em>. Next, clone the repository on the control machine:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ git clone git@ansible-1:projects/tower_collections
+<span style="color:#75715e"># Message &#34;warning: You appear to have cloned an empty repository.&#34; is OK and can be ignored</span>
+<span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ git config --global push.default simple
+<span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ git config --global user.name <span style="color:#e6db74">&#34;Your Name&#34;</span>
+<span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ git config --global user.email you@example.com
+<span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ cd tower_collections/
+</code></pre></div>
+<div class="notices tip" ><p>The repository is currently empty. The three config commands are just there to avoid useless warnings from Git.</p>
+</div>
+
+<p>You now have a local Git server that can be accessed via SSH from Tower.</p>
+<h2 id="create-content-for-the-tower-project">Create Content for the Tower Project</h2>
+<p>Red Hat Ansible Tower can download and install Ansible Collections automatically before executing a Job Template. If a <code>collections/requirements.yml</code> exists in your project, it will be parsed and the Ansible Collections specified in this file will be automatically installed.</p>
 
 <div class="notices tip" ><p>Starting with Red Hat Ansible Tower 3.6 the working directory for the Job Template is in <code>/tmp</code>. Since the Ansible Collection is downloaded into this directory before the Job Template is executed, you will not find temporary files of your Ansible Collection in <code>/var/lib/awx/projects/</code>.</p>
 </div>
 
 <p>The format of the <code>requirements.yml</code> for Ansible Collections is very similar to the one for roles, however it is very important to store in the folder <code>collections</code>.</p>
-<p>Here is an example to set the <code>ansible.posix</code> Ansible Collection as a requirement:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-<span style="color:#66d9ef">collections</span>:
-- ansible.posix
-</code></pre></div><h2 id="step-2---create-job-template">Step 2 - Create Job Template</h2>
-<p>When using Ansible Collections in your Playbook, there are no additional options to set in your Red Hat Ansible Tower Job Template. You specify the repository in which your Playbook is stored, inventory, credentials and other parameters, and execute it by clicking on the <strong>Launch</strong> button.</p>
+<p>Let&rsquo;s create the files needed to see how you can use collections in Tower. This is of course just a simple example. First create the <code>collections</code> directory in your Git repo (you should have changed into <code>tower_collections</code> already above):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 tower_collections<span style="color:#f92672">]</span>$ mkdir collections
+</code></pre></div><p>Then create the <code>requirements.yml</code> file listing the collection(s) you need:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 tower_collections<span style="color:#f92672">]</span>$ cat &gt; collections/requirements.yml <span style="color:#e6db74">&lt;&lt; EOF
+</span><span style="color:#e6db74">---
+</span><span style="color:#e6db74">collections:
+</span><span style="color:#e6db74">- ansible.posix
+</span><span style="color:#e6db74">EOF</span>
+</code></pre></div><p>As this is a simple example we&rsquo;ll just add a Playbook to the Git repo now. Normally you would have a lot more content in your project repository. So what could we do as an example using the <strong>posix</strong> collection again? Let&rsquo;s create a Playbook to configure an <code>at</code> job:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 tower_collections<span style="color:#f92672">]</span>$ cat &gt; configure_at_job.yml <span style="color:#e6db74">&lt;&lt; EOF
+</span><span style="color:#e6db74">---
+</span><span style="color:#e6db74">- name: Install AT Job
+</span><span style="color:#e6db74">  hosts: all
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">  tasks:
+</span><span style="color:#e6db74">  - name: at command needs to be installed
+</span><span style="color:#e6db74">    yum:
+</span><span style="color:#e6db74">      name: at
+</span><span style="color:#e6db74">      state: present
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">  - name: Schedule a command to execute in 20 minutes as root
+</span><span style="color:#e6db74">    ansible.posix.at:
+</span><span style="color:#e6db74">      command: ls -d / &gt;/dev/null
+</span><span style="color:#e6db74">      count: 20
+</span><span style="color:#e6db74">      units: minutes
+</span><span style="color:#e6db74">EOF</span>
+</code></pre></div>
+<div class="notices tip" ><p>Note the usage of the Fully Qualified Collection Name in the Playbook</p>
+</div>
+
+<p>Make sure everything looks fine:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 tower_collections<span style="color:#f92672">]</span>$ tree
+.
+├── collections
+│   └── requirements.yml
+└── configure_at_job.yml
+</code></pre></div><p>So far you created the code only locally on the control host, now you are ready to add it to the repository and push it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 tower_collections<span style="color:#f92672">]</span>$ git add collections configure_at_job.yml
+<span style="color:#f92672">[</span>student@ansible-1 tower_collections<span style="color:#f92672">]</span>$ git commit -m <span style="color:#e6db74">&#34;Adding requirements.yml and playbook&#34;</span>
+<span style="color:#f92672">[</span>student@ansible-1 tower_collections<span style="color:#f92672">]</span>$ git push
+</code></pre></div><h2 id="create-the-project-and-job-template">Create the Project and Job Template</h2>
+<p>Not it&rsquo;s time to access your Tower web UI if you haven&rsquo;t done so out of curiosity already. Point your browser to the URL you were given on the lab landing page, similar to <code>https://student&lt;N&gt;.&lt;LABID&gt;.open.redhat.com</code> (replace <code>&lt;N&gt;</code> with your student number and <code>&lt;LABID&gt;</code> with the ID of this lab) and log in as <code>admin</code>. You can find the password again on the lab landing page.</p>
+<p>To run your new Playbook in Tower you have to configure a number of objects:</p>
+<ul>
+<li>An <strong>Inventory</strong> with the managed hosts</li>
+<li><strong>Machine Credentials</strong> to access the managed hosts</li>
+<li>Git <strong>Credentials</strong> to access your Git repository via SSH</li>
+<li>The Git repo as <strong>Project</strong></li>
+<li>A <strong>Job Template</strong> to run the Playbook</li>
+</ul>
+<p>We&rsquo;ll be a bit verbose for students new to Tower, if you are an Ansible Tower old-hand, just skip through and finish the configuration steps shown.</p>
+<h2 id="inventory-and-machine-credentials">Inventory and Machine Credentials</h2>
+<p>The inventory <strong>Workshop Inventory</strong> and the machine credentials <strong>Workshop Credentials</strong> have already been created in your lab environment.</p>
+<h2 id="configure-scm-credentials">Configure SCM Credentials</h2>
+<p>Now we will configure the credentials to access our the Git repo on your control host via SSH. In the <strong>RESOURCES</strong> menu choose <strong>Credentials</strong>. Now:</p>
+<p>Click the <img src="../../images/green_plus.png?classes=inline" alt="plus"> button to add new credentials</p>
+<ul>
+<li><strong>NAME:</strong> Git Credentials</li>
+<li><strong>ORGANIZATION:</strong> Click on the magnifying glass, pick <strong>Default</strong> and click <strong>SELECT</strong></li>
+<li><strong>CREDENTIAL TYPE:</strong> Click on the magnifying glass, pick <strong>Source Control</strong> as type and click <strong>SELECT</strong> (you will have to use the search or cycle through the types to find it).</li>
+<li><strong>USERNAME:</strong> ec2-user</li>
+</ul>
+<p>As we are using SSH key authentication, you have to provide an SSH private key that can be used to access the host with the Git repo as the user <code>git</code>.</p>
+
+<div class="notices tip" ><p>The Playbook we used to configure Git added the SSH private key to the <code>authorized_keys</code> of user <code>git</code></p>
+</div>
+
+<p>Bring up your code-server terminal on Tower and use <code>cat</code> to get the SSH private key:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>ansible-1 ~<span style="color:#f92672">]</span>$ cat ~/.ssh/aws-private.pem
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEA2nnL3m5sKvoSy37OZ8DQCTjTIPVmCJt/M02KgDt53+baYAFu1TIkC3Yk+HK1
+<span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
+-----END RSA PRIVATE KEY-----
+</code></pre></div><ul>
+<li>
+<p>Copy the <strong>complete private key</strong> (including &ldquo;BEGIN&rdquo; and &ldquo;END&rdquo; lines) from the output and paste it into the <strong>SSH PRIVATE KEY</strong> field in the web UI.</p>
+</li>
+<li>
+<p>Click <strong>SAVE</strong></p>
+</li>
+</ul>
+<p>You have now setup credentials to access the Git repo on your control host.</p>
+<h2 id="set-up-the-project">Set up the Project</h2>
+<p>It&rsquo;s time to set up the Tower Project pointing to your Git repository holding your Playbook and collections requirements file.</p>
+<ul>
+<li>Go to <strong>RESOURCES → Projects</strong> in the side menu view click the <img src="../../images/green_plus.png?classes=inline" alt="plus"> button. Fill in the form:</li>
+<li><strong>NAME:</strong> Collections Repo</li>
+<li><strong>ORGANIZATION:</strong> Default</li>
+<li><strong>SCM TYPE:</strong> Git</li>
+</ul>
+<p>Now you need the URL to access the repo. You could get the URL in Github as <strong>Clone URL</strong>. Enter the URL into the Project configuration:</p>
+<ul>
+<li>
+<p><strong>SCM URL:</strong> git@ansible-1:projects/tower_collections</p>
+</li>
+<li>
+<p><strong>GIT CREDENTIAL:</strong> Click the maginifying glass and choose <code>Git Credential</code>, click <strong>SELECT</strong></p>
+</li>
+<li>
+<p><strong>SCM UPDATE OPTIONS:</strong> Tick the first three boxes to always get a fresh copy of the repository and to update the repository when launching a job.</p>
+</li>
+<li>
+<p>Click <strong>SAVE</strong></p>
+</li>
+</ul>
+<p>The new Project will be synced automatically after creation. If everything went fine, you should see a green icon to the left of the new Project.</p>
+<h2 id="create-the-job-template-and-run-it">Create the Job Template and run it</h2>
+<p>The last step is to create a Job Template to run the Playbook. Go to the <strong>Templates</strong> view, click the <img src="../../images/green_plus.png?classes=inline" alt="plus"> button and choose <strong>Job Template</strong>.</p>
+<ul>
+<li>
+<p><strong>NAME:</strong> Install AT Job</p>
+</li>
+<li>
+<p><strong>JOB TYPE:</strong> Run</p>
+</li>
+<li>
+<p><strong>INVENTORY:</strong> Workshop Inventory</p>
+</li>
+<li>
+<p><strong>PROJECT:</strong> Collections Repo</p>
+</li>
+<li>
+<p><strong>PLAYBOOK:</strong> <code>configure_at_job.yml</code></p>
+</li>
+<li>
+<p><strong>CREDENTIAL:</strong> Workshop Credentials</p>
+</li>
+<li>
+<p>We need to run the tasks as root so check <strong>Enable privilege escalation</strong></p>
+</li>
+<li>
+<p>Click <strong>SAVE</strong></p>
+</li>
+</ul>
+<p>You can start the job by directly clicking the blue <strong>LAUNCH</strong> button, or by clicking on the rocket in the Job Templates overview. After launching the Job Template, you are automatically brought to the job overview where you can follow the playbook execution in real time.</p>
+<p>After the Job has finished bring up your VSCode terminal, as the job was run on all three managed nodes and the control/Tower node, you can simply check the result here. Run <code>sudo at -l</code> and you should see your job was scheduled successfully.</p>
 <h2 id="troubleshooting">Troubleshooting</h2>
-<p>Since Red Hat Ansible Tower does only check for updates in the the repository in which you stored your Playbook, it might not do a refresh if there was a change in the Ansible Collection used by your Playbook. This happens particularly if you also combine Roles and Collections.</p>
-<p>In this case you should check the option <strong>Delete on Update</strong> which will delete the entire local directory during a refresh.</p>
-<p>If there is a problem while parsing your <code>requirements.yml</code> it worth testing it with the <code>ansible-galaxy</code> command. As a reminder, Red Hat Ansible Tower basically also just runs the command for you with the appropriate parameters, so testing this works manually makes a lot of sense.</p>
+<p>Since Red Hat Ansible Tower does only check for updates in the repository in which you stored your Playbook, it might not do a refresh if there was a change in the Ansible Collection used by your Playbook. This happens particularly if you also combine Roles and Collections.</p>
+<p>In this case you should check the option <strong>Delete on Update</strong> (like you did in this lab) which will delete the entire local directory during a refresh.</p>
+<p>If there is a problem while parsing your <code>requirements.yml</code> it&rsquo;s worth testing it with the <code>ansible-galaxy</code> command. As a reminder, Red Hat Ansible Tower basically also just runs the command for you with the appropriate parameters, so testing this works manually makes a lot of sense.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ansible-galaxy collections install -r collections/requirements.yml -f
 </code></pre></div>
 <div class="notices tip" ><p>The <code>-f</code> switch will forces a fresh installation of the specified Ansible Collections, otherwise <code>ansible-galaxy</code> will only install it, if it wasn&rsquo;t already installed. You can also use the <code>--force-with-deps</code> switch to make sure Ansible Collections which have dependencies to others are refreshed as well.</p>
@@ -1855,19 +2010,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602061551"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602061551"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602061551"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602061551"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602061551"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602061551"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602073008"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602073008"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602073008"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602073008"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602073008"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602073008"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602061551"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1602061551"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602061551"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602073008"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1602073008"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602073008"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602061551" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602061551"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602073008" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602073008"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
