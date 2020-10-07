@@ -115,10 +115,6 @@
   </url>
   
   <url>
-    <loc>https://goetzrieger.github.io/ansible-collections/7-advanced-inventory-collections/</loc>
-  </url>
-  
-  <url>
     <loc>https://goetzrieger.github.io/ansible-tower-advanced/7-parallel-jobs/</loc>
   </url>
   
