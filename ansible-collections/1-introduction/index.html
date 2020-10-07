@@ -12,20 +12,20 @@
     <title>Introduction :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1602073664" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602073664" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1602073664" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602073664" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602073664" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602073664" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602073664" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1602073664" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602073664" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1602073806" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602073806" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1602073806" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602073806" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602073806" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602073806" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602073806" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1602073806" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602073806" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1602073664" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1602073806" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602073664"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602073806"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602073664"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602073664"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602073806"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602073806"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602073664"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602073806"></script>
 
     
   </div>
@@ -930,13 +930,13 @@
  
   
     
-    <li data-nav-id="/ansible-collections/6-automation-hub-and-galaxy/" title="Accessing Collections" class="dd-item 
+    <li data-nav-id="/ansible-collections/6-automation-hub-and-galaxy/" title="Information: Accessing Collections" class="dd-item 
         
         
         
         ">
       <a href="https://goetzrieger.github.io/ansible-collections/6-automation-hub-and-galaxy/">
-          Accessing Collections
+          Information: Accessing Collections
           
       </a>
       
@@ -1113,8 +1113,8 @@
   <ul>
     <li><a href="#your-lab-environment">Your Lab Environment</a></li>
     <li><a href="#accessing-your-lab-environment">Accessing your Lab Environment</a></li>
-    <li><a href="#introduction-what-are-collections-and-why-should-i-care">Introduction: what are collections and why should I care?</a></li>
-    <li><a href="#understand-collections-lookup">Understand collections lookup</a></li>
+    <li><a href="#what-are-collections-and-why-should-i-care">What are Collections and why should I care?</a></li>
+    <li><a href="#understand-collections-lookup">Understand Collections Lookup</a></li>
     <li><a href="#automation-hub-vs-galaxy">Automation Hub vs Galaxy</a>
       <ul>
         <li><a href="#red-hat-automation-hub">Red Hat Automation Hub</a></li>
@@ -1155,25 +1155,35 @@
 <thead>
 <tr>
 <th>Role</th>
-<th>Inventory name</th>
+<th>URL for External Access (if applicable)</th>
+<th>Hostname Internal</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Ansible Control Host</td>
+<td>Ansible Tower</td>
+<td>student&lt;N&gt;.&lt;LABID&gt;.open.redhat.com</td>
 <td>ansible-1</td>
 </tr>
 <tr>
-<td>Managed Host 1</td>
+<td>Visual Code Web UI</td>
+<td>student&lt;N&gt;-code.&lt;LABID&gt;.open.redhat.com</td>
+<td></td>
+</tr>
+<tr>
+<td>Managed RHEL8 Host 1</td>
+<td></td>
 <td>node1</td>
 </tr>
 <tr>
-<td>Managed Host 2</td>
+<td>Managed RHEL8 Host 2</td>
+<td></td>
 <td>node2</td>
 </tr>
 <tr>
-<td>Managed Host 3</td>
-<td>node3</td>
+<td>Managed RHEL8 Host 2</td>
+<td></td>
+<td>node2</td>
 </tr>
 </tbody>
 </table>
@@ -1219,9 +1229,15 @@ logout
 <div class="notices warning" ><p>In all subsequent exercises you should work as the student&lt;N&gt; user on the control node if not explicitly told differently.</p>
 </div>
 
-<h2 id="introduction-what-are-collections-and-why-should-i-care">Introduction: what are collections and why should I care?</h2>
-<p>TODO: Looks like something is missing here!</p>
-<h2 id="understand-collections-lookup">Understand collections lookup</h2>
+<h2 id="what-are-collections-and-why-should-i-care">What are Collections and why should I care?</h2>
+<p>Ansible Collections are a new distribution format for Ansible content that can include playbooks, roles, modules, and plugins. Modules are moved from the core Ansible repository into collections living in repositories outside of the core repository. This change in the content delivery process will allow Ansible to keep up the tremendous success and, coming with it, growth in content.</p>
+<ul>
+<li>Before collections, module creators had to wait for their modules to be included in an upcoming Ansible release or had to add them to roles, which made consumption and management more difficult.</li>
+<li>By distributing modules packaged in Ansible Content Collections along with roles, documentation and even Playbooks, content creators are now able to move as fast or conservative as the technology they manage demands.</li>
+</ul>
+<p><strong>Example</strong>: A public cloud provider could make new functionality of an existing service available, that could be rolled out along with the ability to automate the new functionality with Ansible.</p>
+<p>For Ansible users, the benefit is that updated content can continuously be made available. Managing content this way also becomes easier as modules, plugins, roles, and docs that belong together are packaged together and versioned.</p>
+<h2 id="understand-collections-lookup">Understand Collections Lookup</h2>
 <p>Ansible Collections use a simple method to define collection namespaces. Anyway, if
 your playbook loads collections using the <code>collections</code> key and one or more roles, then
 the roles will not inherit the collections set by the playbook.</p>
@@ -1957,19 +1973,19 @@ first, so there is no need to use the <code>collections</code> keyword in the ro
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602073664"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602073664"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602073664"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602073664"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602073664"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602073664"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602073806"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602073806"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602073806"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602073806"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602073806"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602073806"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602073664"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1602073664"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602073664"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602073806"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1602073806"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602073806"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602073664" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602073664"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602073806" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602073806"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
