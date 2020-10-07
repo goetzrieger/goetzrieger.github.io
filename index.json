@@ -109,7 +109,7 @@
 	"title": "Ansible Collections",
 	"tags": [],
 	"description": "",
-	"content": "Ansible Collections Workshop  Exercise 1 - Introduction Exercise 2 - Collections from playbook Exercise 3 - Collections from roles Exercise 4 - Collections from tower Exercise 5 - Creating Collections Exercise 6 - Accessing Collections  Additional Resources  Ansible Docs: Using Collections Ansible Collections Overview Ansible Docs: Developing Collections Blog Post: Introducing: The AWX and Ansible Tower Collections  - Gianni Salinetti  - David Sastre Medina  - Ismail Dhaoui  -- "
+	"content": "Ansible Collections Workshop  Exercise 1 - Introduction Exercise 2 - Collections from playbook Exercise 3 - Collections from roles Exercise 4 - Collections from tower Exercise 5 - Creating Collections Exercise 6 - Accessing Collections  Additional Resources  Ansible Docs: Using Collections Ansible Collections Overview Ansible Docs: Developing Collections Blog Post: Introducing: The AWX and Ansible Tower Collections  "
 },
 {
 	"uri": "https://goetzrieger.github.io/ansible-collections/4-using-collections-from-tower/",
