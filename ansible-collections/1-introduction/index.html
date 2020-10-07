@@ -12,20 +12,20 @@
     <title>Introduction :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1602073806" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602073806" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1602073806" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602073806" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602073806" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602073806" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602073806" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1602073806" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602073806" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1602074149" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602074149" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1602074149" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602074149" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602074149" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602074149" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602074149" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1602074149" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602074149" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1602073806" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1602074149" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602073806"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602074149"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602073806"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602073806"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602074149"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602074149"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602073806"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602074149"></script>
 
     
   </div>
@@ -1115,14 +1115,6 @@
     <li><a href="#accessing-your-lab-environment">Accessing your Lab Environment</a></li>
     <li><a href="#what-are-collections-and-why-should-i-care">What are Collections and why should I care?</a></li>
     <li><a href="#understand-collections-lookup">Understand Collections Lookup</a></li>
-    <li><a href="#automation-hub-vs-galaxy">Automation Hub vs Galaxy</a>
-      <ul>
-        <li><a href="#red-hat-automation-hub">Red Hat Automation Hub</a></li>
-        <li><a href="#certified-content">Certified Content</a></li>
-        <li><a href="#supported-automation">Supported Automation</a></li>
-        <li><a href="#ansible-galaxy">Ansible Galaxy</a></li>
-      </ul>
-    </li>
   </ul>
 </nav>
     </div>
@@ -1275,21 +1267,6 @@ lookup in the playbook</p>
 </ul>
 <p>Roles defined <strong>within</strong> a collection always implicitly search their own collection
 first, so there is no need to use the <code>collections</code> keyword in the role metadata to access modules, plugins, or other roles.</p>
-<h2 id="automation-hub-vs-galaxy">Automation Hub vs Galaxy</h2>
-<p>Explain the concept of content repositories.</p>
-<h3 id="red-hat-automation-hub">Red Hat Automation Hub</h3>
-<p>It is a service that is provided as part of the Red Hat SaaS Offering. It consists of the location where to discover and download only supported and certified Ansible Content Collections by Red Hat and its Partners. These content collections contain ways to consume automation, how-to-guides to implement them in your infrastructure. The support for Automation Hub is included with Red Hat Automation Platform subscription.</p>
-
-<div class="notices tip" ><p>Red Hat Automation Hub resides on <a href="https://cloud.redhat.com/ansible/automation-hub">https://cloud.redhat.com/ansible/automation-hub</a>: requires Red Hat customer portal credentials and a valid Red Hat Automation Platform subscription.</p>
-</div>
-
-<h3 id="certified-content">Certified Content</h3>
-<p>In the portal of Automation Hub, users have direct access to trusted content collections from Red Hat and Certified Partners. Certified collections are developed, tested, built, delivered, and supported by Red Hat and its Partners. To find more details about the scope of support, check the <a href="https://access.redhat.com/articles/4916901">Ansible Certified Content FAQ</a>,</p>
-<h3 id="supported-automation">Supported Automation</h3>
-<p>Automation Hub is a one-stop-shop for Ansible content that is backed by support from Red Hat to deliver additional reassurance for customers. Additional supportability claims for these collections may be provided under the &ldquo;Maintained and Supported By&rdquo; one of Red Hat Partners.</p>
-<h3 id="ansible-galaxy">Ansible Galaxy</h3>
-<p>It is the location for wider Ansible community that initially started to provide pre-packaged units of work known as Ansible roles. Roles can be dropped into Ansible Playbooks and immediately put to work. in a recent version of Galaxy started to provide Ansible content collections as well.</p>
-<p>Ansible Galaxy resides on <a href="https://galaxy.ansible.com/">https://galaxy.ansible.com/</a></p>
 
 
 
@@ -1973,19 +1950,19 @@ first, so there is no need to use the <code>collections</code> keyword in the ro
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602073806"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602073806"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602073806"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602073806"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602073806"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602073806"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602074149"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602074149"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602074149"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602074149"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602074149"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602074149"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602073806"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1602073806"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602073806"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602074149"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1602074149"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602074149"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602073806" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602073806"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602074149" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602074149"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
