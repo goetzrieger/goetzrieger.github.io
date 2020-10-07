@@ -12,20 +12,20 @@
     <title>Collections in Tower :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1602073220" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602073220" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1602073220" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602073220" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602073220" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602073220" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602073220" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1602073220" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602073220" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1602073664" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602073664" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1602073664" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602073664" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602073664" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602073664" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602073664" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1602073664" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602073664" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1602073220" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1602073664" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602073220"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602073664"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602073220"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602073220"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602073664"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602073664"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602073220"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602073664"></script>
 
     
   </div>
@@ -1266,18 +1266,10 @@ MIIEpAIBAAKCAQEA2nnL3m5sKvoSy37OZ8DQCTjTIPVmCJt/M02KgDt53+baYAFu1TIkC3Yk+HK1
 </ul>
 <p>Now you need the URL to access the repo. You could get the URL in Github as <strong>Clone URL</strong>. Enter the URL into the Project configuration:</p>
 <ul>
-<li>
-<p><strong>SCM URL:</strong> git@ansible-1:projects/tower_collections</p>
-</li>
-<li>
-<p><strong>GIT CREDENTIAL:</strong> Click the magnifying glass and choose <code>Git Credential</code>, click <strong>SELECT</strong></p>
-</li>
-<li>
-<p><strong>SCM UPDATE OPTIONS:</strong> Tick the first three boxes to always get a fresh copy of the repository and to update the repository when launching a job.</p>
-</li>
-<li>
-<p>Click <strong>SAVE</strong></p>
-</li>
+<li><strong>SCM URL:</strong> git@ansible-1:projects/tower_collections</li>
+<li><strong>GIT CREDENTIAL:</strong> Click the magnifying glass and choose <code>Git Credential</code>, click <strong>SELECT</strong></li>
+<li><strong>SCM UPDATE OPTIONS:</strong> Tick the first three boxes to always get a fresh copy of the repository and to update the repository when launching a job.</li>
+<li>Click <strong>SAVE</strong></li>
 </ul>
 <p>The new Project will be synced automatically after creation. If everything went fine, you should see a green icon to the left of the new Project.</p>
 <h2 id="create-the-job-template-and-run-it">Create the Job Template and run it</h2>
@@ -1319,11 +1311,6 @@ MIIEpAIBAAKCAQEA2nnL3m5sKvoSy37OZ8DQCTjTIPVmCJt/M02KgDt53+baYAFu1TIkC3Yk+HK1
 <div class="notices tip" ><p>The <code>-f</code> switch will forces a fresh installation of the specified Ansible Collections, otherwise <code>ansible-galaxy</code> will only install it, if it wasn&rsquo;t already installed. You can also use the <code>--force-with-deps</code> switch to make sure Ansible Collections which have dependencies to others are refreshed as well.</p>
 </div>
 
-<hr>
-<p><strong>Navigation</strong>
-<br>
-<a href="../3-using-collections-from-roles/">Previous Exercise</a> - <a href="../5-creating-collections/">Next Exercise</a></p>
-<p><a href="../README.md">Click here to return to the Ansible for Red Hat Enterprise Linux Workshop</a></p>
 
 
 
@@ -2010,19 +1997,19 @@ MIIEpAIBAAKCAQEA2nnL3m5sKvoSy37OZ8DQCTjTIPVmCJt/M02KgDt53+baYAFu1TIkC3Yk+HK1
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602073220"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602073220"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602073220"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602073220"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602073220"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602073220"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602073664"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602073664"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602073664"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602073664"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602073664"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602073664"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602073220"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1602073220"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602073220"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602073664"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1602073664"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602073664"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602073220" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602073220"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602073664" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602073664"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
