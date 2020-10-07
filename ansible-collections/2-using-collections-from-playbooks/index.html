@@ -12,20 +12,20 @@
     <title>Collections from Playbook :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1602079182" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602079182" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1602079182" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602079182" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602079182" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602079182" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602079182" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1602079182" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602079182" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1602106286" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602106286" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1602106286" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602106286" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602106286" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602106286" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602106286" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1602106286" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602106286" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1602079182" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1602106286" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602079182"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602106286"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602079182"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602079182"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602106286"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602106286"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602079182"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602106286"></script>
 
     
   </div>
@@ -930,13 +930,13 @@
  
   
     
-    <li data-nav-id="/ansible-collections/6-automation-hub-and-galaxy/" title="Information: Accessing Collections" class="dd-item 
+    <li data-nav-id="/ansible-collections/6-automation-hub-and-galaxy/" title="Use Automation Hub" class="dd-item 
         
         
         
         ">
       <a href="https://goetzrieger.github.io/ansible-collections/6-automation-hub-and-galaxy/">
-          Information: Accessing Collections
+          Use Automation Hub
           
       </a>
       
@@ -1121,10 +1121,7 @@
 
 
 
-	<p>Now with the introduction out of the way, you will learn how to use an Ansible Collection from a Playbook. To use a module from a specific Ansible Collection, we have to use the fully qualified collection name. This name is built from the name of the author, the name of the collection and the name of the module.</p>
-<pre><code>&lt;author&gt;.&lt;collection&gt;.&lt;module&gt;
-</code></pre>
-<p>For the following exercise, we will use a collection written by the Ansible Core Team. The name of the author is therefore &ldquo;ansible&rdquo;. You can find a list of all modules and collections written by the Ansible Core Team on <a href="https://galaxy.ansible.com/ansible">Ansible Galaxy</a>. Head over there and have a good look around!</p>
+	<p>For the following exercise, we will use a collection written by the Ansible Core Team. The name of the author is therefore &ldquo;ansible&rdquo;. You can find a list of all modules and collections written by the Ansible Core Team on <a href="https://galaxy.ansible.com/ansible">Ansible Galaxy</a>. Head over there and have a good look around!</p>
 <p>As you can see they maintain several collections and roles. One of their collections is called &ldquo;posix&rdquo; and we can find the documentation and additional details on the <a href="https://galaxy.ansible.com/ansible/posix">Ansible Galaxy POSIX Collection</a> page.</p>
 <p>One of the modules provided by this collection allows us to manage <a href="https://www.redhat.com/en/topics/linux/what-is-selinux">SELinux</a> settings. The fully qualified collection name for this module is therefore <code>ansible.posix.selinux</code>.</p>
 <p>You can find more details about <a href="https://docs.ansible.com/ansible/latest/user_guide/collections_using.html">using collections</a> in the <a href="https://docs.ansible.com/">Ansible Documentation</a>.</p>
@@ -1137,10 +1134,10 @@
 <pre><code>[student@ansible-1 ~]$ ansible-galaxy collection install -f ansible.posix
 </code></pre>
 <p>This will always download and install the latest version, even if it was already up to date. Ansible Collections can have dependencies for other Ansible Collections as well - if you want to make sure those dependencies are refreshed as well, you can use the <code>--force-with-deps</code> switch.</p>
-<p>By default the installation is stored in your local <code>~/.ansible</code> directory. This can be overwritten by using the <code>-p /path/to/collection</code> switch. Keep in mind though that <code>ansible-playbook</code> will only use that directory, if you change your <code>ansible.cfg</code> accordingly. To check your current configuration, you can dump your configuration and search for <code>collection</code>.</p>
-<pre><code>[student@ansible-1 ~]$ ansible-config dump | grep -i collection
-</code></pre>
-<h2 id="step-2---documentation">Step 2 - Documentation</h2>
+<p>By default the installation is stored in your local <code>~/.ansible</code> directory. This can be overwritten by using the <code>-p /path/to/collection</code> switch. Keep in mind though that <code>ansible-playbook</code> will only use this directory, if you change your <code>ansible.cfg</code> accordingly. To check your current configuration, you can dump your configuration and search for <code>collection</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ ansible-config dump | grep -i collection
+COLLECTIONS_PATHS<span style="color:#f92672">(</span>default<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;/home/student&lt;N&gt;/.ansible/collections&#39;</span>, <span style="color:#e6db74">&#39;/usr/share/ansible/collections&#39;</span><span style="color:#f92672">]</span>
+</code></pre></div><h2 id="step-2---documentation">Step 2 - Documentation</h2>
 <p>The <code>ansible-doc</code> command only searches the system directories for documentation. You can still use it though to read up on modules you installed from Ansible Collections by using the fully qualified collection name.</p>
 <p>Let&rsquo;s have a look at the module documentation for the <code>selinux</code> module of the <code>ansible.posix</code> collection, which we are going to use in the next part of the exercise:</p>
 <pre><code>[student@ansible-1 ~]$ ansible-doc ansible.posix.selinux
@@ -1151,10 +1148,10 @@
 &gt; SELINUX    (/usr/lib/python3.6/site-packages/ansible/modules/system/selinux.py)
 </code></pre>
 <p>You can see how the command this time pulled the documentation for the module that was installed with Ansible.</p>
-<blockquote>
-<p><strong>NOTE</strong>:
-Depending on your screen resolution you might have to press <code>q</code> to leave the documentation viewer.</p>
-</blockquote>
+
+<div class="notices note" ><p>Depending on your screen resolution you might have to press <code>q</code> to leave the documentation viewer.</p>
+</div>
+
 <h2 id="step-3---write-an-ansible-playbook">Step 3 - Write an Ansible Playbook</h2>
 <p>We want to use the SELinux module to make sure it is configured in enforcing mode. SELinux is a kernel feature which brings extra security to our Linux system and it is highly recommended to always keep it enabled and in enforcing mode. If you&rsquo;re new to SELinux, there is a nice article on <a href="https://www.redhat.com/en/topics/linux/what-is-selinux">What is SELinux</a> to get you started.</p>
 <p>Let&rsquo;s write a simple playbook which enables SELinux and sets it to enforcing mode on the local machine. In this lab you can use the visual <strong>code-server</strong> editor or run an editor of your choice from the terminal. Create the Playbook <code>enforce-selinux.yml</code> with the following content:</p>
@@ -1167,10 +1164,11 @@ Depending on your screen resolution you might have to press <code>q</code> to le
     <span style="color:#66d9ef">ansible.posix.selinux</span>:
       <span style="color:#66d9ef">policy</span>: targeted
       <span style="color:#66d9ef">state</span>: enforcing
-</code></pre></div><p>Make sure you save the playbook in your student users home directory.</p>
-<blockquote>
-<p><strong>NOTE</strong>: Pay special attention to the module name. Typically you would see something like <code>selinux</code>, but since we are using a module provided by an Ansible Collection, we have to specify the fully qualified collection name.</p>
-</blockquote>
+</code></pre></div><p>Make sure you save the playbook as <code>enforce-selinux.yml</code> in your student users home directory.</p>
+
+<div class="notices note" ><p>Pay special attention to the module name. Typically you would see something like <code>selinux</code>, but since we are using a module provided by an Ansible Collection, we have to specify the fully qualified collection name.</p>
+</div>
+
 <h2 id="step-4---test-the-playbook">Step 4 - Test the playbook</h2>
 <p>Noe let&rsquo;s run the Playbook and see what happens:</p>
 <pre><code>[student@ansible-1 ~]$ ansible-playbook enforce-selinux.yml
@@ -1189,9 +1187,9 @@ ok: [localhost]
 PLAY RECAP ********************************************************************************************************
 localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 </code></pre>
-<p>If SELinux was not set to enforcing mode before, you might see &ldquo;changed&rdquo; instead of ok. If it did say &ldquo;changed&rdquo; and you run it a second time, you should now see &ldquo;ok&rdquo; - the magic of <a href="https://docs.ansible.com/ansible/latest/reference_appendices/glossary.html">Ansible idempotency</a>.</p>
+<p>If SELinux was not set to enforcing mode before, you might see &ldquo;changed&rdquo; instead of &ldquo;ok&rdquo;. If it did say &ldquo;changed&rdquo; and you run it a second time, you should now see &ldquo;ok&rdquo; - the magic of <a href="https://docs.ansible.com/ansible/latest/reference_appendices/glossary.html">Ansible idempotency</a>.</p>
 <h2 id="step-5---simplify-the-namespace">Step 5 - Simplify the namespace</h2>
-<p>If you use many modules from Ansible Collections in your Playbook, the <author>.<collection> prefix can become quite annoying and reading your Playbook can become harder as well.</p>
+<p>If you use many modules from Ansible Collections in your Playbook, the &lt;author&gt;.&lt;collection&gt; prefix can become quite annoying and reading your Playbook can become harder as well.</p>
 <p>You can use the <code>collections</code> keyword to skip defining the namespace with every task. In your terminal edit the Playbook <code>enforce-selinux.yml</code> to look like this, basically adding the <code>collections:</code> section and changing the module name from FQCN to the simple module name:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
 - <span style="color:#66d9ef">name</span>: set SELinux to enforcing
@@ -1214,7 +1212,6 @@ localhost                  : ok=2    changed=0    unreachable=0    failed=0    s
 <div class="notices warning" ><p>We are explaining the <code>collections</code> keyword here for completeness. It is however recommended to always use the fully qualified collection name. The internal lookup can deliver unexpected results if there are many overlapping or overriding module names, which can be avoided by always using the full name. Since most modern code editors provide auto completion, it&rsquo;s not too much of an issue when typing the code either.</p>
 </div>
 
-<p>During the next chapter of this lab you&rsquo;ll learn more details on how the internal lookup works.</p>
 
 
 
@@ -1885,19 +1882,19 @@ localhost                  : ok=2    changed=0    unreachable=0    failed=0    s
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602079182"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602079182"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602079182"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602079182"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602079182"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602079182"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602106286"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602106286"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602106286"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602106286"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602106286"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602106286"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602079182"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1602079182"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602079182"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602106286"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1602106286"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602106286"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602079182" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602079182"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602106286" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602106286"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

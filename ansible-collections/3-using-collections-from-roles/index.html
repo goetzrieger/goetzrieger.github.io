@@ -12,20 +12,20 @@
     <title>Collections from Roles :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1602079182" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602079182" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1602079182" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602079182" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602079182" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602079182" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602079182" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1602079182" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602079182" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1602106286" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602106286" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1602106286" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602106286" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602106286" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602106286" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602106286" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1602106286" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602106286" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1602079182" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1602106286" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602079182"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602106286"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602079182"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602079182"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602106286"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602106286"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602079182"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602106286"></script>
 
     
   </div>
@@ -930,13 +930,13 @@
  
   
     
-    <li data-nav-id="/ansible-collections/6-automation-hub-and-galaxy/" title="Information: Accessing Collections" class="dd-item 
+    <li data-nav-id="/ansible-collections/6-automation-hub-and-galaxy/" title="Use Automation Hub" class="dd-item 
         
         
         
         ">
       <a href="https://goetzrieger.github.io/ansible-collections/6-automation-hub-and-galaxy/">
-          Information: Accessing Collections
+          Use Automation Hub
           
       </a>
       
@@ -1122,23 +1122,23 @@
 	<p>In this exercise you will learn how collections are used from within Ansible roles. As promised we&rsquo;ll explain the collection name resolution logic in more depth first. Then you&rsquo;ll see how to call a collection from an Ansible role using collection fully qualified collection name (FQCN).</p>
 <h2 id="step-2-running-collections-from-an-ansible-role">Step 2: Running collections from an Ansible role</h2>
 <p>First and to keep you home directory tidy, create an exercise folder:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir exercise-03
-cd exercise--3
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ mkdir exercise-03
+<span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ cd exercise-03
 </code></pre></div><p>For this lab, we will use the <code>ansible.posix</code> collection again, which contains a series of POSIX
 oriented modules and plugins for systems management. You should have installed the collection in the first exercise, if not, just do it now:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ ansible-galaxy collection install ansible.posix
+Process install dependency map
+Starting collection install process
+Skipping <span style="color:#e6db74">&#39;ansible.posix&#39;</span> as it is already installed
 </code></pre></div>
 <div class="notices tip" ><p>See how the command didn&rsquo;t fail or complain if the collection was installed already but just let&rsquo;s you know it was already there.</p>
 </div>
 
 <h3 id="approach-1-collections-loaded-as-metadata">Approach 1: Collections loaded as metadata</h3>
-<p>The first option is to specify the collection you want to use in your roles metadata.</p>
-
-<div class="notices tip" ><p>You can go through the exercise steps or copy the finished role from <code>solutions/selinux_manage_meta</code>.</p>
-</div>
-
+<p>There are two approaches to use Ansible Collections in your role. The first approach is to specify the collection you want to use in your roles metadata.</p>
 <p>First we&rsquo;ll create a simple role. Start with creating a new role scaffold using the <code>ansible-galaxy init</code> command (make sure you changed into your exercise folder):</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 exercise-03<span style="color:#f92672">]</span>$ ansible-galaxy init --init-path roles selinux_manage_meta
+- Role selinux_manage_meta was created successfully
 </code></pre></div><p>Now you have to edit a couple of files. First edit the role metadata in <code>roles/selinux_manage_meta/meta/main.yml</code> and append the following lines at the end of the file, don&rsquo;t change anything else:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># Collections list</span>
 <span style="color:#66d9ef">collections</span>:
@@ -1175,7 +1175,7 @@ oriented modules and plugins for systems management. You should have installed t
 <span style="color:#66d9ef">sebooleans_enable</span>: []
 <span style="color:#66d9ef">sebooleans_disable</span>: []
 </code></pre></div><p>As a last step clean up the unused folders of the role:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -rf roles/selinux_manage_meta/<span style="color:#f92672">{</span>tests,vars,handlers,files,templates<span style="color:#f92672">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 exercise-03<span style="color:#f92672">]</span>$ rm -rf roles/selinux_manage_meta/<span style="color:#f92672">{</span>tests,vars,handlers,files,templates<span style="color:#f92672">}</span>
 </code></pre></div><p>And you are done with the role! Run <code>tree</code> to check everything looks good:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 exercise-03<span style="color:#f92672">]</span>$ tree
 .
@@ -1223,10 +1223,6 @@ PLAY RECAP *********************************************************************
 localhost                  : ok<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>    changed<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>    unreachable<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    failed<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    skipped<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    rescued<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>    ignored<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
 </code></pre></div><h3 id="approach-2-collections-loaded-with-fqcn">Approach 2: Collections loaded with FQCN</h3>
 <p>The second approach to use collections in roles uses the collection FQCN to call the related modules and plugins. To better demonstrate the differences, we will implement a new version of the previous role with the FQCN approach without changing the inner logic.</p>
-
-<div class="notices tip" ><p>You can go though the exercise steps or copy the finished role from <code>solutions/selinux_manage_fqcn</code>.</p>
-</div>
-
 <p>To make this easy we&rsquo;ll just copy and edit the role we created above:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 exercise-03<span style="color:#f92672">]</span>$ cp -r roles/selinux_manage_meta/ roles/selinux_manage_fqcn
 </code></pre></div><p>Now change the file <code>roles/selinux_manage_fqcn/tasks/main.yml</code> so it uses the FQCN for the modules. It should look like this:</p>
@@ -1967,19 +1963,19 @@ localhost                  : ok<span style="color:#f92672">=</span><span style="
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602079182"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602079182"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602079182"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602079182"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602079182"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602079182"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602106286"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602106286"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602106286"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602106286"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602106286"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602106286"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602079182"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1602079182"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602079182"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602106286"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1602106286"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602106286"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602079182" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602079182"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602106286" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602106286"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

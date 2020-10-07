@@ -99,15 +99,15 @@
   </url>
   
   <url>
-    <loc>https://goetzrieger.github.io/ansible-collections/6-automation-hub-and-galaxy/</loc>
-  </url>
-  
-  <url>
     <loc>https://goetzrieger.github.io/ansible-getting-started/6-templates/</loc>
   </url>
   
   <url>
     <loc>https://goetzrieger.github.io/ansible-tower-advanced/6-instance-groups/</loc>
+  </url>
+  
+  <url>
+    <loc>https://goetzrieger.github.io/ansible-collections/6-automation-hub-and-galaxy/</loc>
   </url>
   
   <url>
