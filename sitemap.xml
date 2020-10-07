@@ -156,14 +156,6 @@
   </url>
   
   <url>
-    <loc>https://goetzrieger.github.io/ansible-collections/3-using-collections-from-roles/solutions/selinux_manage_fqcn/</loc>
-  </url>
-  
-  <url>
-    <loc>https://goetzrieger.github.io/ansible-collections/3-using-collections-from-roles/solutions/selinux_manage_meta/</loc>
-  </url>
-  
-  <url>
     <loc>https://goetzrieger.github.io/ansible-collections/5-creating-collections/solutions/roles/demo_image_builder/</loc>
   </url>
   
