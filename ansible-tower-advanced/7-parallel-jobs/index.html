@@ -12,20 +12,20 @@
     <title>Parallel Jobs :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602232059" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602269832" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1602232059" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1602269832" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602232059"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602269832"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602232059"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602232059"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602269832"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602269832"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602232059"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602269832"></script>
 
     
   </div>
@@ -1095,6 +1095,7 @@
     </li>
     <li><a href="#create-parallel-workflow">Create Parallel Workflow</a></li>
     <li><a href="#execute-and-watch">Execute and Watch</a></li>
+    <li><a href="#deactivate-a-node">Deactivate a node</a></li>
     <li><a href="#using-instance-groups">Using Instance Groups</a>
       <ul>
         <li><a href="#assign-jobs-to-instance-groups">Assign Jobs to Instance Groups</a></li>
@@ -1146,7 +1147,7 @@
 <h2 id="prepare-the-compliance-lab">Prepare the Compliance Lab</h2>
 <h3 id="create-three-templates">Create three Templates</h3>
 <p>As mentioned the Github repository contains three Playbooks to enforce different compliance requirements. First create these three templates and attach credentials using the <code>awx</code> CLI in the VSCode terminal:</p>
-<pre><code>[student@ansible-1 ~]$ awx job_template create --name &quot;Compliance STIG packages&quot; \
+<pre><code>[student@ansible-1 ~]$ awx -f human job_template create --name &quot;Compliance STIG packages&quot; \
                       --job-type run \
                       --inventory &quot;Example Inventory&quot; \
                       --project &quot;Apache&quot;  \
@@ -1167,7 +1168,7 @@
 [student@ansible-1 ~]$ awx -f human job_template associate --name &quot;Compliance STIG config&quot; \
                       --credential &quot;Example Credentials&quot;
 
-[student@ansible-1 ~]$ awx job_template create --name &quot;Compliance CIS&quot; \
+[student@ansible-1 ~]$ awx -f human job_template create --name &quot;Compliance CIS&quot; \
                       --job-type run  \
                       --inventory &quot;Example Inventory&quot; \
                       --project &quot;Apache&quot; \
@@ -1223,6 +1224,7 @@
 </li>
 </ul>
 <p>You have configured a Workflow that is not going through templates one after the other but rather executes three templates in parallel.</p>
+<p><img src="../../images/compliance-workflow.png" alt="compliance workflow"></p>
 <h2 id="execute-and-watch">Execute and Watch</h2>
 <p>Your workflow is ready to go, launch it.</p>
 <ul>
@@ -1245,6 +1247,7 @@
 <p>Because the Job Templates called in the workflow didn’t specify an instance group, they where distributed (more or less) evenly over the instances.</p>
 </li>
 </ul>
+<h2 id="deactivate-a-node">Deactivate a node</h2>
 <p>Now deactivate instance <strong>ansible-1</strong> with the slider button and wait until it is shown as unavailable. Make a (mental) note of the <strong>TOTAL JOBS</strong> counter of the instance. Go back to the list of templates and launch the workflow <strong>Compliance Workflow</strong> again.</p>
 <p>Go back to the <strong>Instance Groups</strong> view, get back to the instance overview of instance group <strong>tower</strong> and verify that the three Playbooks where launched on the remaining instances and the <strong>TOTAL JOBS</strong> counter of instance <strong>ansible-1</strong> didn’t change.</p>
 <p>Activate <strong>ansible-1</strong> again by sliding the button to &ldquo;checked&rdquo;.</p>
@@ -1252,7 +1255,7 @@
 <p>So we have seen how a Tower cluster is distributing jobs over Tower instances by default. We have already created instance groups which allow us to take control over which job is executed on which node, so let’s use them.</p>
 <p>To make it easier to spot where the jobs were run, let’s first empty the jobs history. This can be done using <strong>awx-manage</strong> on one of the Tower instances. From your VSCode terminal <strong>and as <code>root</code></strong> run the command:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ sudo -i
-<span style="color:#f92672">[</span>ansible-1 ~<span style="color:#f92672">]</span><span style="color:#75715e"># awx-manage cleanup_jobs  --days=0</span>
+<span style="color:#f92672">[</span>root@ansible-1 ~<span style="color:#f92672">]</span><span style="color:#75715e"># awx-manage cleanup_jobs  --days=0</span>
 deleting <span style="color:#e6db74">&#34;2020-04-08 15:43:12.121133+00:00-2-failed&#34;</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">2</span> host summaries, <span style="color:#ae81ff">8</span> events<span style="color:#f92672">)</span>
 <span style="color:#f92672">[</span>...<span style="color:#f92672">]</span>
 notifications: <span style="color:#ae81ff">0</span> deleted, <span style="color:#ae81ff">0</span> skipped.
@@ -2000,19 +2003,19 @@ notifications: <span style="color:#ae81ff">0</span> deleted, <span style="color:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602232059"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602269832"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602232059"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602269832"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602232059" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602232059"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602269832" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602269832"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

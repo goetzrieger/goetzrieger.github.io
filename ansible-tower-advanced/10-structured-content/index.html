@@ -12,20 +12,20 @@
     <title>Well Structured Content Repositories :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602232059" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602269832" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1602232059" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1602269832" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602232059"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602269832"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602232059"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602232059"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602269832"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602269832"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602232059"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602269832"></script>
 
     
   </div>
@@ -1174,7 +1174,7 @@
 <div class="notices tip" ><p>The repository is currently empty. The three config commands are just there to avoid useless warnings from Git.</p>
 </div>
 
-<p>you are now going to add some default directories and files:</p>
+<p>You are now going to add some default directories and files:</p>
 <pre><code>[student@ansible-1 structured-content]$ touch {staging,production}
 </code></pre>
 <p>This command creates two inventory files: in this case we have different stages with different hosts which we keep them in separate inventory files. Note that those files are right now still empty and need to be filled with content to work properly.</p>
@@ -1340,13 +1340,13 @@ will be in.</p>
 <p>Call e.g. <code>curl node1</code> to get the default page.</p>
 <h3 id="from-tower">From Tower</h3>
 <p>To configure and use this repository as a <strong>Source Control Management (SCM)</strong> system in Tower you have to create credentials again, this time to access the Git repository over SSH. This credential is user/key based, and we need the following <strong>awx</strong> command (assuming the <code>TOWER_</code> environment variables are still defined):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>root@ansible-1 ~<span style="color:#f92672">]</span><span style="color:#75715e"># awx -f human credential create --name &#34;Git Credentials&#34; \</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span><span style="color:#75715e"># awx -f human credential create --name &#34;Git Credentials&#34; \</span>
           --organization <span style="color:#e6db74">&#34;Default&#34;</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>          --credential_type <span style="color:#e6db74">&#34;Source Control&#34;</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>          --inputs <span style="color:#e6db74">&#39;{&#34;username&#34;: &#34;git&#34;, &#34;ssh_key_data&#34;: &#34;@~/.ssh/aws-private.pem&#34;}&#39;</span>
 </code></pre></div><p>The new repository needs to be added as project. Feel free to use the
 web UI or use <strong>awx</strong> like shown below.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>root@ansible-1 ~<span style="color:#f92672">]</span><span style="color:#75715e"># awx project create --name &#34;Structured Content Repository&#34; \</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span><span style="color:#75715e"># awx -f human project create --name &#34;Structured Content Repository&#34; \</span>
                     --organization Default <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>                    --scm_type git <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>                    --scm_url  git@ansible-1:projects/structured-content.git <span style="color:#ae81ff">\
@@ -1412,7 +1412,7 @@ web UI or use <strong>awx</strong> like shown below.</p>
 <p>Now create a template to execute the <code>site.yml</code> against both stages at the same time and associate the credentials.</p>
 
 <div class="notices tip" ><p>Please note that in a real world use case you might want to have different templates to address the different stages separably.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span><span style="color:#75715e"># awx job_template create --name &#34;Structured Content Execution&#34; \</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span><span style="color:#75715e"># awx -f human job_template create --name &#34;Structured Content Execution&#34; \</span>
                     --job_type run --inventory <span style="color:#e6db74">&#34;Structured Content Inventory&#34;</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>                    --project <span style="color:#e6db74">&#34;Structured Content Repository&#34;</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>                    --playbook <span style="color:#e6db74">&#34;site.yml&#34;</span> <span style="color:#ae81ff">\
@@ -1438,18 +1438,17 @@ job template <strong>Structured Content Execution</strong> and watch the results
 <p>To include it with the existing structured content, first we have to create a file called <code>roles/requirements.yml</code> and reference the role there:</p>
 
 <div class="notices warning" ><p>Make sure you work as user <strong>student&lt;N&gt;</strong></p>
+</div>
+
+<p>Let&rsquo;s create a <code>roles/requirements.yml</code> file:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 structured-content<span style="color:#f92672">]</span>$ cat roles/requirements.yml
 - src: https://github.com/ansible-labs-summit-crew/shared-apache-role.git
   scm: git
   version: master
-</code></pre></div></div>
-
-
+</code></pre></div>
 <div class="notices tip" ><p>In a production environment you may want to change the version to a fixed version or tag, to make sure that only tested and verified code is checked out and used. But this strongly depends on how you develop your code and which branching model you use.</p>
 </div>
 
-<p>Here we add the source for the role and identify the type of source
-control.</p>
 <p>Next, we reference the role itself in our playbook. Change the
 <strong>site.yml</strong> Playbook to look like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 structured-content<span style="color:#f92672">]</span>$ cat site.yml
@@ -2153,19 +2152,19 @@ changed: [node1]
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602232059"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602269832"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602232059"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602269832"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602232059" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602232059"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602269832" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602269832"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

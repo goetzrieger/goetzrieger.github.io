@@ -12,20 +12,20 @@
     <title>Run a Job in a Cluster :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602232059" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602269832" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1602232059" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1602269832" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602232059"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602269832"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602232059"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602232059"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602269832"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602269832"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602232059"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602269832"></script>
 
     
   </div>
@@ -1087,7 +1087,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#so-what-instance-run-the-job">So what Instance run the Job?</a>
+    <li><a href="#so-which-instance-did-actually-run-the-job">So, which Instance did actually run the Job?</a>
       <ul>
         <li><a href="#from-the-job-output">From the Job Output</a></li>
         <li><a href="#from-the-instance-groups">From the instance groups</a></li>
@@ -1133,7 +1133,7 @@
 </li>
 </ul>
 <p>At first this is not different from a standard Tower setup. But as this is a cluster of active Tower instances every instance could have run the job.</p>
-<h2 id="so-what-instance-run-the-job">So what Instance run the Job?</h2>
+<h2 id="so-which-instance-did-actually-run-the-job">So, which Instance did actually run the Job?</h2>
 <p>There are a couple of ways to find the node that executed the job.</p>
 <h3 id="from-the-job-output">From the Job Output</h3>
 <p>The most obvious way is to look up the <strong>EXECUTION NODE</strong> in the details of the job output. If you closed it already or want to look it up later, go to <strong>VIEWS-&gt;Jobs</strong> and look up the job in question.</p>
@@ -1158,7 +1158,7 @@
 </ul>
 <p>Bring up the terminal in your VSCode session and run:</p>
 
-<div class="notices warning" ><p>Replace <strong>&lt;ID&gt;</strong> with the job ID you want to query!</p>
+<div class="notices warning" ><p>Replace <strong>&lt;ID&gt;</strong> with the job ID you want to query and <strong>VERY_SECRET_PASSWORD</strong> with your actual password from the landing page.</p>
 </div>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ curl -s -k -u admin:VERY_SECRET_PASSWORD https://ansible-1/api/v2/jobs/&lt;ID&gt;/ | python3 -m json.tool | grep execution_node
@@ -1867,19 +1867,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602232059"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602269832"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602232059"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602269832"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602232059" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602232059"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602269832" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602269832"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

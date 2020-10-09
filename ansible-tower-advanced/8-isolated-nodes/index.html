@@ -12,20 +12,20 @@
     <title>Isolated Nodes :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602232059" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602269832" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1602232059" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1602269832" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602232059"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602269832"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602232059"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602232059"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602269832"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602269832"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602232059"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602269832"></script>
 
     
   </div>
@@ -1119,7 +1119,7 @@
 
 
 	<p>Ansible is used to manage complex infrastructures with machines and networks living in multiple separate datacenters, servers behind firewalls or in cloud VPCs and remote locations only reachable over unstable links which may not survive the length of a job run. In cases like these it’s often better to run automation local to the nodes.</p>
-<p>To solve this, Tower provides <strong>Isolated Nodes</strong>:</p>
+<p>To address such requirements, Tower provides <strong>Isolated Nodes</strong>:</p>
 <ul>
 <li>
 <p>Isolated Nodes <strong>don’t have a full installation of Tower</strong>, but a minimal set of utilities used to run jobs.</p>
@@ -1163,9 +1163,9 @@ ansible-4
 <div class="notices warning" ><p>The Ansible installer files in <code>/tmp/tower_install/</code> are owned by root, but your code-server/VSCode instance is running as your student&lt;N&gt; user. To be able to edit the inventory file, you have to change the file permissions.</p>
 </div>
 
-<p>To edit the inventory file in VSCode editor change the permissions (don&rsquo;t do 777 in real life&hellip; ;-)):</p>
+<p>To edit the inventory file in VSCode editor change the permissions (don&rsquo;t do 666 in real life&hellip; ;-)):</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 ~<span style="color:#f92672">]</span>$ sudo -i
-<span style="color:#f92672">[</span>ansible-1 ~<span style="color:#f92672">]</span><span style="color:#75715e"># chmod 777 /tmp/tower_install/inventory</span>
+<span style="color:#f92672">[</span>ansible-1 ~<span style="color:#f92672">]</span><span style="color:#75715e"># chmod 666 /tmp/tower_install/inventory</span>
 <span style="color:#f92672">[</span>ansible-1 ~<span style="color:#f92672">]</span><span style="color:#75715e"># exit</span>
 </code></pre></div><p>Then do <strong>File -&gt; Open File</strong> in VSCode, navigate to <code>/tmp/tower_install/inventory</code> file and open it. Add the isolated node to the inventory to look like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[tower]</span>
@@ -1174,7 +1174,7 @@ ansible-4
 <span style="color:#a6e22e">ansible-3</span>
 
 <span style="color:#66d9ef">[isolated_group_dmz]</span>
-<span style="color:#a6e22e">isonode ansible_host</span><span style="color:#f92672">=</span><span style="color:#e6db74">isonode ansible_become=true</span>
+<span style="color:#a6e22e">isonode</span>
 
 <span style="color:#66d9ef">[isolated_group_dmz:vars]</span>
 <span style="color:#a6e22e">controller</span><span style="color:#f92672">=</span><span style="color:#e6db74">tower</span>
@@ -1196,7 +1196,7 @@ ansible-4
 <span style="color:#f92672">[</span>ansible-1 ~<span style="color:#f92672">]</span><span style="color:#75715e"># cd /tmp/tower_install/</span>
 <span style="color:#f92672">[</span>ansible-1 tower_install<span style="color:#f92672">]</span><span style="color:#75715e"># ./setup.sh</span>
 </code></pre></div>
-<div class="notices note" ><p>The setup.sh script will take a couple of minutes to finish execution.</p>
+<div class="notices note" ><p>The <code>setup.sh</code> script will take a couple of minutes to finish execution.</p>
 </div>
 
 <p>Sit down and watch the tasks flying by&hellip;</p>
@@ -1225,8 +1225,7 @@ id name
 <p><strong>ORGANIZATION:</strong> Default</p>
 </li>
 <li>
-<p><strong>INSTANCE GROUPS:</strong> Pick the instance group you created in the last
-step, <code>dmz</code></p>
+<p><strong>INSTANCE GROUPS:</strong> Pick the instance group you created in the last step, <code>dmz</code></p>
 </li>
 <li>
 <p>Click <strong>SAVE</strong></p>
@@ -1970,19 +1969,19 @@ step, <code>dmz</code></p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602232059"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602269832"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602232059"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602269832"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602232059" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602232059"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602269832" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602269832"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

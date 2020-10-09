@@ -12,20 +12,20 @@
     <title>Creating Tower Objects Using `awx` :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1602232059" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602232059" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602269832" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1602232059" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1602269832" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602232059"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602269832"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602232059"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602232059"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602269832"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602269832"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602232059"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602269832"></script>
 
     
   </div>
@@ -1155,8 +1155,7 @@
 <p>As mentioned one of the purposes of <strong>awx</strong> is to use it to automatically configure more complex Tower setups. In such cases, multiple <strong>awx</strong> commands are put together in a script. We follow that practice in our example here, and create a shell script on the control host with all commands you have to run to bootstrap Tower. So in the next few paragraphs we describe the steps to do and describe the corresponding <strong>awx</strong> commands. But we will not execute them, but instead write them into a script.</p>
 <p>In <strong>code-server</strong> create a new file <strong>File-&gt;New File</strong> and save it (<strong>File-&gt;Save As</strong>) as <strong><code>setup-tower.sh</code></strong>. Add the commands executed above:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
-</span><span style="color:#75715e"></span>set +e  <span style="color:#75715e"># avoid exiting if an object already exists.</span>
-awx -f human inventory create --name <span style="color:#e6db74">&#34;Example Inventory&#34;</span> --organization <span style="color:#e6db74">&#34;Default&#34;</span>
+</span><span style="color:#75715e"></span>awx -f human inventory create --name <span style="color:#e6db74">&#34;Example Inventory&#34;</span> --organization <span style="color:#e6db74">&#34;Default&#34;</span>
 awx -f human host create --name <span style="color:#e6db74">&#34;node1&#34;</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --inventory <span style="color:#e6db74">&#34;Example Inventory&#34;</span>
 awx -f human host create --name <span style="color:#e6db74">&#34;node2&#34;</span> <span style="color:#ae81ff">\
@@ -1172,7 +1171,7 @@ the full script here. You&rsquo;ll get &ldquo;Duplicate&rdquo; messages because 
 </code></pre></div><p>From now on we’ll explain the needed commands for each of the next steps and add them to the script one-by-one.</p>
 <h2 id="create-machine-credentials">Create Machine Credentials</h2>
 
-<div class="notices tip" ><p>SSH keys have already been created and distributed in your lab environment and <code>sudo</code> has been setup on the managed hosts to allow password-less login. When you SSH into a host as user <strong>student&lt;N&gt;</strong> from <strong>ansible-1</strong> you will become user <strong>ec2-user</strong> on the host you SSH-ed to.</p>
+<div class="notices tip" ><p>SSH keys have already been created and distributed in your lab environment and <code>sudo</code> has been setup on the managed hosts to allow password-less login. When you SSH into a host as user <strong>student&lt;N&gt;</strong> from <strong>ansible-1</strong> you will become user <strong>ec2-user</strong> on the host you logged in.</p>
 </div>
 
 <p>Now we want to configure these credentials to access our managed hosts from Tower. Add the following to to <strong><code>setup-tower.sh</code></strong>, but don’t run the script yet:</p>
@@ -1183,7 +1182,7 @@ the full script here. You&rsquo;ll get &ldquo;Duplicate&rdquo; messages because 
 </code></pre>
 <p>Don’t run the shell script yet, first go through the following steps to add all commands to it.</p>
 
-<div class="notices warning" ><p>As the <strong>awx</strong> commands get longer you’ll find we use the back-slash for line wraps to make the commands readable. You can copy the examples or use them without the \ on one line, of course.</p>
+<div class="notices warning" ><p>As the <strong>awx</strong> commands get longer you’ll find we use the back-slash for line wraps to make the commands readable. You can copy the examples or use them without the \ in one line, of course.</p>
 </div>
 
 <h2 id="create-the-project">Create the Project</h2>
@@ -1240,7 +1239,6 @@ awx -f human credential create --name &quot;Example Credentials&quot; \
     --organization &quot;Default&quot; \
     --credential_type &quot;Machine&quot; \
     --inputs '{&quot;username&quot;: &quot;ec2-user&quot;, &quot;ssh_key_data&quot;: &quot;@~/.ssh/aws-private.pem&quot;}'
-
 awx -f human project create --name=&quot;Apache&quot; \
     --scm_type=git \
     --scm_url=&quot;https://github.com/goetzrieger/ansible-labs-playbooks.git&quot; \
@@ -1256,12 +1254,12 @@ awx -f human job_templates create  \
 awx -f human job_template associate --name &quot;Install Apache&quot; \
     --credential &quot;Example Credentials&quot;
 </code></pre>
-<p><strong>And now: Run the script, and verify that all resources were properly created in the web UI.</strong></p>
+<p><strong>And now:</strong> Run the script (make sure the <code>TOWER_</code> environment variables are defined), and verify that all resources were properly created in the web UI.</p>
 <h2 id="take-away">Take away</h2>
 <p>It’s easy to script Tower’s configuration using <strong>awx</strong>. This way you can bootstrap a new Tower node or script tasks you have to run on a regular basis. You will learn more about the Tower API at the end of the lab.</p>
 <h2 id="its-a-cluster-after-all">It’s a Cluster After All</h2>
 <p>We are working in a clustered environment. To verify that the resources were created on all instances properly, login to the other Tower nodes web UI&rsquo;s (You run the <strong>awx</strong> commands against your Tower node 1).</p>
-<p>Have a look around, everything we automatically configured on one Tower instance with our script was <strong>synced automatically</strong> to the other nodes. Inventory, credentials, projects, templates, all there.</p>
+<p>Have a look around, everything we automatically configured on one Tower instance with our script was <strong>synchronized automatically</strong> to the other nodes. Inventory, credentials, projects, templates, all there.</p>
 
 
 
@@ -1932,19 +1930,19 @@ awx -f human job_template associate --name &quot;Install Apache&quot; \
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602232059"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602269832"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1602232059"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602232059"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602269832"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602232059" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602232059"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602269832" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602269832"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
