@@ -12,20 +12,20 @@
     <title>Discovering the Tower API :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1602269832" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602269832" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1602269832" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602269832" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602269832" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602269832" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602269832" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1602269832" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602269832" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1602493571" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602493571" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1602493571" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602493571" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602493571" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602493571" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602493571" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1602493571" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602493571" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1602269832" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1602493571" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602493571"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602269832"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602269832"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602493571"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602493571"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602269832"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602493571"></script>
 
     
   </div>
@@ -1159,6 +1159,7 @@ through it:</p>
 </li>
 </ol>
 <details><summary><b>Click here for Solution</b></summary>
+<hr/>
 <p>
 <p>The JSON should roughly look like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
@@ -1172,6 +1173,7 @@ through it:</p>
 }
 </code></pre></div><p>and the result should be a 201 telling you about your success. You can login with the password and see that you see… nothing, because you have no rights.</p>
 </p>
+<hr/>
 </details>
 <p>Now log in again as admin and go back to the list of users:
 <code>https://student&lt;N&gt;.&lt;LABID&gt;.open.redhat.com/api/v2/users/</code></p>
@@ -1190,6 +1192,7 @@ through it:</p>
 </ul>
 <p>So why not patch the user to be named &ldquo;Johnny&rdquo; instead of &ldquo;John&rdquo;?</p>
 <details><summary><b>Click here for Solution</b></summary>
+<hr/>
 <p>
 <p>Add this to the <strong>CONTENT</strong> field:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
@@ -1197,9 +1200,11 @@ through it:</p>
 }
 </code></pre></div><p>And press the <strong>PATCH</strong> button.</p>
 </p>
+<hr/>
 </details>
 <p>Now try to <strong>PUT</strong> the <strong>last_name</strong> &ldquo;Smithy&rdquo; using the same approach. What happens?</p>
 <details><summary><b>Click here for Solution</b></summary>
+<hr/>
 <p>
 <p>Enter this into the <strong>CONTENT</strong> field and press <strong>PUT</strong>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
@@ -1211,6 +1216,7 @@ through it:</p>
     <span style="color:#f92672">&#34;last_name&#34;</span>: <span style="color:#e6db74">&#34;Smithy&#34;</span>
 }
 </code></pre></div></p>
+<hr/>
 </details>
 <p>When you’re done press the red <strong>DELETE</strong> button and remove Johnny Smithy.</p>
 
@@ -1883,19 +1889,19 @@ through it:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602269832"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602269832"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602269832"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602269832"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602269832"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602493571"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602493571"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602493571"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602493571"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602493571"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602493571"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602269832"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1602269832"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602269832"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602493571"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1602493571"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602493571"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602269832" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602269832"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602493571" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602493571"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
