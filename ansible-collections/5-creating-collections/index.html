@@ -12,20 +12,20 @@
     <title>Creating Collections :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602599873" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602602031" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1602599873" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1602602031" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602599873"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602602031"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602599873"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602599873"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602602031"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602602031"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602599873"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602602031"></script>
 
     
   </div>
@@ -1313,42 +1313,42 @@ def main<span style="color:#f92672">()</span>:
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 workshop_demo_collection <span style="color:#f92672">]</span>$ ansible-galaxy init --init-path roles hello_motd
 - Role hello_motd was created successfully
 </code></pre></div><p>In the next step add the following role tasks in the <code>roles/hello_motd/tasks/main.yml</code> file:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-<span style="color:#75715e"># tasks file for hello_motd</span>
-- <span style="color:#66d9ef">name</span>: Generate greeting and store result
-  <span style="color:#66d9ef">demo_hello</span>:
-    <span style="color:#66d9ef">name</span>: <span style="color:#e6db74">&#34;{{ friend_name }}&#34;</span>
-  <span style="color:#66d9ef">register</span>: demo_greeting
+<pre><code>---
+# tasks file for hello_motd
+- name: Generate greeting and store result
+  demo_hello:
+    name: &quot;{{ friend_name }}&quot;
+  register: demo_greeting
 
-- <span style="color:#66d9ef">name</span>: store test in /etc/motd
-  <span style="color:#66d9ef">copy</span>:
-    <span style="color:#66d9ef">content</span>: <span style="color:#e6db74">&#34;{{ demo_greeting.fact }}\n&#34;</span>
-    <span style="color:#66d9ef">dest</span>: /etc/motd
-  <span style="color:#66d9ef">become</span>: yes
-</code></pre></div><p>Notice the usage of the <code>demo_hello</code> module, installed in the collection, to generate the greeting string.</p>
+- name: store test in /etc/motd
+  copy:
+    content: &quot;{{ demo_greeting.fact }}\n&quot;
+    dest: /etc/motd
+  become: yes
+</code></pre><p>Notice the usage of the <code>demo_hello</code> module, installed in the collection, to generate the greeting string.</p>
 
 <div class="notices tip" ><p>When a collection role calls a module in the same collection namespace, the module is automatically resolved.</p>
 </div>
 
 <p>Every role should come with sensible defaults, add the following default variable to the <code>roles/hello_motd/defaults/main.yml</code> file to make it look like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-<span style="color:#75715e"># defaults file for hello_motd</span>
-<span style="color:#66d9ef">friend_name</span>: <span style="color:#e6db74">&#34;John Doe&#34;</span>
-</code></pre></div><p>Because <code>ansible-galaxy</code> creates a complete structure of directories and files, it&rsquo;s a good idea to clean up unused ones to keep it tidy:</p>
+<pre><code>---
+# defaults file for hello_motd
+friend_name: &quot;John Doe&quot;
+</code></pre><p>Because <code>ansible-galaxy</code> creates a complete structure of directories and files, it&rsquo;s a good idea to clean up unused ones to keep it tidy:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 workshop_demo_collection <span style="color:#f92672">]</span>$ rm -rf roles/hello_motd/<span style="color:#f92672">{</span>handlers,vars,tests<span style="color:#f92672">}</span>
 </code></pre></div><p>And as the final step customize the <code>roles/hello_motd/meta/main.yml</code> file to define Galaxy metadata and potential dependencies of the role. Use this sample minimal content:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">galaxy_info</span>:
-  <span style="color:#66d9ef">author</span>: Ansible Workshop Team
-  <span style="color:#66d9ef">description</span>: Hello world demo
+<pre><code>galaxy_info:
+  author: Ansible Workshop Team
+  description: Hello world demo
 
-  <span style="color:#66d9ef">license</span>: GPL<span style="color:#ae81ff">-2.0</span>-or-later
+  license: GPL-2.0-or-later
 
-  <span style="color:#66d9ef">min_ansible_version</span>: <span style="color:#ae81ff">2.9</span>
+  min_ansible_version: 2.9
 
-  <span style="color:#66d9ef">galaxy_tags</span>: [<span style="color:#e6db74">&#34;demo&#34;</span>]
+  galaxy_tags: [&quot;demo&quot;]
 
-<span style="color:#66d9ef">dependencies</span>: []
-</code></pre></div><h2 id="build-and-install-your-custom-collection">Build and Install your Custom Collection</h2>
+dependencies: []
+</code></pre><h2 id="build-and-install-your-custom-collection">Build and Install your Custom Collection</h2>
 <p>Okay, you are done with creating your role. Now you&rsquo;ll build the collection and generate a .tar.gz file that can be installed locally or uploaded to Galaxy. From the collection folder run the following command:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 workshop_demo_collection <span style="color:#f92672">]</span>$ ansible-galaxy collection build
 Created collection <span style="color:#66d9ef">for</span> redhat.workshop_demo_collection at /home/student&lt;N&gt;/exercise-05/ansible_collections/redhat/workshop_demo_collection/redhat-workshop_demo_collection-1.0.0.tar.gz
@@ -1364,15 +1364,15 @@ Installing <span style="color:#e6db74">&#39;redhat.workshop_demo_collection:1.0.
 <span style="color:#f92672">[</span>student@ansible-1 exercise-05 <span style="color:#f92672">]</span>$ mkdir collections_test
 <span style="color:#f92672">[</span>student@ansible-1 exercise-05 <span style="color:#f92672">]</span>$ cd collections_test
 </code></pre></div><p>To test the collection you need a basic <code>playbook.yml</code> file, create it with the following content:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-- <span style="color:#66d9ef">hosts</span>: localhost
+<pre><code>---
+- hosts: localhost
 
-  <span style="color:#66d9ef">tasks</span>:
-  - <span style="color:#66d9ef">import_role</span>:
-      <span style="color:#66d9ef">name</span>: redhat.workshop_demo_collection.hello_motd
-    <span style="color:#66d9ef">vars</span>:
-      <span style="color:#66d9ef">friend_name</span>: <span style="color:#e6db74">&#34;Angry Potato&#34;</span>
-</code></pre></div><h3 id="running-the-test-playbook">Running the Test Playbook</h3>
+  tasks:
+  - import_role:
+      name: redhat.workshop_demo_collection.hello_motd
+    vars:
+      friend_name: &quot;Angry Potato&quot;
+</code></pre><h3 id="running-the-test-playbook">Running the Test Playbook</h3>
 <p>Run the test playbook.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 collections_test <span style="color:#f92672">]</span>$ ansible-playbook playbook.yml
 
@@ -2078,19 +2078,19 @@ Hello Angry Potato!
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602599873"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602602031"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602599873"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602602031"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602599873" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602599873"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602602031" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602602031"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

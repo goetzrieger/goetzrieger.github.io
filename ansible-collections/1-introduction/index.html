@@ -12,20 +12,20 @@
     <title>Introduction :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602599873" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602602031" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1602599873" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1602602031" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602599873"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602602031"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602599873"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602599873"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602602031"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602602031"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602599873"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602602031"></script>
 
     
   </div>
@@ -1243,25 +1243,25 @@ logout
 <ul>
 <li>
 <p><strong>Approach 1</strong>: Pass a list of collections in the <code>collections</code> field inside the <code>meta/main.yml</code> file within the role. This will ensure that the collections list searched by the role will have higher priority than the collections list in the playbook. Ansible will use the collections list defined inside the role even if the playbook that calls the role defines different collections in a separate <code>collections</code> keyword entry.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># myrole/meta/main.yml</span>
-<span style="color:#66d9ef">collections</span>:
+<pre><code># myrole/meta/main.yml
+collections:
   - my_namespace.first_collection
   - my_namespace.second_collection
   - other_namespace.other_collection
-</code></pre></div></li>
+</code></pre></li>
 <li>
 <p><strong>Approach 2</strong>: Use the collection fully qualified collection name (FQCN) directly from a task in the role. In this way the collection will always be called with its unique FQCN, and override any other lookup in the playbook</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#66d9ef">name</span>: Create an EC2 instance using collection by FQCN
-  <span style="color:#66d9ef">amazon.aws.ec2</span>:
-    <span style="color:#66d9ef">key_name</span>: mykey
-    <span style="color:#66d9ef">instance_type</span>: t2.micro
-    <span style="color:#66d9ef">image</span>: ami<span style="color:#ae81ff">-123456</span>
-    <span style="color:#66d9ef">wait</span>: yes
-    <span style="color:#66d9ef">group</span>: webserver
-    <span style="color:#66d9ef">count</span>: <span style="color:#ae81ff">3</span>
-    <span style="color:#66d9ef">vpc_subnet_id</span>: subnet<span style="color:#ae81ff">-29e63245</span>
-    <span style="color:#66d9ef">assign_public_ip</span>: yes
-</code></pre></div></li>
+<pre><code>- name: Create an EC2 instance using collection by FQCN
+  amazon.aws.ec2:
+    key_name: mykey
+    instance_type: t2.micro
+    image: ami-123456
+    wait: yes
+    group: webserver
+    count: 3
+    vpc_subnet_id: subnet-29e63245
+    assign_public_ip: yes
+</code></pre></li>
 </ul>
 <p>Roles defined <strong>within</strong> a collection always implicitly search their own collection first, so there is no need to use the <code>collections</code> keyword in the role metadata to access modules, plugins, or other roles.</p>
 <p>In the following chapters of this lab you will learn how collections work and see different examples to see how it works.</p>
@@ -1936,19 +1936,19 @@ logout
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602599873"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602602031"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602599873"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602602031"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602599873" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602599873"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602602031" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602602031"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

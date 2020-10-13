@@ -12,20 +12,20 @@
     <title>Conditionals, Handlers and Loops :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602599873" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602602031" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1602599873" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1602602031" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602599873"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602602031"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602599873"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602599873"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602602031"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602602031"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602599873"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602602031"></script>
 
     
   </div>
@@ -1172,17 +1172,17 @@
 <span style="color:#66d9ef">[control]</span>
 <span style="color:#a6e22e">ansible ansible_host</span><span style="color:#f92672">=</span><span style="color:#e6db74">44.55.66.77</span>
 </code></pre></div><p>Next create the file <code>ftpserver.yml</code> on your control host in the <code>~/ansible-files/</code> directory:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-- <span style="color:#66d9ef">name</span>: Install vsftpd on ftpservers
-  <span style="color:#66d9ef">hosts</span>: all
-  <span style="color:#66d9ef">become</span>: yes
-  <span style="color:#66d9ef">tasks</span>:
-    - <span style="color:#66d9ef">name</span>: Install FTP server when host in ftpserver group
-      <span style="color:#66d9ef">yum</span>:
-        <span style="color:#66d9ef">name</span>: vsftpd
-        <span style="color:#66d9ef">state</span>: latest
-      <span style="color:#66d9ef">when</span>: inventory_hostname in groups[<span style="color:#e6db74">&#34;ftpserver&#34;</span>]
-</code></pre></div>
+<pre><code>---
+- name: Install vsftpd on ftpservers
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install FTP server when host in ftpserver group
+      yum:
+        name: vsftpd
+        state: latest
+      when: inventory_hostname in groups[&quot;ftpserver&quot;]
+</code></pre>
 <div class="notices tip" ><p>By now you should know how to run Ansible Playbooks, we’ll start to be less verbose in this guide. Go create and run it. :-)</p>
 </div>
 
@@ -1208,23 +1208,23 @@ changed: <span style="color:#f92672">[</span>node2<span style="color:#f92672">]<
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 ansible-files<span style="color:#f92672">]</span>$ scp 11.22.33.44:/etc/httpd/conf/httpd.conf ~/ansible-files/
 httpd.conf
 </code></pre></div><p>Next, create the Playbook <code>httpd_conf.yml</code>. Make sure that you are in the directory <code>~/ansible-files</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-- <span style="color:#66d9ef">name</span>: manage httpd.conf
-  <span style="color:#66d9ef">hosts</span>: web
-  <span style="color:#66d9ef">become</span>: yes
-  <span style="color:#66d9ef">tasks</span>:
-  - <span style="color:#66d9ef">name</span>: Copy Apache configuration file
-    <span style="color:#66d9ef">copy</span>:
-      <span style="color:#66d9ef">src</span>: httpd.conf
-      <span style="color:#66d9ef">dest</span>: /etc/httpd/conf/
-    <span style="color:#66d9ef">notify</span>:
+<pre><code>---
+- name: manage httpd.conf
+  hosts: web
+  become: yes
+  tasks:
+  - name: Copy Apache configuration file
+    copy:
+      src: httpd.conf
+      dest: /etc/httpd/conf/
+    notify:
         - restart_apache
-  <span style="color:#66d9ef">handlers</span>:
-    - <span style="color:#66d9ef">name</span>: restart_apache
-      <span style="color:#66d9ef">service</span>:
-        <span style="color:#66d9ef">name</span>: httpd
-        <span style="color:#66d9ef">state</span>: restarted
-</code></pre></div><p>So what’s new here?</p>
+  handlers:
+    - name: restart_apache
+      service:
+        name: httpd
+        state: restarted
+</code></pre><p>So what’s new here?</p>
 <ul>
 <li>
 <p>The <code>notify</code> section calls the handler only when the copy task actually changes the file. That way the service is only restarted if needed - and not each time the playbook is run.</p>
@@ -1262,21 +1262,21 @@ curl: <span style="color:#f92672">(</span>7<span style="color:#f92672">)</span> 
 <h2 id="simple-loops">Simple Loops</h2>
 <p>Loops enable us to repeat the same task over and over again. For example, lets say you want to create multiple users. By using an Ansible loop, you can do that in a single task. Loops can also iterate over more than just basic lists. For example, if you have a list of users with their corresponding group, loop can iterate over them as well. Find out more about loops in the <a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_loops.html">Ansible Loops</a> documentation.</p>
 <p>To show the loops feature we will generate three new users on <code>node1</code>. For that, create the Playbook <code>loop_users.yml</code> in <code>~/ansible-files</code> on your control node as your student user and run it. We will use the <code>user</code> module to generate the user accounts.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-- <span style="color:#66d9ef">name</span>: Ensure users
-  <span style="color:#66d9ef">hosts</span>: node1
-  <span style="color:#66d9ef">become</span>: yes
+<pre><code>---
+- name: Ensure users
+  hosts: node1
+  become: yes
 
-  <span style="color:#66d9ef">tasks</span>:
-    - <span style="color:#66d9ef">name</span>: Ensure three users are present
-      <span style="color:#66d9ef">user</span>:
-        <span style="color:#66d9ef">name</span>: <span style="color:#e6db74">&#34;{{ item }}&#34;</span>
-        <span style="color:#66d9ef">state</span>: present
-      <span style="color:#66d9ef">loop</span>:
+  tasks:
+    - name: Ensure three users are present
+      user:
+        name: &quot;{{ item }}&quot;
+        state: present
+      loop:
          - dev_user
          - qa_user
          - prod_user
-</code></pre></div>
+</code></pre>
 <div class="notices tip" ><p>Lines starting with a variable need to be quoted.</p>
 </div>
 
@@ -1294,32 +1294,32 @@ curl: <span style="color:#f92672">(</span>7<span style="color:#f92672">)</span> 
 </ul>
 <h2 id="loops-over-hashes">Loops over hashes</h2>
 <p>As mentioned loops can also be over lists of hashes. Imagine that the users should be assigned to different additional groups:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#66d9ef">username</span>: dev_user
-  <span style="color:#66d9ef">groups</span>: ftp
-- <span style="color:#66d9ef">username</span>: qa_user
-  <span style="color:#66d9ef">groups</span>: ftp
-- <span style="color:#66d9ef">username</span>: prod_user
-  <span style="color:#66d9ef">groups</span>: apache
-</code></pre></div><p>The <code>user</code> module has the optional parameter <code>groups</code> to list additional users. To reference items in a hash, the <code>{{ item }}</code> keyword needs to reference the subkey: <code>{{ item.groups }}</code> for example.</p>
+<pre><code>- username: dev_user
+  groups: ftp
+- username: qa_user
+  groups: ftp
+- username: prod_user
+  groups: apache
+</code></pre><p>The <code>user</code> module has the optional parameter <code>groups</code> to list additional users. To reference items in a hash, the <code>{{ item }}</code> keyword needs to reference the subkey: <code>{{ item.groups }}</code> for example.</p>
 <p>Let&rsquo;s rewrite the playbook to create the users with additional user rights:</p>
 <!-- {% raw %} -->
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-- <span style="color:#66d9ef">name</span>: Ensure users
-  <span style="color:#66d9ef">hosts</span>: node1
-  <span style="color:#66d9ef">become</span>: yes
+<pre><code>---
+- name: Ensure users
+  hosts: node1
+  become: yes
 
-  <span style="color:#66d9ef">tasks</span>:
-    - <span style="color:#66d9ef">name</span>: Ensure three users are present
-      <span style="color:#66d9ef">user</span>:
-        <span style="color:#66d9ef">name</span>: <span style="color:#e6db74">&#34;{{ item.username }}&#34;</span>
-        <span style="color:#66d9ef">state</span>: present
-        <span style="color:#66d9ef">groups</span>: <span style="color:#e6db74">&#34;{{ item.groups }}&#34;</span>
-      <span style="color:#66d9ef">loop</span>:
-        - { <span style="color:#66d9ef">username: &#39;dev_user&#39;, groups</span>: <span style="color:#e6db74">&#39;ftp&#39;</span> }
-        - { <span style="color:#66d9ef">username: &#39;qa_user&#39;, groups</span>: <span style="color:#e6db74">&#39;ftp&#39;</span> }
-        - { <span style="color:#66d9ef">username: &#39;prod_user&#39;, groups</span>: <span style="color:#e6db74">&#39;apache&#39;</span> }
+  tasks:
+    - name: Ensure three users are present
+      user:
+        name: &quot;{{ item.username }}&quot;
+        state: present
+        groups: &quot;{{ item.groups }}&quot;
+      loop:
+        - { username: 'dev_user', groups: 'ftp' }
+        - { username: 'qa_user', groups: 'ftp' }
+        - { username: 'prod_user', groups: 'apache' }
 
-</code></pre></div><!-- {% endraw %} -->
+</code></pre><!-- {% endraw %} -->
 <p>Check the output:</p>
 <ul>
 <li>Again the task is listed once, but three changes are listed. Each loop with its content is shown.</li>
@@ -1995,19 +1995,19 @@ uid<span style="color:#f92672">=</span>1002<span style="color:#f92672">(</span>d
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602599873"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602602031"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602599873"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602602031"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602599873" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602599873"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602602031" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602602031"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

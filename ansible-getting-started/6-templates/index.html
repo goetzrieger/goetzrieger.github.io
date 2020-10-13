@@ -12,20 +12,20 @@
     <title>Templates :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602599873" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602602031" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1602599873" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1602602031" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602599873"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602602031"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602599873"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602599873"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602602031"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602602031"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602599873"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602602031"></script>
 
     
   </div>
@@ -1126,18 +1126,18 @@ deployed on {{ ansible_architecture }} architecture.
 </code></pre><!-- {% endraw %} -->
 <p>The template file contains the basic text that will later be copied over. It also contains variables which will be replaced on the target machines individually.</p>
 <p>Next we need a playbook to use this template. In the <code>~/ansible-files/</code> directory create the Playbook <code>motd-facts.yml</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-- <span style="color:#66d9ef">name</span>: Fill motd file with host data
-  <span style="color:#66d9ef">hosts</span>: node1
-  <span style="color:#66d9ef">become</span>: yes
-  <span style="color:#66d9ef">tasks</span>:
-    - <span style="color:#66d9ef">template</span>:
-        <span style="color:#66d9ef">src</span>: motd-facts.j2
-        <span style="color:#66d9ef">dest</span>: /etc/motd
-        <span style="color:#66d9ef">owner</span>: root
-        <span style="color:#66d9ef">group</span>: root
-        <span style="color:#66d9ef">mode</span>: <span style="color:#ae81ff">0644</span>
-</code></pre></div><p>You have done this a couple of times by now:</p>
+<pre><code>---
+- name: Fill motd file with host data
+  hosts: node1
+  become: yes
+  tasks:
+    - template:
+        src: motd-facts.j2
+        dest: /etc/motd
+        owner: root
+        group: root
+        mode: 0644
+</code></pre><p>You have done this a couple of times by now:</p>
 <ul>
 <li>
 <p>Understand what the Playbook does.</p>
@@ -1862,19 +1862,19 @@ running kernel {{ ansible_kernel }}.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602599873"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602602031"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602599873"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602602031"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602599873" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602599873"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602602031" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602602031"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,20 +12,20 @@
     <title>Using Variables :: Ansible Labs for AnsibleFest</title>
 
     
-    <link href="https://goetzrieger.github.io/css/nucleus.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hybrid.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/theme.css?1602599873" rel="stylesheet">
-    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602599873" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/nucleus.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/fontawesome-all.min.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hybrid.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/featherlight.min.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/perfect-scrollbar.min.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/auto-complete.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/atom-one-dark-reasonable.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/theme.css?1602602031" rel="stylesheet">
+    <link href="https://goetzrieger.github.io/css/hugo-theme.css?1602602031" rel="stylesheet">
     
-      <link href="https://goetzrieger.github.io/css/theme-red.css?1602599873" rel="stylesheet">
+      <link href="https://goetzrieger.github.io/css/theme-red.css?1602602031" rel="stylesheet">
     
 
-    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602599873"></script>
+    <script src="https://goetzrieger.github.io/js/jquery-3.3.1.min.js?1602602031"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602599873"></script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602599873"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/lunr.min.js?1602602031"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/auto-complete.js?1602602031"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/goetzrieger.github.io\/";
     
 </script>
-<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602599873"></script>
+<script type="text/javascript" src="https://goetzrieger.github.io/js/search.js?1602602031"></script>
 
     
   </div>
@@ -1123,8 +1123,8 @@
 <p>Ansible exists to make tasks simple and repeatable.  We also know that not all systems are exactly alike and often require some slight change to the way an Ansible playbook is run. Enter variables.</p>
 <p>Ansible supports variables to store values that can be used in Playbooks. Variables can be defined in a variety of places and have a clear precedence. Ansible substitutes the variable with its value when a task is executed.</p>
 <p>Variables are referenced in Playbooks by placing the variable name in double curly braces:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">Here comes a variable {{ variable1 }}
-</code></pre></div><p>Variables and their values can be defined in various places: the inventory, additional files, on the command line, etc.</p>
+<pre><code>Here comes a variable {{ variable1 }}
+</code></pre><p>Variables and their values can be defined in various places: the inventory, additional files, on the command line, etc.</p>
 <p>The recommended practice to provide variables in the inventory is to define them in files located in two directories named <code>host_vars</code> and <code>group_vars</code>:</p>
 <ul>
 <li>
@@ -1146,14 +1146,14 @@
 <ul>
 <li>Create the file <code>~/ansible-files/group_vars/web</code> with this content:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-<span style="color:#66d9ef">stage</span>: dev
-</code></pre></div><ul>
+<pre><code>---
+stage: dev
+</code></pre><ul>
 <li>Create the file <code>~/ansible-files/host_vars/node2</code> with this content:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-<span style="color:#66d9ef">stage</span>: prod
-</code></pre></div><p>What is this about?</p>
+<pre><code>---
+stage: prod
+</code></pre><p>What is this about?</p>
 <ul>
 <li>
 <p>For all servers in the <code>web</code> group the variable <code>stage</code> with value <code>dev</code> is defined. So as default we flag them as members of the dev environment.</p>
@@ -1179,16 +1179,16 @@
 <div class="notices tip" ><p>Note how the variable &ldquo;stage&rdquo; is used in the name of the file to copy.</p>
 </div>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-- <span style="color:#66d9ef">name</span>: Copy index.html
-  <span style="color:#66d9ef">hosts</span>: web
-  <span style="color:#66d9ef">become</span>: yes
-  <span style="color:#66d9ef">tasks</span>:
-  - <span style="color:#66d9ef">name</span>: copy index.html
-    <span style="color:#66d9ef">copy</span>:
-      <span style="color:#66d9ef">src</span>: ~/ansible-files/{{ stage }}_index.html
-      <span style="color:#66d9ef">dest</span>: /var/www/html/index.html
-</code></pre></div><ul>
+<pre><code>---
+- name: Copy index.html
+  hosts: web
+  become: yes
+  tasks:
+  - name: copy index.html
+    copy:
+      src: ~/ansible-files/{{ stage }}_index.html
+      dest: /var/www/html/index.html
+</code></pre><ul>
 <li>Run the Playbook:</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>student@ansible-1 ansible-files<span style="color:#f92672">]</span>$ ansible-playbook deploy_index_html.yml
@@ -1240,14 +1240,14 @@ node3 ansible_host<span style="color:#f92672">=</span>33.44.55.66
 </details>
 <h2 id="using-facts-in-playbooks">Using Facts in Playbooks</h2>
 <p>Facts can be used in a Playbook like variables, using the proper naming, of course. Create this Playbook as <code>facts.yml</code> in the <code>~/ansible-files/</code> directory:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-- <span style="color:#66d9ef">name</span>: Output facts within a playbook
-  <span style="color:#66d9ef">hosts</span>: all
-  <span style="color:#66d9ef">tasks</span>:
-  - <span style="color:#66d9ef">name</span>: Prints Ansible facts
-    <span style="color:#66d9ef">debug</span>:
-      <span style="color:#66d9ef">msg</span>: The default IPv4 address of {{ ansible_fqdn }} is {{ ansible_default_ipv4.address }}
-</code></pre></div>
+<pre><code>---
+- name: Output facts within a playbook
+  hosts: all
+  tasks:
+  - name: Prints Ansible facts
+    debug:
+      msg: The default IPv4 address of {{ ansible_fqdn }} is {{ ansible_default_ipv4.address }}
+</code></pre>
 <div class="notices tip" ><p>The &ldquo;debug&rdquo; module is handy for e.g. debugging variables or expressions.</p>
 </div>
 
@@ -1944,19 +1944,19 @@ node3                      : ok<span style="color:#f92672">=</span><span style="
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602599873"></script>
+    <script src="https://goetzrieger.github.io/js/clipboard.min.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.min.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/perfect-scrollbar.jquery.min.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/jquery.sticky.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/featherlight.min.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/highlight.pack.js?1602602031"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/learn.js?1602599873"></script>
-    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602599873"></script>
+    <script src="https://goetzrieger.github.io/js/modernizr.custom-3.6.0.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/learn.js?1602602031"></script>
+    <script src="https://goetzrieger.github.io/js/hugo-learn.js?1602602031"></script>
 
-    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602599873" rel="stylesheet" />
-    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602599873"></script>
+    <link href="https://goetzrieger.github.io/mermaid/mermaid.css?1602602031" rel="stylesheet" />
+    <script src="https://goetzrieger.github.io/mermaid/mermaid.js?1602602031"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
